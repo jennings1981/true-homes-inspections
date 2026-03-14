@@ -42,15 +42,15 @@ export default function SampleReports() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {reportFeatures.map((feature) => (
                   <div key={feature.title} className="service-card">
-                    <div className="w-8 h-8 bg-amber-500/10 flex items-center justify-center mb-3">
-                      <feature.icon size={16} className="text-amber-400" />
+                    <div className="w-8 h-8 bg-[#D35400]/10 flex items-center justify-center mb-3">
+                      <feature.icon size={16} className="text-[#D35400]" />
                     </div>
                     <h3 className="font-['Barlow_Condensed'] font-700 text-base text-white mb-1">{feature.title}</h3>
                     <p className="text-xs text-muted-foreground leading-relaxed">{feature.desc}</p>
                   </div>
                 ))}
               </div>
-              <div className="bg-[oklch(0.20_0.005_260)] border border-amber-500/20 p-5">
+              <div className="bg-[oklch(0.20_0.005_260)] border border-[#D35400]/20 p-5">
                 <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-3">Request a Sample Report</h3>
                 <p className="text-sm text-muted-foreground mb-4">Want to see a full sample report before scheduling? Call or email us and we'll send one right over.</p>
                 <div className="flex gap-3">
@@ -79,7 +79,7 @@ export default function SampleReports() {
                     "Accessible on any device (phone, tablet, computer)",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-white/70">
-                      <CheckCircle size={13} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                      <CheckCircle size={13} className="text-[#D35400] flex-shrink-0 mt-0.5" />
                       {item}
                     </li>
                   ))}
@@ -95,7 +95,7 @@ export default function SampleReports() {
         </div>
       </section>
 
-      <section className="py-16 bg-amber-500">
+      <section className="py-16 bg-[#D35400]">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">

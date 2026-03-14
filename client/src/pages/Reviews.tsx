@@ -25,7 +25,7 @@ export default function Reviews() {
           </h1>
           <div className="flex items-center gap-3 mb-4">
             <div className="flex gap-1">
-              {[1,2,3,4,5].map(i => <Star key={i} size={20} className="text-amber-400 fill-amber-400" />)}
+              {[1,2,3,4,5].map(i => <Star key={i} size={20} className="text-[#D35400] fill-[#D35400]" />)}
             </div>
             <span className="font-['Barlow_Condensed'] font-700 text-2xl text-white">5.0</span>
             <span className="text-muted-foreground text-sm">— Based on 100+ verified reviews</span>
@@ -44,7 +44,7 @@ export default function Reviews() {
                 <div className="flex items-center justify-between mb-3 mt-2">
                   <div className="flex gap-1">
                     {Array.from({ length: review.rating }).map((_, j) => (
-                      <Star key={j} size={13} className="text-amber-400 fill-amber-400" />
+                      <Star key={j} size={13} className="text-[#D35400] fill-[#D35400]" />
                     ))}
                   </div>
                   <span className="text-xs text-muted-foreground">{review.date}</span>
@@ -52,7 +52,7 @@ export default function Reviews() {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-5 italic">"{review.text}"</p>
                 <div>
                   <div className="font-['Barlow_Condensed'] font-700 text-white text-sm">{review.name}</div>
-                  <div className="text-xs text-amber-400/70">{review.location}</div>
+                  <div className="text-xs text-[#D35400]/70">{review.location}</div>
                 </div>
               </div>
             ))}
@@ -60,7 +60,7 @@ export default function Reviews() {
         </div>
       </section>
 
-      <section className="py-16 bg-amber-500">
+      <section className="py-16 bg-[#D35400]">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">

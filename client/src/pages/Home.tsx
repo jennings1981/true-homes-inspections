@@ -142,12 +142,12 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left: Headline */}
               <div>
-                <div className="section-label text-amber-400 mb-6">
+                <div className="section-label text-[#D35400] mb-6">
                   North Idaho's Trusted Inspector
                 </div>
                 <h1 className="font-['Barlow_Condensed'] font-800 text-5xl md:text-6xl lg:text-7xl text-white leading-[0.95] mb-6 tracking-tight">
                   TRUSTED HOME<br />
-                  <span className="text-amber-400">INSPECTIONS</span><br />
+                  <span className="text-[#D35400]">INSPECTIONS</span><br />
                   IN NORTH IDAHO
                 </h1>
                 <p className="text-lg text-white/80 mb-8 max-w-lg leading-relaxed font-['Barlow'] font-300">
@@ -169,7 +169,7 @@ export default function Home() {
                     { icon: CheckCircle, label: "20+ Years Experience" },
                   ].map(({ icon: Icon, label }) => (
                     <div key={label} className="flex items-center gap-2 text-sm text-white/70">
-                      <Icon size={14} className="text-amber-400" />
+                      <Icon size={14} className="text-[#D35400]" />
                       {label}
                     </div>
                   ))}
@@ -187,19 +187,19 @@ export default function Home() {
                     <input
                       type="text"
                       placeholder="Your Name"
-                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-amber-500/60 transition-colors"
+                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-[#D35400]/60 transition-colors"
                     />
                     <input
                       type="tel"
                       placeholder="Phone Number"
-                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-amber-500/60 transition-colors"
+                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-[#D35400]/60 transition-colors"
                     />
                     <input
                       type="text"
                       placeholder="Property Address"
-                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-amber-500/60 transition-colors"
+                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-[#D35400]/60 transition-colors"
                     />
-                    <select className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-muted-foreground focus:outline-none focus:border-amber-500/60 transition-colors">
+                    <select className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-muted-foreground focus:outline-none focus:border-[#D35400]/60 transition-colors">
                       <option value="">Select Service</option>
                       <option>Buyer Home Inspection</option>
                       <option>Pre-Listing Inspection</option>
@@ -217,7 +217,7 @@ export default function Home() {
         </section>
 
         {/* ── STATS BAR ── */}
-        <section className="bg-amber-500 py-8">
+        <section className="bg-[#D35400] py-8">
           <div className="container">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {stats.map((stat) => (
@@ -254,14 +254,14 @@ export default function Home() {
                   className={`service-card group fade-up`}
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
-                  <div className="w-10 h-10 bg-amber-500/10 flex items-center justify-center mb-4 group-hover:bg-amber-500/20 transition-colors">
-                    <svc.icon size={20} className="text-amber-400" />
+                  <div className="w-10 h-10 bg-[#D35400]/10 flex items-center justify-center mb-4 group-hover:bg-[#D35400]/20 transition-colors">
+                    <svc.icon size={20} className="text-[#D35400]" />
                   </div>
                   <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-2 leading-tight">
                     {svc.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">{svc.desc}</p>
-                  <div className="flex items-center gap-1 text-xs text-amber-400 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
+                  <div className="flex items-center gap-1 text-xs text-[#D35400] font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
                     Learn More <ChevronRight size={12} />
                   </div>
                 </Link>
@@ -311,7 +311,7 @@ export default function Home() {
                     "Same-Week Scheduling Available",
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm text-white/80">
-                      <CheckCircle size={15} className="text-amber-400 flex-shrink-0" />
+                      <CheckCircle size={15} className="text-[#D35400] flex-shrink-0" />
                       {item}
                     </li>
                   ))}
@@ -344,10 +344,10 @@ export default function Home() {
                   style={{ transitionDelay: `${i * 100}ms` }}
                 >
                   {i < process.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-amber-500/20 z-0" style={{ width: "calc(100% - 2rem)" }} />
+                    <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-[#D35400]/20 z-0" style={{ width: "calc(100% - 2rem)" }} />
                   )}
                   <div className="relative z-10 p-6 bg-[oklch(0.20_0.005_260)] border border-white/5 h-full">
-                    <div className="font-['Barlow_Condensed'] font-800 text-5xl text-amber-500/15 leading-none mb-3">
+                    <div className="font-['Barlow_Condensed'] font-800 text-5xl text-[#D35400]/15 leading-none mb-3">
                       {step.num}
                     </div>
                     <h3 className="font-['Barlow_Condensed'] font-700 text-xl text-white mb-2">{step.title}</h3>
@@ -375,7 +375,7 @@ export default function Home() {
         >
           <div className="absolute inset-0 bg-black/70" />
           <div className="relative z-10 container text-center max-w-3xl mx-auto">
-            <div className="section-label justify-center mb-6 text-amber-400">Our Promise</div>
+            <div className="section-label justify-center mb-6 text-[#D35400]">Our Promise</div>
             <blockquote className="font-['Barlow_Condensed'] font-700 text-3xl md:text-5xl text-white leading-tight mb-6">
               "We inspect every home as if our own family were moving in."
             </blockquote>
@@ -404,13 +404,13 @@ export default function Home() {
                 >
                   <div className="flex gap-1 mb-4 mt-2">
                     {Array.from({ length: t.rating }).map((_, j) => (
-                      <Star key={j} size={14} className="text-amber-400 fill-amber-400" />
+                      <Star key={j} size={14} className="text-[#D35400] fill-[#D35400]" />
                     ))}
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-5 italic">"{t.text}"</p>
                   <div>
                     <div className="font-['Barlow_Condensed'] font-700 text-white text-sm">{t.name}</div>
-                    <div className="text-xs text-amber-400/70">{t.location}</div>
+                    <div className="text-xs text-[#D35400]/70">{t.location}</div>
                   </div>
                 </div>
               ))}
@@ -453,7 +453,7 @@ export default function Home() {
                 <Link
                   key={area.city}
                   href={area.href}
-                  className="bg-[oklch(0.20_0.005_260)] border border-white/5 px-4 py-3 text-center text-sm text-muted-foreground hover:text-amber-400 hover:border-amber-500/30 transition-all font-['Barlow'] font-500"
+                  className="bg-[oklch(0.20_0.005_260)] border border-white/5 px-4 py-3 text-center text-sm text-muted-foreground hover:text-[#D35400] hover:border-[#D35400]/30 transition-all font-['Barlow'] font-500"
                 >
                   {area.city}
                 </Link>
@@ -477,7 +477,7 @@ export default function Home() {
                   North Idaho Home Inspection Blog
                 </h2>
               </div>
-              <Link href="/blog" className="hidden md:flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 transition-colors font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
+              <Link href="/blog" className="hidden md:flex items-center gap-2 text-sm text-[#D35400] hover:text-[#E8660A] transition-colors font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
                 All Posts <ArrowRight size={14} />
               </Link>
             </div>
@@ -486,18 +486,18 @@ export default function Home() {
                 <Link
                   key={post.title}
                   href={post.href}
-                  className="group bg-[oklch(0.20_0.005_260)] border border-white/5 hover:border-amber-500/20 transition-all fade-up"
+                  className="group bg-[oklch(0.20_0.005_260)] border border-white/5 hover:border-[#D35400]/20 transition-all fade-up"
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
                   <div className="p-6">
-                    <div className="text-xs text-amber-400/70 font-['Barlow_Condensed'] font-600 tracking-widest uppercase mb-3">
+                    <div className="text-xs text-[#D35400]/70 font-['Barlow_Condensed'] font-600 tracking-widest uppercase mb-3">
                       {post.date}
                     </div>
-                    <h3 className="font-['Barlow_Condensed'] font-700 text-xl text-white mb-3 leading-tight group-hover:text-amber-400 transition-colors">
+                    <h3 className="font-['Barlow_Condensed'] font-700 text-xl text-white mb-3 leading-tight group-hover:text-[#D35400] transition-colors">
                       {post.title}
                     </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-4">{post.excerpt}</p>
-                    <div className="flex items-center gap-1 text-xs text-amber-400 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
+                    <div className="flex items-center gap-1 text-xs text-[#D35400] font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
                       Read More <ChevronRight size={12} />
                     </div>
                   </div>
@@ -508,7 +508,7 @@ export default function Home() {
         </section>
 
         {/* ── FINAL CTA ── */}
-        <section className="py-20 bg-amber-500">
+        <section className="py-20 bg-[#D35400]">
           <div className="container text-center">
             <h2 className="font-['Barlow_Condensed'] font-800 text-4xl md:text-5xl text-[oklch(0.10_0.005_260)] leading-tight mb-4">
               Ready to Schedule Your Inspection?

@@ -88,8 +88,8 @@ export default function Services() {
               className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "lg:grid-flow-dense" : ""}`}
             >
               <div className={i % 2 === 1 ? "lg:col-start-2" : ""}>
-                <div className="w-12 h-12 bg-amber-500/10 flex items-center justify-center mb-5">
-                  <svc.icon size={24} className="text-amber-400" />
+                <div className="w-12 h-12 bg-[#D35400]/10 flex items-center justify-center mb-5">
+                  <svc.icon size={24} className="text-[#D35400]" />
                 </div>
                 <h2 className="font-['Barlow_Condensed'] font-800 text-4xl text-white leading-tight mb-4">
                   {svc.title}
@@ -99,7 +99,7 @@ export default function Services() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
                   {svc.includes.map((item) => (
                     <div key={item} className="flex items-center gap-2 text-sm text-white/70">
-                      <CheckCircle size={13} className="text-amber-400 flex-shrink-0" />
+                      <CheckCircle size={13} className="text-[#D35400] flex-shrink-0" />
                       {item}
                     </div>
                   ))}
@@ -120,7 +120,7 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-16 bg-amber-500">
+      <section className="py-16 bg-[#D35400]">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">

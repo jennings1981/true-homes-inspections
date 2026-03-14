@@ -24,8 +24,8 @@ export default function LocationPage({ city, county, state, description, paragra
         <div className="absolute inset-0 bg-black/75" />
         <div className="relative z-10 container">
           <div className="flex items-center gap-2 mb-4">
-            <MapPin size={14} className="text-amber-400" />
-            <span className="text-xs text-amber-400 font-['Barlow_Condensed'] font-600 tracking-widest uppercase">{county}, {state}</span>
+            <MapPin size={14} className="text-[#D35400]" />
+            <span className="text-xs text-[#D35400] font-['Barlow_Condensed'] font-600 tracking-widest uppercase">{county}, {state}</span>
           </div>
           <h1 className="font-['Barlow_Condensed'] font-800 text-5xl md:text-6xl text-white leading-tight mb-4">
             Home Inspector in {city}, Idaho
@@ -53,7 +53,7 @@ export default function LocationPage({ city, county, state, description, paragra
               <ul className="space-y-2 mb-8">
                 {localFacts.map((fact) => (
                   <li key={fact} className="flex items-start gap-3 text-sm text-white/70">
-                    <CheckCircle size={13} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={13} className="text-[#D35400] flex-shrink-0 mt-0.5" />
                     {fact}
                   </li>
                 ))}
@@ -62,11 +62,11 @@ export default function LocationPage({ city, county, state, description, paragra
               {testimonial && (
                 <div className="testimonial-card mt-8">
                   <div className="flex gap-1 mb-4 mt-2">
-                    {[1,2,3,4,5].map(i => <Star key={i} size={13} className="text-amber-400 fill-amber-400" />)}
+                    {[1,2,3,4,5].map(i => <Star key={i} size={13} className="text-[#D35400] fill-[#D35400]" />)}
                   </div>
                   <p className="text-sm text-muted-foreground italic mb-4">"{testimonial.text}"</p>
                   <div className="font-['Barlow_Condensed'] font-700 text-white text-sm">{testimonial.name}</div>
-                  <div className="text-xs text-amber-400/70">{city}, Idaho</div>
+                  <div className="text-xs text-[#D35400]/70">{city}, Idaho</div>
                 </div>
               )}
             </div>
@@ -95,8 +95,8 @@ export default function LocationPage({ city, county, state, description, paragra
                     { label: "New Construction Inspection", href: "/services/new-construction-inspection" },
                     { label: "Radon Testing", href: "/services/radon-testing" },
                   ].map((svc) => (
-                    <Link key={svc.href} href={svc.href} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-amber-400 transition-colors py-1">
-                      <ArrowRight size={12} className="text-amber-400/50" />
+                    <Link key={svc.href} href={svc.href} className="flex items-center gap-2 text-sm text-muted-foreground hover:text-[#D35400] transition-colors py-1">
+                      <ArrowRight size={12} className="text-[#D35400]/50" />
                       {svc.label}
                     </Link>
                   ))}
@@ -107,7 +107,7 @@ export default function LocationPage({ city, county, state, description, paragra
         </div>
       </section>
 
-      <section className="py-16 bg-amber-500">
+      <section className="py-16 bg-[#D35400]">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">

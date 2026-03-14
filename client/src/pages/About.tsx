@@ -105,7 +105,7 @@ export default function About() {
               <ul className="space-y-3">
                 {credentials.map((cred) => (
                   <li key={cred} className="flex items-start gap-3 text-sm text-white/80">
-                    <CheckCircle size={15} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={15} className="text-[#D35400] flex-shrink-0 mt-0.5" />
                     {cred}
                   </li>
                 ))}
@@ -133,8 +133,8 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v) => (
               <div key={v.title} className="service-card">
-                <div className="w-10 h-10 bg-amber-500/10 flex items-center justify-center mb-4">
-                  <v.icon size={20} className="text-amber-400" />
+                <div className="w-10 h-10 bg-[#D35400]/10 flex items-center justify-center mb-4">
+                  <v.icon size={20} className="text-[#D35400]" />
                 </div>
                 <h3 className="font-['Barlow_Condensed'] font-700 text-xl text-white mb-2">{v.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
@@ -144,7 +144,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-16 bg-amber-500">
+      <section className="py-16 bg-[#D35400]">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">

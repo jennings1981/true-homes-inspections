@@ -39,9 +39,9 @@ export default function Schedule() {
             {/* Form */}
             <div className="lg:col-span-2">
               {submitted ? (
-                <div className="bg-[oklch(0.20_0.005_260)] border border-amber-500/20 p-10 text-center">
-                  <div className="w-16 h-16 bg-amber-500/10 flex items-center justify-center mx-auto mb-5">
-                    <CheckCircle size={32} className="text-amber-400" />
+                <div className="bg-[oklch(0.20_0.005_260)] border border-[#D35400]/20 p-10 text-center">
+                  <div className="w-16 h-16 bg-[#D35400]/10 flex items-center justify-center mx-auto mb-5">
+                    <CheckCircle size={32} className="text-[#D35400]" />
                   </div>
                   <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-white mb-3">Request Received!</h2>
                   <p className="text-muted-foreground mb-6">
@@ -49,7 +49,7 @@ export default function Schedule() {
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Questions? Call us directly at{" "}
-                    <a href="tel:+15099984033" className="text-amber-400 hover:text-amber-300 transition-colors">(509) 998-4033</a>
+                    <a href="tel:+15099984033" className="text-[#D35400] hover:text-[#E8660A] transition-colors">(509) 998-4033</a>
                   </p>
                 </div>
               ) : (
@@ -57,7 +57,7 @@ export default function Schedule() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-xs font-['Barlow_Condensed'] font-600 tracking-widest uppercase text-muted-foreground mb-2">
-                        Full Name <span className="text-amber-400">*</span>
+                        Full Name <span className="text-[#D35400]">*</span>
                       </label>
                       <input
                         type="text"
@@ -70,7 +70,7 @@ export default function Schedule() {
                     </div>
                     <div>
                       <label className="block text-xs font-['Barlow_Condensed'] font-600 tracking-widest uppercase text-muted-foreground mb-2">
-                        Phone Number <span className="text-amber-400">*</span>
+                        Phone Number <span className="text-[#D35400]">*</span>
                       </label>
                       <input
                         type="tel"
@@ -96,7 +96,7 @@ export default function Schedule() {
                   </div>
                   <div>
                     <label className="block text-xs font-['Barlow_Condensed'] font-600 tracking-widest uppercase text-muted-foreground mb-2">
-                      Property Address <span className="text-amber-400">*</span>
+                      Property Address <span className="text-[#D35400]">*</span>
                     </label>
                     <input
                       type="text"
@@ -136,7 +136,7 @@ export default function Schedule() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                     <div>
                       <label className="block text-xs font-['Barlow_Condensed'] font-600 tracking-widest uppercase text-muted-foreground mb-2">
-                        Service Needed <span className="text-amber-400">*</span>
+                        Service Needed <span className="text-[#D35400]">*</span>
                       </label>
                       <select
                         required
@@ -191,16 +191,16 @@ export default function Schedule() {
               <div className="bg-[oklch(0.20_0.005_260)] border border-white/5 p-6">
                 <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-4">Contact Us Directly</h3>
                 <div className="space-y-3">
-                  <a href="tel:+15099984033" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-amber-400 transition-colors">
-                    <Phone size={14} className="text-amber-400 flex-shrink-0" />
+                  <a href="tel:+15099984033" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-[#D35400] transition-colors">
+                    <Phone size={14} className="text-[#D35400] flex-shrink-0" />
                     (509) 998-4033
                   </a>
-                  <a href="mailto:info@truehomesinspections.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-amber-400 transition-colors">
-                    <Mail size={14} className="text-amber-400 flex-shrink-0" />
+                  <a href="mailto:info@truehomesinspections.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-[#D35400] transition-colors">
+                    <Mail size={14} className="text-[#D35400] flex-shrink-0" />
                     info@truehomesinspections.com
                   </a>
                   <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <Clock size={14} className="text-amber-400 flex-shrink-0" />
+                    <Clock size={14} className="text-[#D35400] flex-shrink-0" />
                     Mon–Sat: 7am–7pm
                   </div>
                 </div>
@@ -218,19 +218,19 @@ export default function Schedule() {
                     "Attend your inspection — we encourage it",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-2 text-sm text-muted-foreground">
-                      <CheckCircle size={13} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                      <CheckCircle size={13} className="text-[#D35400] flex-shrink-0 mt-0.5" />
                       {item}
                     </li>
                   ))}
                 </ul>
               </div>
 
-              <div className="bg-amber-500/10 border border-amber-500/20 p-6">
+              <div className="bg-[#D35400]/10 border border-[#D35400]/20 p-6">
                 <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-2">Service Area</h3>
                 <p className="text-sm text-muted-foreground mb-3">
                   We serve all of North Idaho including Sandpoint, Coeur d'Alene, Post Falls, and surrounding communities.
                 </p>
-                <a href="/areas-served" className="text-xs text-amber-400 hover:text-amber-300 transition-colors font-['Barlow_Condensed'] font-600 tracking-wide uppercase flex items-center gap-1">
+                <a href="/areas-served" className="text-xs text-[#D35400] hover:text-[#E8660A] transition-colors font-['Barlow_Condensed'] font-600 tracking-wide uppercase flex items-center gap-1">
                   View Full Service Area <ArrowRight size={11} />
                 </a>
               </div>

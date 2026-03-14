@@ -1,10 +1,15 @@
 /**
  * Layout — True Homes Inspections
- * Territorial Authority: dark nav + amber accents + comprehensive footer
+ * Brand: dark nav + orange accents (#D35400) + True Homes logo image
  */
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Phone, Mail, Menu, X, ChevronDown, MapPin, Clock, Facebook, Star } from "lucide-react";
+
+const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/true-homes-logo_ec38aa83.jpeg";
+
+// Brand orange color
+const ORANGE = "#D35400";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -50,7 +55,10 @@ function NavDropdown({ item }: { item: typeof navItems[0] }) {
               <Link
                 key={child.href}
                 href={child.href}
-                className="block px-4 py-2.5 text-xs font-['Barlow_Condensed'] font-600 tracking-wide uppercase text-muted-foreground hover:text-amber-400 hover:bg-white/5 transition-colors"
+                className="block px-4 py-2.5 text-xs font-['Barlow_Condensed'] font-600 tracking-wide uppercase text-muted-foreground hover:text-white hover:bg-white/5 transition-colors"
+                style={{ ["--hover-color" as string]: ORANGE }}
+                onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
+                onMouseLeave={e => (e.currentTarget.style.color = "")}
                 onClick={() => setOpen(false)}
               >
                 {child.label}
@@ -85,29 +93,35 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="hidden md:block bg-[oklch(0.10_0.005_260)] border-b border-white/5">
         <div className="container flex items-center justify-between py-2">
           <div className="flex items-center gap-6">
-            <a href="tel:+15099984033" className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-amber-400 transition-colors">
-              <Phone size={11} className="text-amber-400" />
+            <a href="tel:+15099984033" className="flex items-center gap-1.5 text-xs text-muted-foreground transition-colors"
+              onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
+              onMouseLeave={e => (e.currentTarget.style.color = "")}>
+              <Phone size={11} style={{ color: ORANGE }} />
               (509) 998-4033
             </a>
-            <a href="mailto:info@truehomesinspections.com" className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-amber-400 transition-colors">
-              <Mail size={11} className="text-amber-400" />
+            <a href="mailto:info@truehomesinspections.com" className="flex items-center gap-1.5 text-xs text-muted-foreground transition-colors"
+              onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
+              onMouseLeave={e => (e.currentTarget.style.color = "")}>
+              <Mail size={11} style={{ color: ORANGE }} />
               info@truehomesinspections.com
             </a>
             <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-              <Clock size={11} className="text-amber-400" />
+              <Clock size={11} style={{ color: ORANGE }} />
               Mon–Sat 7am–7pm
             </div>
           </div>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">
-              {[1,2,3,4,5].map(i => <Star key={i} size={10} className="text-amber-400 fill-amber-400" />)}
+              {[1,2,3,4,5].map(i => <Star key={i} size={10} style={{ color: ORANGE, fill: ORANGE }} />)}
               <span className="text-xs text-muted-foreground ml-1">5.0 · 100+ Reviews</span>
             </div>
             <a
               href="https://www.facebook.com/truehomesinspections"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-amber-400 transition-colors"
+              className="text-muted-foreground transition-colors"
+              onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
+              onMouseLeave={e => (e.currentTarget.style.color = "")}
             >
               <Facebook size={13} />
             </a>
@@ -123,15 +137,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             : "bg-[oklch(0.12_0.005_260)] border-b border-white/5"
         }`}
       >
-        <div className="container flex items-center justify-between py-4">
-          {/* Logo */}
-          <Link href="/" className="flex flex-col leading-none group">
-            <span className="font-['Barlow_Condensed'] font-800 text-xl text-white tracking-tight group-hover:text-amber-400 transition-colors">
-              TRUE HOMES
-            </span>
-            <span className="font-['Barlow_Condensed'] font-600 text-xs tracking-[0.2em] text-amber-400 uppercase">
-              Inspections
-            </span>
+        <div className="container flex items-center justify-between py-3">
+          {/* Logo image */}
+          <Link href="/">
+            <img
+              src={LOGO_URL}
+              alt="True Homes Home Inspections"
+              className="h-14 w-auto object-contain"
+              style={{ maxWidth: "220px" }}
+            />
           </Link>
 
           {/* Desktop nav */}
@@ -153,8 +167,10 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
           {/* CTA */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+15099984033" className="flex items-center gap-1.5 text-xs text-muted-foreground hover:text-amber-400 transition-colors font-['Barlow_Condensed'] font-600 tracking-wide">
-              <Phone size={13} className="text-amber-400" />
+            <a href="tel:+15099984033" className="flex items-center gap-1.5 text-xs text-muted-foreground transition-colors font-['Barlow_Condensed'] font-600 tracking-wide"
+              onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
+              onMouseLeave={e => (e.currentTarget.style.color = "")}>
+              <Phone size={13} style={{ color: ORANGE }} />
               (509) 998-4033
             </a>
             <Link href="/schedule" className="btn-amber text-xs py-2.5 px-5">
@@ -180,9 +196,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <div key={item.href}>
                   <Link
                     href={item.href}
-                    className={`block py-2.5 text-sm font-['Barlow_Condensed'] font-600 tracking-widest uppercase transition-colors ${
-                      location === item.href ? "text-amber-400" : "text-muted-foreground hover:text-white"
-                    }`}
+                    className="block py-2.5 text-sm font-['Barlow_Condensed'] font-600 tracking-widest uppercase transition-colors text-muted-foreground hover:text-white"
+                    style={location === item.href ? { color: ORANGE } : {}}
                   >
                     {item.label}
                   </Link>
@@ -192,7 +207,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="block py-2 text-xs font-['Barlow_Condensed'] font-600 tracking-widest uppercase text-muted-foreground hover:text-amber-400 transition-colors"
+                          className="block py-2 text-xs font-['Barlow_Condensed'] font-600 tracking-widest uppercase text-muted-foreground transition-colors"
+                          onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
+                          onMouseLeave={e => (e.currentTarget.style.color = "")}
                         >
                           {child.label}
                         </Link>
@@ -203,7 +220,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               ))}
               <div className="pt-4 border-t border-white/5 space-y-3">
                 <a href="tel:+15099984033" className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Phone size={14} className="text-amber-400" /> (509) 998-4033
+                  <Phone size={14} style={{ color: ORANGE }} /> (509) 998-4033
                 </a>
                 <Link href="/schedule" className="btn-amber text-xs w-full justify-center">
                   Schedule Inspection
@@ -223,15 +240,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
             {/* Brand */}
             <div>
-              <div className="mb-4">
-                <div className="font-['Barlow_Condensed'] font-800 text-xl text-white tracking-tight">TRUE HOMES</div>
-                <div className="font-['Barlow_Condensed'] font-600 text-xs tracking-[0.2em] text-amber-400 uppercase">Inspections</div>
+              <div className="mb-5">
+                <img
+                  src={LOGO_URL}
+                  alt="True Homes Home Inspections"
+                  className="h-12 w-auto object-contain"
+                  style={{ maxWidth: "180px" }}
+                />
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed mb-5">
                 North Idaho's trusted, locally owned home inspection company. Licensed, InterNACHI certified, and committed to protecting your investment.
               </p>
               <div className="flex items-center gap-1 mb-2">
-                {[1,2,3,4,5].map(i => <Star key={i} size={12} className="text-amber-400 fill-amber-400" />)}
+                {[1,2,3,4,5].map(i => <Star key={i} size={12} style={{ color: ORANGE, fill: ORANGE }} />)}
                 <span className="text-xs text-muted-foreground ml-1">5.0 · 100+ Reviews</span>
               </div>
               <div className="flex gap-3 mt-4">
@@ -239,9 +260,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   href="https://www.facebook.com/truehomesinspections"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 bg-white/5 flex items-center justify-center hover:bg-amber-500/20 transition-colors"
+                  className="w-8 h-8 bg-white/5 flex items-center justify-center transition-colors"
+                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = `${ORANGE}22`)}
+                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = "")}
                 >
-                  <Facebook size={14} className="text-muted-foreground hover:text-amber-400" />
+                  <Facebook size={14} className="text-muted-foreground" />
                 </a>
               </div>
             </div>
@@ -258,7 +281,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   { label: "Sample Reports", href: "/sample-reports" },
                 ].map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-muted-foreground hover:text-amber-400 transition-colors">
+                    <Link href={link.href} className="text-sm text-muted-foreground transition-colors"
+                      onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
+                      onMouseLeave={e => (e.currentTarget.style.color = "")}>
                       {link.label}
                     </Link>
                   </li>
@@ -277,7 +302,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   { label: "All Areas Served", href: "/areas-served" },
                 ].map((link) => (
                   <li key={link.href}>
-                    <Link href={link.href} className="text-sm text-muted-foreground hover:text-amber-400 transition-colors">
+                    <Link href={link.href} className="text-sm text-muted-foreground transition-colors"
+                      onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
+                      onMouseLeave={e => (e.currentTarget.style.color = "")}>
                       {link.label}
                     </Link>
                   </li>
@@ -290,23 +317,27 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <h4 className="font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase text-white mb-4">Contact</h4>
               <ul className="space-y-3">
                 <li>
-                  <a href="tel:+15099984033" className="flex items-start gap-2 text-sm text-muted-foreground hover:text-amber-400 transition-colors">
-                    <Phone size={13} className="text-amber-400 mt-0.5 flex-shrink-0" />
+                  <a href="tel:+15099984033" className="flex items-start gap-2 text-sm text-muted-foreground transition-colors"
+                    onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
+                    onMouseLeave={e => (e.currentTarget.style.color = "")}>
+                    <Phone size={13} style={{ color: ORANGE }} className="mt-0.5 flex-shrink-0" />
                     (509) 998-4033
                   </a>
                 </li>
                 <li>
-                  <a href="mailto:info@truehomesinspections.com" className="flex items-start gap-2 text-sm text-muted-foreground hover:text-amber-400 transition-colors">
-                    <Mail size={13} className="text-amber-400 mt-0.5 flex-shrink-0" />
+                  <a href="mailto:info@truehomesinspections.com" className="flex items-start gap-2 text-sm text-muted-foreground transition-colors"
+                    onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
+                    onMouseLeave={e => (e.currentTarget.style.color = "")}>
+                    <Mail size={13} style={{ color: ORANGE }} className="mt-0.5 flex-shrink-0" />
                     info@truehomesinspections.com
                   </a>
                 </li>
                 <li className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <MapPin size={13} className="text-amber-400 mt-0.5 flex-shrink-0" />
+                  <MapPin size={13} style={{ color: ORANGE }} className="mt-0.5 flex-shrink-0" />
                   North Idaho Panhandle
                 </li>
                 <li className="flex items-start gap-2 text-sm text-muted-foreground">
-                  <Clock size={13} className="text-amber-400 mt-0.5 flex-shrink-0" />
+                  <Clock size={13} style={{ color: ORANGE }} className="mt-0.5 flex-shrink-0" />
                   Mon–Sat: 7am–7pm
                 </li>
               </ul>
@@ -335,12 +366,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     href={link.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-muted-foreground hover:text-amber-400 transition-colors"
+                    className="text-xs text-muted-foreground transition-colors"
+                    onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
+                    onMouseLeave={e => (e.currentTarget.style.color = "")}
                   >
                     {link.label}
                   </a>
                 ) : (
-                  <Link key={link.label} href={link.href} className="text-xs text-muted-foreground hover:text-amber-400 transition-colors">
+                  <Link key={link.label} href={link.href} className="text-xs text-muted-foreground transition-colors"
+                    onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
+                    onMouseLeave={e => (e.currentTarget.style.color = "")}>
                     {link.label}
                   </Link>
                 )
