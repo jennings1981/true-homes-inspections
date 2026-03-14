@@ -1,7 +1,7 @@
 /**
- * Home Page — True Homes Brand Identity
- * Primary: #C0392B (burnt red), Accent: #D35400 (orange)
- * Dark charcoal backgrounds, sharp edges, Barlow Condensed headings
+ * Home Page — "Territorial Authority" Design
+ * Hero: cinematic Lake Pend Oreille + inline quote form
+ * Sections: Stats, Services, Process, Testimonials, Blog preview, CTA
  */
 import { useEffect, useRef } from "react";
 import { Link } from "wouter";
@@ -14,6 +14,7 @@ import {
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/hero-north-idaho-M9dpChiYReqSTwNmxxV7rj.webp";
 const INSPECTOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/hero-house-inspection-63aGz43DbvpCKgC7R3bn5U.webp";
 const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/north-idaho-landscape-aGtsL65CuHUy9D4qReAaQj.webp";
+const INTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/inspection-interior-5kwkj8D2DYcxBYd4VkaTu6.webp";
 
 const services = [
   {
@@ -133,29 +134,30 @@ export default function Home() {
             backgroundPosition: "center 30%",
           }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/65 to-black/35" />
+          {/* Dark overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
           <div className="relative z-10 container py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Left: Headline */}
               <div>
-                <div className="section-label mb-6">
+                <div className="section-label text-amber-400 mb-6">
                   North Idaho's Trusted Inspector
                 </div>
                 <h1 className="font-['Barlow_Condensed'] font-800 text-5xl md:text-6xl lg:text-7xl text-white leading-[0.95] mb-6 tracking-tight">
                   TRUSTED HOME<br />
-                  <span style={{ color: "#C0392B" }}>INSPECTIONS</span><br />
+                  <span className="text-amber-400">INSPECTIONS</span><br />
                   IN NORTH IDAHO
                 </h1>
                 <p className="text-lg text-white/80 mb-8 max-w-lg leading-relaxed font-['Barlow'] font-300">
                   Serving Sandpoint, Coeur d'Alene, Post Falls, and surrounding communities. Licensed &amp; InterNACHI certified with 20+ years of experience protecting North Idaho home buyers.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-10">
-                  <Link href="/schedule" className="btn-primary text-sm">
+                  <Link href="/schedule" className="btn-amber text-sm">
                     Schedule Your Inspection <ArrowRight size={14} />
                   </Link>
-                  <a href="tel:+15099984033" className="btn-outline-primary text-sm">
+                  <a href="tel:+15099984033" className="btn-outline-amber text-sm">
                     <Phone size={14} /> Call Now
                   </a>
                 </div>
@@ -167,7 +169,7 @@ export default function Home() {
                     { icon: CheckCircle, label: "20+ Years Experience" },
                   ].map(({ icon: Icon, label }) => (
                     <div key={label} className="flex items-center gap-2 text-sm text-white/70">
-                      <Icon size={14} style={{ color: "#C0392B" }} />
+                      <Icon size={14} className="text-amber-400" />
                       {label}
                     </div>
                   ))}
@@ -176,35 +178,35 @@ export default function Home() {
 
               {/* Right: Quick quote form */}
               <div className="lg:ml-auto w-full max-w-sm">
-                <div className="bg-[#0f0f0f]/90 backdrop-blur-sm border border-white/10 p-6">
+                <div className="bg-[oklch(0.12_0.005_260)]/90 backdrop-blur-sm border border-white/10 p-6">
                   <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white tracking-wide mb-1">
                     Request a Quote
                   </h3>
-                  <p className="text-xs text-white/50 mb-5">We'll respond within 1 business hour.</p>
+                  <p className="text-xs text-muted-foreground mb-5">We'll respond within 1 business hour.</p>
                   <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
                     <input
                       type="text"
                       placeholder="Your Name"
-                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#C0392B]/60 transition-colors"
+                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-amber-500/60 transition-colors"
                     />
                     <input
                       type="tel"
                       placeholder="Phone Number"
-                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#C0392B]/60 transition-colors"
+                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-amber-500/60 transition-colors"
                     />
                     <input
                       type="text"
                       placeholder="Property Address"
-                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-[#C0392B]/60 transition-colors"
+                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-amber-500/60 transition-colors"
                     />
-                    <select className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white/50 focus:outline-none focus:border-[#C0392B]/60 transition-colors">
+                    <select className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-muted-foreground focus:outline-none focus:border-amber-500/60 transition-colors">
                       <option value="">Select Service</option>
                       <option>Buyer Home Inspection</option>
                       <option>Pre-Listing Inspection</option>
                       <option>New Construction Inspection</option>
                       <option>Radon Testing</option>
                     </select>
-                    <Link href="/schedule" className="btn-primary w-full justify-center text-xs">
+                    <Link href="/schedule" className="btn-amber w-full justify-center text-xs">
                       Get a Quote <ArrowRight size={13} />
                     </Link>
                   </form>
@@ -215,15 +217,15 @@ export default function Home() {
         </section>
 
         {/* ── STATS BAR ── */}
-        <section style={{ backgroundColor: "#C0392B" }} className="py-8">
+        <section className="bg-amber-500 py-8">
           <div className="container">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               {stats.map((stat) => (
                 <div key={stat.label}>
-                  <div className="font-['Barlow_Condensed'] font-800 text-4xl text-white leading-none mb-1">
+                  <div className="font-['Barlow_Condensed'] font-800 text-4xl text-[oklch(0.10_0.005_260)] leading-none mb-1">
                     {stat.value}
                   </div>
-                  <div className="text-xs font-['Barlow'] font-600 uppercase tracking-wider text-white/70">
+                  <div className="text-xs font-['Barlow'] font-600 uppercase tracking-wider text-[oklch(0.15_0.005_260)]/70">
                     {stat.label}
                   </div>
                 </div>
@@ -249,24 +251,24 @@ export default function Home() {
                 <Link
                   key={svc.title}
                   href={svc.href}
-                  className="service-card group fade-up"
+                  className={`service-card group fade-up`}
                   style={{ transitionDelay: `${i * 80}ms` }}
                 >
-                  <div className="w-10 h-10 flex items-center justify-center mb-4 group-hover:opacity-80 transition-opacity" style={{ backgroundColor: "rgba(192,57,43,0.12)" }}>
-                    <svc.icon size={20} style={{ color: "#C0392B" }} />
+                  <div className="w-10 h-10 bg-amber-500/10 flex items-center justify-center mb-4 group-hover:bg-amber-500/20 transition-colors">
+                    <svc.icon size={20} className="text-amber-400" />
                   </div>
                   <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-2 leading-tight">
                     {svc.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4">{svc.desc}</p>
-                  <div className="flex items-center gap-1 text-xs font-['Barlow_Condensed'] font-600 tracking-wide uppercase" style={{ color: "#C0392B" }}>
+                  <div className="flex items-center gap-1 text-xs text-amber-400 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
                     Learn More <ChevronRight size={12} />
                   </div>
                 </Link>
               ))}
             </div>
             <div className="mt-10 text-center fade-up">
-              <Link href="/services" className="btn-outline-primary text-xs">
+              <Link href="/services" className="btn-outline-amber text-xs">
                 View All Services <ArrowRight size={13} />
               </Link>
             </div>
@@ -274,10 +276,10 @@ export default function Home() {
         </section>
 
         {/* ── ABOUT SPLIT ── */}
-        <section className="py-24 bg-[oklch(0.18_0.004_260)]">
+        <section className="py-24 bg-[oklch(0.18_0.005_260)]">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              {/* Image with brand frame */}
+              {/* Image with amber frame */}
               <div className="relative fade-up order-2 lg:order-1">
                 <div className="amber-frame">
                   <img
@@ -309,12 +311,12 @@ export default function Home() {
                     "Same-Week Scheduling Available",
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm text-white/80">
-                      <CheckCircle size={15} style={{ color: "#C0392B" }} className="flex-shrink-0" />
+                      <CheckCircle size={15} className="text-amber-400 flex-shrink-0" />
                       {item}
                     </li>
                   ))}
                 </ul>
-                <Link href="/about" className="btn-primary text-xs">
+                <Link href="/about" className="btn-amber text-xs">
                   About True Homes <ArrowRight size={13} />
                 </Link>
               </div>
@@ -342,10 +344,10 @@ export default function Home() {
                   style={{ transitionDelay: `${i * 100}ms` }}
                 >
                   {i < process.length - 1 && (
-                    <div className="hidden lg:block absolute top-8 left-full w-full h-px z-0" style={{ width: "calc(100% - 2rem)", backgroundColor: "rgba(192,57,43,0.2)" }} />
+                    <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-amber-500/20 z-0" style={{ width: "calc(100% - 2rem)" }} />
                   )}
-                  <div className="relative z-10 p-6 bg-[oklch(0.20_0.004_260)] border border-white/5 h-full">
-                    <div className="font-['Barlow_Condensed'] font-800 text-5xl leading-none mb-3" style={{ color: "rgba(192,57,43,0.15)" }}>
+                  <div className="relative z-10 p-6 bg-[oklch(0.20_0.005_260)] border border-white/5 h-full">
+                    <div className="font-['Barlow_Condensed'] font-800 text-5xl text-amber-500/15 leading-none mb-3">
                       {step.num}
                     </div>
                     <h3 className="font-['Barlow_Condensed'] font-700 text-xl text-white mb-2">{step.title}</h3>
@@ -355,7 +357,7 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-12 text-center fade-up">
-              <Link href="/schedule" className="btn-primary text-sm">
+              <Link href="/schedule" className="btn-amber text-sm">
                 Schedule Your Inspection <ArrowRight size={14} />
               </Link>
             </div>
@@ -371,21 +373,21 @@ export default function Home() {
             backgroundPosition: "center 40%",
           }}
         >
-          <div className="absolute inset-0 bg-black/72" />
+          <div className="absolute inset-0 bg-black/70" />
           <div className="relative z-10 container text-center max-w-3xl mx-auto">
-            <div className="section-label justify-center mb-6">Our Promise</div>
+            <div className="section-label justify-center mb-6 text-amber-400">Our Promise</div>
             <blockquote className="font-['Barlow_Condensed'] font-700 text-3xl md:text-5xl text-white leading-tight mb-6">
               "We inspect every home as if our own family were moving in."
             </blockquote>
             <p className="text-white/60 text-sm mb-8">— True Homes Inspections, Sandpoint, Idaho</p>
-            <Link href="/schedule" className="btn-primary text-sm">
+            <Link href="/schedule" className="btn-amber text-sm">
               Book Your Inspection Today <ArrowRight size={14} />
             </Link>
           </div>
         </section>
 
         {/* ── TESTIMONIALS ── */}
-        <section className="py-24 bg-[oklch(0.18_0.004_260)]">
+        <section className="py-24 bg-[oklch(0.18_0.005_260)]">
           <div className="container">
             <div className="max-w-xl mb-14 fade-up">
               <div className="section-label mb-4">Client Reviews</div>
@@ -402,19 +404,19 @@ export default function Home() {
                 >
                   <div className="flex gap-1 mb-4 mt-2">
                     {Array.from({ length: t.rating }).map((_, j) => (
-                      <Star key={j} size={14} style={{ color: "#D35400" }} className="fill-[#D35400]" />
+                      <Star key={j} size={14} className="text-amber-400 fill-amber-400" />
                     ))}
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-5 italic">"{t.text}"</p>
                   <div>
                     <div className="font-['Barlow_Condensed'] font-700 text-white text-sm">{t.name}</div>
-                    <div className="text-xs" style={{ color: "rgba(211,84,0,0.8)" }}>{t.location}</div>
+                    <div className="text-xs text-amber-400/70">{t.location}</div>
                   </div>
                 </div>
               ))}
             </div>
             <div className="mt-10 text-center fade-up">
-              <Link href="/reviews" className="btn-outline-primary text-xs">
+              <Link href="/reviews" className="btn-outline-amber text-xs">
                 Read All Reviews <ArrowRight size={13} />
               </Link>
             </div>
@@ -451,17 +453,14 @@ export default function Home() {
                 <Link
                   key={area.city}
                   href={area.href}
-                  className="bg-[oklch(0.20_0.004_260)] border border-white/5 px-4 py-3 text-center text-sm text-muted-foreground hover:text-[#C0392B] transition-all font-['Barlow'] font-500"
-                  style={{ borderColor: "rgba(255,255,255,0.05)" }}
-                  onMouseEnter={e => (e.currentTarget.style.borderColor = "rgba(192,57,43,0.3)")}
-                  onMouseLeave={e => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.05)")}
+                  className="bg-[oklch(0.20_0.005_260)] border border-white/5 px-4 py-3 text-center text-sm text-muted-foreground hover:text-amber-400 hover:border-amber-500/30 transition-all font-['Barlow'] font-500"
                 >
                   {area.city}
                 </Link>
               ))}
             </div>
             <div className="mt-8 text-center fade-up">
-              <Link href="/areas-served" className="btn-outline-primary text-xs">
+              <Link href="/areas-served" className="btn-outline-amber text-xs">
                 View Full Service Area <ArrowRight size={13} />
               </Link>
             </div>
@@ -469,7 +468,7 @@ export default function Home() {
         </section>
 
         {/* ── BLOG PREVIEW ── */}
-        <section className="py-24 bg-[oklch(0.18_0.004_260)]">
+        <section className="py-24 bg-[oklch(0.18_0.005_260)]">
           <div className="container">
             <div className="flex items-end justify-between mb-12 fade-up">
               <div>
@@ -478,7 +477,7 @@ export default function Home() {
                   North Idaho Home Inspection Blog
                 </h2>
               </div>
-              <Link href="/blog" className="hidden md:flex items-center gap-2 text-sm hover:opacity-80 transition-opacity font-['Barlow_Condensed'] font-600 tracking-wide uppercase" style={{ color: "#C0392B" }}>
+              <Link href="/blog" className="hidden md:flex items-center gap-2 text-sm text-amber-400 hover:text-amber-300 transition-colors font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
                 All Posts <ArrowRight size={14} />
               </Link>
             </div>
@@ -487,20 +486,18 @@ export default function Home() {
                 <Link
                   key={post.title}
                   href={post.href}
-                  className="group bg-[oklch(0.20_0.004_260)] border border-white/5 transition-all fade-up"
+                  className="group bg-[oklch(0.20_0.005_260)] border border-white/5 hover:border-amber-500/20 transition-all fade-up"
                   style={{ transitionDelay: `${i * 80}ms` }}
-                  onMouseEnter={e => (e.currentTarget.style.borderColor = "rgba(192,57,43,0.25)")}
-                  onMouseLeave={e => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.05)")}
                 >
                   <div className="p-6">
-                    <div className="text-xs font-['Barlow_Condensed'] font-600 tracking-widest uppercase mb-3" style={{ color: "rgba(211,84,0,0.8)" }}>
+                    <div className="text-xs text-amber-400/70 font-['Barlow_Condensed'] font-600 tracking-widest uppercase mb-3">
                       {post.date}
                     </div>
-                    <h3 className="font-['Barlow_Condensed'] font-700 text-xl text-white mb-3 leading-tight group-hover:text-[#C0392B] transition-colors">
+                    <h3 className="font-['Barlow_Condensed'] font-700 text-xl text-white mb-3 leading-tight group-hover:text-amber-400 transition-colors">
                       {post.title}
                     </h3>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-4">{post.excerpt}</p>
-                    <div className="flex items-center gap-1 text-xs font-['Barlow_Condensed'] font-600 tracking-wide uppercase" style={{ color: "#C0392B" }}>
+                    <div className="flex items-center gap-1 text-xs text-amber-400 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
                       Read More <ChevronRight size={12} />
                     </div>
                   </div>
@@ -511,24 +508,24 @@ export default function Home() {
         </section>
 
         {/* ── FINAL CTA ── */}
-        <section style={{ backgroundColor: "#C0392B" }} className="py-20">
+        <section className="py-20 bg-amber-500">
           <div className="container text-center">
-            <h2 className="font-['Barlow_Condensed'] font-800 text-4xl md:text-5xl text-white leading-tight mb-4">
+            <h2 className="font-['Barlow_Condensed'] font-800 text-4xl md:text-5xl text-[oklch(0.10_0.005_260)] leading-tight mb-4">
               Ready to Schedule Your Inspection?
             </h2>
-            <p className="text-white/75 max-w-xl mx-auto mb-8 leading-relaxed">
+            <p className="text-[oklch(0.10_0.005_260)]/70 max-w-xl mx-auto mb-8 leading-relaxed">
               Don't leave the biggest purchase of your life to chance. Schedule your North Idaho home inspection today and get a detailed report within 48 hours.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Link
                 href="/schedule"
-                className="bg-[#1a1a1a] text-white font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-black transition-colors flex items-center gap-2"
+                className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2"
               >
                 Schedule Online <ArrowRight size={14} />
               </Link>
               <a
                 href="tel:+15099984033"
-                className="border-2 border-white text-white font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-white hover:text-[#C0392B] transition-colors flex items-center gap-2"
+                className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2"
               >
                 <Phone size={14} /> (509) 998-4033
               </a>

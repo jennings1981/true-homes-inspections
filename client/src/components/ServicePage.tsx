@@ -30,8 +30,8 @@ export default function ServicePage({ title, subtitle, description, longDesc, in
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <div className="w-12 h-12 bg-[#C0392B]/10 flex items-center justify-center mb-6">
-                <Icon size={24} className="text-[#C0392B]" />
+              <div className="w-12 h-12 bg-amber-500/10 flex items-center justify-center mb-6">
+                <Icon size={24} className="text-amber-400" />
               </div>
               {longDesc.map((para, i) => (
                 <p key={i} className="text-muted-foreground leading-relaxed mb-4">{para}</p>
@@ -41,15 +41,15 @@ export default function ServicePage({ title, subtitle, description, longDesc, in
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {includes.map((item) => (
                     <div key={item} className="flex items-center gap-2 text-sm text-white/70">
-                      <CheckCircle size={13} className="text-[#C0392B] flex-shrink-0" />
+                      <CheckCircle size={13} className="text-amber-400 flex-shrink-0" />
                       {item}
                     </div>
                   ))}
                 </div>
               </div>
               <div className="mt-8 flex gap-3">
-                <Link href="/schedule" className="btn-primary text-xs">Schedule Now <ArrowRight size={13} /></Link>
-                <a href="tel:+15099984033" className="btn-outline-primary text-xs"><Phone size={13} /> Call Us</a>
+                <Link href="/schedule" className="btn-amber text-xs">Schedule Now <ArrowRight size={13} /></Link>
+                <a href="tel:+15099984033" className="btn-outline-amber text-xs"><Phone size={13} /> Call Us</a>
               </div>
             </div>
             <div>
@@ -58,8 +58,8 @@ export default function ServicePage({ title, subtitle, description, longDesc, in
                 <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-4">Schedule This Inspection</h3>
                 <p className="text-sm text-muted-foreground mb-4">Call us or schedule online. Same-week appointments often available.</p>
                 <div className="space-y-3">
-                  <Link href="/schedule" className="btn-primary w-full justify-center text-xs">Book Online <ArrowRight size={13} /></Link>
-                  <a href="tel:+15099984033" className="btn-outline-primary w-full justify-center text-xs"><Phone size={13} /> (509) 998-4033</a>
+                  <Link href="/schedule" className="btn-amber w-full justify-center text-xs">Book Online <ArrowRight size={13} /></Link>
+                  <a href="tel:+15099984033" className="btn-outline-amber w-full justify-center text-xs"><Phone size={13} /> (509) 998-4033</a>
                 </div>
               </div>
             </div>
@@ -75,7 +75,7 @@ export default function ServicePage({ title, subtitle, description, longDesc, in
             <div className="space-y-6">
               {faq.map((item) => (
                 <div key={item.q} className="border-b border-white/5 pb-6">
-                  <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-[#C0392B] mb-2">{item.q}</h3>
+                  <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-amber-400 mb-2">{item.q}</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{item.a}</p>
                 </div>
               ))}
@@ -84,17 +84,17 @@ export default function ServicePage({ title, subtitle, description, longDesc, in
         </section>
       )}
 
-      <section style={{ backgroundColor: "#C0392B" }} className="py-16">
+      <section className="py-16 bg-amber-500">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-white leading-tight mb-1">Ready to Get Started?</h2>
-            <p className="text-white/70 text-sm">Schedule your inspection today — same-week availability.</p>
+            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">Ready to Get Started?</h2>
+            <p className="text-[oklch(0.10_0.005_260)]/70 text-sm">Schedule your inspection today — same-week availability.</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
-            <Link href="/schedule" className="bg-[#1a1a1a] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-black transition-colors flex items-center gap-2">
+            <Link href="/schedule" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2">
               Schedule Now <ArrowRight size={13} />
             </Link>
-            <a href="tel:+15099984033" className="border-2 border-white text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[#1a1a1a] hover:text-white transition-colors flex items-center gap-2">
+            <a href="tel:+15099984033" className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2">
               <Phone size={13} /> Call Us
             </a>
           </div>

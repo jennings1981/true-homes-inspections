@@ -59,14 +59,14 @@ export default function AreasServed() {
                 className="service-card group"
               >
                 <div className="flex items-center gap-2 mb-3">
-                  <MapPin size={16} className="text-[#C0392B]" />
-                  <span className="text-xs text-[#C0392B]/70 font-['Barlow_Condensed'] font-600 tracking-widest uppercase">{area.county}</span>
+                  <MapPin size={16} className="text-amber-400" />
+                  <span className="text-xs text-amber-400/70 font-['Barlow_Condensed'] font-600 tracking-widest uppercase">{area.county}</span>
                 </div>
-                <h3 className="font-['Barlow_Condensed'] font-700 text-2xl text-white mb-2 group-hover:text-[#C0392B] transition-colors">
+                <h3 className="font-['Barlow_Condensed'] font-700 text-2xl text-white mb-2 group-hover:text-amber-400 transition-colors">
                   {area.city}, Idaho
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed mb-4">{area.desc}</p>
-                <div className="flex items-center gap-1 text-xs text-[#C0392B] font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
+                <div className="flex items-center gap-1 text-xs text-amber-400 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
                   View Page <ArrowRight size={12} />
                 </div>
               </Link>
@@ -83,30 +83,30 @@ export default function AreasServed() {
                 key={area}
                 className="bg-[oklch(0.20_0.005_260)] border border-white/5 px-4 py-3 flex items-center gap-2 text-sm text-muted-foreground"
               >
-                <MapPin size={12} className="text-[#C0392B]/50 flex-shrink-0" />
+                <MapPin size={12} className="text-amber-400/50 flex-shrink-0" />
                 {area}
               </div>
             ))}
           </div>
           <p className="mt-8 text-sm text-muted-foreground">
-            Don't see your area? <a href="tel:+15099984033" className="text-[#C0392B] hover:text-[#D35400] transition-colors">Call us at (509) 998-4033</a> — we serve a wide radius and are happy to discuss your location.
+            Don't see your area? <a href="tel:+15099984033" className="text-amber-400 hover:text-amber-300 transition-colors">Call us at (509) 998-4033</a> — we serve a wide radius and are happy to discuss your location.
           </p>
         </div>
       </section>
 
-      <section className="py-16 bg-[#C0392B]">
+      <section className="py-16 bg-amber-500">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-white leading-tight mb-1">
+            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">
               Serving Your North Idaho Community
             </h2>
-            <p className="text-white/70 text-sm">Schedule your inspection today — we come to you.</p>
+            <p className="text-[oklch(0.10_0.005_260)]/70 text-sm">Schedule your inspection today — we come to you.</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
-            <Link href="/schedule" className="bg-[#1a1a1a] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-black transition-colors flex items-center gap-2">
+            <Link href="/schedule" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2">
               Schedule Now <ArrowRight size={13} />
             </Link>
-            <a href="tel:+15099984033" className="border-2 border-white text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[#1a1a1a] hover:text-white transition-colors flex items-center gap-2">
+            <a href="tel:+15099984033" className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2">
               <Phone size={13} /> (509) 998-4033
             </a>
           </div>

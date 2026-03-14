@@ -117,7 +117,7 @@ export default function Blog() {
           {/* Featured post */}
           <div className="mb-16">
             <div className="section-label mb-6">Featured Article</div>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-[oklch(0.20_0.005_260)] border border-white/5 hover:border-[#C0392B]/20 transition-all group">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 bg-[oklch(0.20_0.005_260)] border border-white/5 hover:border-amber-500/20 transition-all group">
               <div className="h-64 lg:h-auto overflow-hidden">
                 <img
                   src="https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/inspection-interior-5kwkj8D2DYcxBYd4VkaTu6.webp"
@@ -127,14 +127,14 @@ export default function Blog() {
               </div>
               <div className="p-8 flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
-                  <span className="text-xs bg-[#C0392B]/10 text-[#C0392B] px-2 py-1 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">{posts[0].category}</span>
+                  <span className="text-xs bg-amber-500/10 text-amber-400 px-2 py-1 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">{posts[0].category}</span>
                   <span className="text-xs text-muted-foreground flex items-center gap-1"><Calendar size={11} /> {posts[0].date}</span>
                 </div>
-                <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-white mb-4 leading-tight group-hover:text-[#C0392B] transition-colors">
+                <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-white mb-4 leading-tight group-hover:text-amber-400 transition-colors">
                   {posts[0].title}
                 </h2>
                 <p className="text-muted-foreground text-sm leading-relaxed mb-6">{posts[0].excerpt}</p>
-                <div className="flex items-center gap-2 text-sm text-[#C0392B] font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
+                <div className="flex items-center gap-2 text-sm text-amber-400 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
                   Read Article <ArrowRight size={13} />
                 </div>
               </div>
@@ -147,20 +147,20 @@ export default function Blog() {
             {posts.slice(1).map((post) => (
               <div
                 key={post.title}
-                className="bg-[oklch(0.20_0.005_260)] border border-white/5 hover:border-[#C0392B]/20 transition-all group cursor-pointer"
+                className="bg-[oklch(0.20_0.005_260)] border border-white/5 hover:border-amber-500/20 transition-all group cursor-pointer"
               >
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <span className="text-xs bg-[#C0392B]/10 text-[#C0392B] px-2 py-1 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">{post.category}</span>
+                    <span className="text-xs bg-amber-500/10 text-amber-400 px-2 py-1 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">{post.category}</span>
                     <span className="text-xs text-muted-foreground">{post.readTime}</span>
                   </div>
-                  <h3 className="font-['Barlow_Condensed'] font-700 text-xl text-white mb-3 leading-tight group-hover:text-[#C0392B] transition-colors">
+                  <h3 className="font-['Barlow_Condensed'] font-700 text-xl text-white mb-3 leading-tight group-hover:text-amber-400 transition-colors">
                     {post.title}
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed mb-5">{post.excerpt}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-xs text-muted-foreground flex items-center gap-1"><Calendar size={11} /> {post.date}</span>
-                    <div className="flex items-center gap-1 text-xs text-[#C0392B] font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
+                    <div className="flex items-center gap-1 text-xs text-amber-400 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">
                       Read <ChevronRight size={12} />
                     </div>
                   </div>
@@ -171,16 +171,16 @@ export default function Blog() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#C0392B]">
+      <section className="py-16 bg-amber-500">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-white leading-tight mb-1">
+            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">
               Ready to Schedule Your Inspection?
             </h2>
-            <p className="text-white/70 text-sm">Put our expertise to work for you.</p>
+            <p className="text-[oklch(0.10_0.005_260)]/70 text-sm">Put our expertise to work for you.</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
-            <Link href="/schedule" className="bg-[#1a1a1a] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-black transition-colors flex items-center gap-2">
+            <Link href="/schedule" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2">
               Schedule Now <ArrowRight size={13} />
             </Link>
           </div>

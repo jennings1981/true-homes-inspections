@@ -1,8 +1,6 @@
 /**
- * True Homes Inspections — Brand Identity Design System
- * Primary: Burnt Orange/Red #C0392B (oklch ~0.48 0.19 28)
- * Accent:  Warm Orange #D35400 (oklch ~0.55 0.18 42)
- * Dark:    Charcoal #2C2C2C (oklch ~0.22 0 0)
+ * True Homes Inspections — "Territorial Authority" Design System
+ * Dark slate (#18181B / oklch(0.15)) + Amber (#E8960C / amber-500)
  * Fonts: Barlow Condensed (headings) + Barlow (body)
  */
 
@@ -51,80 +49,71 @@
 }
 
 :root {
-  /* True Homes Brand — dark charcoal base + burnt orange/red primary */
-  --radius: 0rem;
+  /* Territorial Authority — dark theme by default */
+  --radius: 0rem; /* Sharp corners throughout */
   --background: oklch(0.15 0.005 260);
-  --foreground: oklch(0.93 0.005 65);
-  --card: oklch(0.19 0.004 260);
-  --card-foreground: oklch(0.93 0.005 65);
-  --popover: oklch(0.19 0.004 260);
-  --popover-foreground: oklch(0.93 0.005 65);
-  /* Burnt orange/red — #C0392B */
-  --primary: oklch(0.48 0.19 28);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.22 0.004 260);
+  --foreground: oklch(0.92 0.005 65);
+  --card: oklch(0.18 0.005 260);
+  --card-foreground: oklch(0.92 0.005 65);
+  --popover: oklch(0.18 0.005 260);
+  --popover-foreground: oklch(0.92 0.005 65);
+  --primary: oklch(0.72 0.18 75);        /* amber-500 */
+  --primary-foreground: oklch(0.10 0.005 260);
+  --secondary: oklch(0.22 0.005 260);
   --secondary-foreground: oklch(0.85 0.005 65);
-  --muted: oklch(0.22 0.004 260);
-  --muted-foreground: oklch(0.56 0.008 260);
-  --accent: oklch(0.55 0.18 42);
-  --accent-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.22 0.005 260);
+  --muted-foreground: oklch(0.55 0.010 260);
+  --accent: oklch(0.72 0.18 75);
+  --accent-foreground: oklch(0.10 0.005 260);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(1 0 0 / 8%);
   --input: oklch(1 0 0 / 8%);
-  --ring: oklch(0.48 0.19 28);
-  --chart-1: oklch(0.48 0.19 28);
-  --chart-2: oklch(0.55 0.18 42);
-  --chart-3: oklch(0.62 0.16 55);
-  --chart-4: oklch(0.38 0.15 28);
-  --chart-5: oklch(0.30 0.12 28);
-  --sidebar: oklch(0.12 0.004 260);
+  --ring: oklch(0.72 0.18 75);
+  --chart-1: oklch(0.72 0.18 75);
+  --chart-2: oklch(0.65 0.16 75);
+  --chart-3: oklch(0.55 0.14 75);
+  --chart-4: oklch(0.45 0.12 75);
+  --chart-5: oklch(0.35 0.10 75);
+  --sidebar: oklch(0.12 0.005 260);
   --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-primary: oklch(0.48 0.19 28);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.20 0.004 260);
+  --sidebar-primary: oklch(0.72 0.18 75);
+  --sidebar-primary-foreground: oklch(0.10 0.005 260);
+  --sidebar-accent: oklch(0.20 0.005 260);
   --sidebar-accent-foreground: oklch(0.85 0.005 65);
   --sidebar-border: oklch(1 0 0 / 8%);
-  --sidebar-ring: oklch(0.48 0.19 28);
+  --sidebar-ring: oklch(0.72 0.18 75);
 }
 
+/* Force dark theme — this is a dark-only design */
 .dark {
   --background: oklch(0.15 0.005 260);
-  --foreground: oklch(0.93 0.005 65);
-  --card: oklch(0.19 0.004 260);
-  --card-foreground: oklch(0.93 0.005 65);
-  --popover: oklch(0.19 0.004 260);
-  --popover-foreground: oklch(0.93 0.005 65);
-  --primary: oklch(0.48 0.19 28);
-  --primary-foreground: oklch(0.98 0 0);
-  --secondary: oklch(0.22 0.004 260);
+  --foreground: oklch(0.92 0.005 65);
+  --card: oklch(0.18 0.005 260);
+  --card-foreground: oklch(0.92 0.005 65);
+  --popover: oklch(0.18 0.005 260);
+  --popover-foreground: oklch(0.92 0.005 65);
+  --primary: oklch(0.72 0.18 75);
+  --primary-foreground: oklch(0.10 0.005 260);
+  --secondary: oklch(0.22 0.005 260);
   --secondary-foreground: oklch(0.85 0.005 65);
-  --muted: oklch(0.22 0.004 260);
-  --muted-foreground: oklch(0.56 0.008 260);
-  --accent: oklch(0.55 0.18 42);
-  --accent-foreground: oklch(0.98 0 0);
+  --muted: oklch(0.22 0.005 260);
+  --muted-foreground: oklch(0.55 0.010 260);
+  --accent: oklch(0.72 0.18 75);
+  --accent-foreground: oklch(0.10 0.005 260);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(1 0 0 / 8%);
   --input: oklch(1 0 0 / 8%);
-  --ring: oklch(0.48 0.19 28);
-  --sidebar: oklch(0.12 0.004 260);
+  --ring: oklch(0.72 0.18 75);
+  --sidebar: oklch(0.12 0.005 260);
   --sidebar-foreground: oklch(0.85 0.005 65);
-  --sidebar-primary: oklch(0.48 0.19 28);
-  --sidebar-primary-foreground: oklch(0.98 0 0);
-  --sidebar-accent: oklch(0.20 0.004 260);
+  --sidebar-primary: oklch(0.72 0.18 75);
+  --sidebar-primary-foreground: oklch(0.10 0.005 260);
+  --sidebar-accent: oklch(0.20 0.005 260);
   --sidebar-accent-foreground: oklch(0.85 0.005 65);
   --sidebar-border: oklch(1 0 0 / 8%);
-  --sidebar-ring: oklch(0.48 0.19 28);
-}
-
-/* Brand color custom properties for easy use */
-:root {
-  --brand-red: #C0392B;
-  --brand-orange: #D35400;
-  --brand-charcoal: #2C2C2C;
-  --brand-red-oklch: oklch(0.48 0.19 28);
-  --brand-orange-oklch: oklch(0.55 0.18 42);
+  --sidebar-ring: oklch(0.72 0.18 75);
 }
 
 @layer base {
@@ -186,35 +175,13 @@
     }
   }
 
-  /* ── Primary CTA button — burnt orange/red ── */
-  .btn-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background-color: #C0392B;
-    color: #ffffff;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.75rem 1.75rem;
-    transition: background-color 0.2s ease, transform 0.15s ease;
-    white-space: nowrap;
-    border: none;
-  }
-  .btn-primary:hover {
-    background-color: #a93226;
-    transform: translateY(-1px);
-  }
-
-  /* Keep btn-amber as alias for backward compat */
+  /* ── Buttons ── */
   .btn-amber {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    background-color: #C0392B;
-    color: #ffffff;
+    background-color: oklch(0.72 0.18 75);
+    color: oklch(0.10 0.005 260);
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 700;
     font-size: 0.75rem;
@@ -223,42 +190,18 @@
     padding: 0.75rem 1.75rem;
     transition: background-color 0.2s ease, transform 0.15s ease;
     white-space: nowrap;
-    border: none;
   }
   .btn-amber:hover {
-    background-color: #a93226;
+    background-color: oklch(0.65 0.17 75);
     transform: translateY(-1px);
   }
 
-  .btn-outline-primary {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    border: 1.5px solid rgba(192, 57, 43, 0.6);
-    color: #C0392B;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700;
-    font-size: 0.75rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 0.75rem 1.75rem;
-    transition: all 0.2s ease;
-    white-space: nowrap;
-    background: transparent;
-  }
-  .btn-outline-primary:hover {
-    background-color: rgba(192, 57, 43, 0.1);
-    border-color: #C0392B;
-    transform: translateY(-1px);
-  }
-
-  /* Keep btn-outline-amber as alias */
   .btn-outline-amber {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    border: 1.5px solid rgba(192, 57, 43, 0.6);
-    color: #C0392B;
+    border: 1.5px solid oklch(0.72 0.18 75 / 60%);
+    color: oklch(0.72 0.18 75);
     font-family: 'Barlow Condensed', sans-serif;
     font-weight: 700;
     font-size: 0.75rem;
@@ -267,11 +210,10 @@
     padding: 0.75rem 1.75rem;
     transition: all 0.2s ease;
     white-space: nowrap;
-    background: transparent;
   }
   .btn-outline-amber:hover {
-    background-color: rgba(192, 57, 43, 0.1);
-    border-color: #C0392B;
+    background-color: oklch(0.72 0.18 75 / 10%);
+    border-color: oklch(0.72 0.18 75);
     transform: translateY(-1px);
   }
 
@@ -285,45 +227,45 @@
     font-size: 0.7rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #C0392B;
+    color: oklch(0.72 0.18 75);
   }
   .section-label::before {
     content: '';
     display: block;
     width: 1.5rem;
     height: 2px;
-    background-color: #C0392B;
+    background-color: oklch(0.72 0.18 75);
     flex-shrink: 0;
   }
 
-  /* ── Brand divider ── */
+  /* ── Amber divider ── */
   .amber-divider {
     width: 3rem;
     height: 3px;
-    background-color: #C0392B;
+    background-color: oklch(0.72 0.18 75);
   }
 
   /* ── Service card ── */
   .service-card {
-    background-color: oklch(0.20 0.004 260);
+    background-color: oklch(0.20 0.005 260);
     border: 1px solid oklch(1 0 0 / 6%);
     padding: 1.5rem;
     transition: border-color 0.2s ease, transform 0.2s ease;
   }
   .service-card:hover {
-    border-color: rgba(192, 57, 43, 0.3);
+    border-color: oklch(0.72 0.18 75 / 25%);
     transform: translateY(-2px);
   }
 
   /* ── Testimonial card ── */
   .testimonial-card {
-    background-color: oklch(0.20 0.004 260);
+    background-color: oklch(0.20 0.005 260);
     border: 1px solid oklch(1 0 0 / 6%);
-    border-top: 3px solid #C0392B;
+    border-top: 3px solid oklch(0.72 0.18 75);
     padding: 1.5rem;
   }
 
-  /* ── Brand frame (image decoration) ── */
+  /* ── Amber frame (image decoration) ── */
   .amber-frame {
     position: relative;
   }
@@ -334,7 +276,7 @@
     left: -12px;
     right: 12px;
     bottom: 12px;
-    border: 2px solid #C0392B;
+    border: 2px solid oklch(0.72 0.18 75);
     z-index: 0;
     pointer-events: none;
   }
@@ -346,9 +288,9 @@
   /* ── Form inputs ── */
   .form-input {
     width: 100%;
-    background-color: oklch(0.20 0.004 260);
+    background-color: oklch(0.20 0.005 260);
     border: 1px solid oklch(1 0 0 / 10%);
-    color: oklch(0.93 0.005 65);
+    color: oklch(0.92 0.005 65);
     padding: 0.75rem 1rem;
     font-family: 'Barlow', sans-serif;
     font-size: 0.875rem;
@@ -356,14 +298,14 @@
     outline: none;
   }
   .form-input::placeholder {
-    color: oklch(0.55 0.008 260);
+    color: oklch(0.55 0.010 260);
   }
   .form-input:focus {
-    border-color: rgba(192, 57, 43, 0.6);
+    border-color: oklch(0.72 0.18 75 / 60%);
   }
   select.form-input option {
-    background-color: oklch(0.20 0.004 260);
-    color: oklch(0.93 0.005 65);
+    background-color: oklch(0.20 0.005 260);
+    color: oklch(0.92 0.005 65);
   }
 
   /* ── Scroll animations ── */
@@ -396,33 +338,19 @@
     left: 0;
     width: 0;
     height: 1.5px;
-    background-color: #C0392B;
+    background-color: oklch(0.72 0.18 75);
     transition: width 0.2s ease;
   }
   .nav-link:hover {
-    color: oklch(0.93 0.005 65);
+    color: oklch(0.92 0.005 65);
   }
   .nav-link:hover::after {
     width: 100%;
   }
   .nav-link.active {
-    color: #C0392B;
+    color: oklch(0.72 0.18 75);
   }
   .nav-link.active::after {
     width: 100%;
-  }
-
-  /* ── Brand color utilities ── */
-  .text-brand {
-    color: #C0392B;
-  }
-  .bg-brand {
-    background-color: #C0392B;
-  }
-  .border-brand {
-    border-color: #C0392B;
-  }
-  .text-brand-orange {
-    color: #D35400;
   }
 }

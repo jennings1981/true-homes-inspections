@@ -25,7 +25,7 @@ export default function Reviews() {
           </h1>
           <div className="flex items-center gap-3 mb-4">
             <div className="flex gap-1">
-              {[1,2,3,4,5].map(i => <Star key={i} size={20} className="text-[#C0392B] fill-[#D35400]" />)}
+              {[1,2,3,4,5].map(i => <Star key={i} size={20} className="text-amber-400 fill-amber-400" />)}
             </div>
             <span className="font-['Barlow_Condensed'] font-700 text-2xl text-white">5.0</span>
             <span className="text-muted-foreground text-sm">— Based on 100+ verified reviews</span>
@@ -44,7 +44,7 @@ export default function Reviews() {
                 <div className="flex items-center justify-between mb-3 mt-2">
                   <div className="flex gap-1">
                     {Array.from({ length: review.rating }).map((_, j) => (
-                      <Star key={j} size={13} className="text-[#C0392B] fill-[#D35400]" />
+                      <Star key={j} size={13} className="text-amber-400 fill-amber-400" />
                     ))}
                   </div>
                   <span className="text-xs text-muted-foreground">{review.date}</span>
@@ -52,7 +52,7 @@ export default function Reviews() {
                 <p className="text-sm text-muted-foreground leading-relaxed mb-5 italic">"{review.text}"</p>
                 <div>
                   <div className="font-['Barlow_Condensed'] font-700 text-white text-sm">{review.name}</div>
-                  <div className="text-xs text-[#C0392B]/70">{review.location}</div>
+                  <div className="text-xs text-amber-400/70">{review.location}</div>
                 </div>
               </div>
             ))}
@@ -60,19 +60,19 @@ export default function Reviews() {
         </div>
       </section>
 
-      <section className="py-16 bg-[#C0392B]">
+      <section className="py-16 bg-amber-500">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-white leading-tight mb-1">
+            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">
               Join Hundreds of Satisfied Clients
             </h2>
-            <p className="text-white/70 text-sm">Schedule your inspection today and experience the True Homes difference.</p>
+            <p className="text-[oklch(0.10_0.005_260)]/70 text-sm">Schedule your inspection today and experience the True Homes difference.</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
-            <Link href="/schedule" className="bg-[#1a1a1a] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-black transition-colors flex items-center gap-2">
+            <Link href="/schedule" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2">
               Schedule Now <ArrowRight size={13} />
             </Link>
-            <a href="tel:+15099984033" className="border-2 border-white text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[#1a1a1a] hover:text-white transition-colors flex items-center gap-2">
+            <a href="tel:+15099984033" className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2">
               <Phone size={13} /> (509) 998-4033
             </a>
           </div>
