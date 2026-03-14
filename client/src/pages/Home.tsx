@@ -13,6 +13,7 @@ import {
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/hero-north-idaho-M9dpChiYReqSTwNmxxV7rj.webp";
 const INSPECTOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/hero-house-inspection-63aGz43DbvpCKgC7R3bn5U.webp";
+const TIM_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/tim-photo_8065e303.png";
 const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/north-idaho-landscape-aGtsL65CuHUy9D4qReAaQj.webp";
 const INTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/inspection-interior-5kwkj8D2DYcxBYd4VkaTu6.webp";
 
@@ -230,6 +231,66 @@ export default function Home() {
                   </div>
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── MEET TIM ── */}
+        <section className="py-20 bg-[oklch(0.18_0.005_260)]">
+          <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+              {/* Photo */}
+              <div className="fade-up flex justify-center lg:justify-start">
+                <div className="relative">
+                  {/* Orange accent border */}
+                  <div
+                    className="absolute inset-0 border-2 border-[#D35400]"
+                    style={{ transform: "translate(12px, 12px)" }}
+                  />
+                  <img
+                    src={TIM_PHOTO}
+                    alt="Tim — Certified Home Inspector, True Homes Inspections"
+                    className="relative z-10 w-72 h-80 object-cover object-top shadow-2xl"
+                    style={{ objectPosition: "center 10%" }}
+                  />
+                  {/* Badge */}
+                  <div className="absolute -bottom-5 -right-5 z-20 bg-[#D35400] px-4 py-3 shadow-xl">
+                    <div className="font-['Barlow_Condensed'] font-800 text-white text-xl leading-none">20+</div>
+                    <div className="font-['Barlow'] text-white/80 text-xs uppercase tracking-wider">Years Exp.</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="fade-up">
+                <div className="section-label mb-4">Meet Your Inspector</div>
+                <h2 className="font-['Barlow_Condensed'] font-800 text-4xl md:text-5xl text-white leading-tight mb-2">
+                  Hi, I'm Tim
+                </h2>
+                <div className="font-['Barlow_Condensed'] font-600 text-[#D35400] text-lg tracking-wide uppercase mb-5">
+                  Owner &amp; Certified Home Inspector
+                </div>
+                <div className="amber-divider mb-6" />
+                <blockquote className="border-l-2 border-[#D35400] pl-5 mb-6">
+                  <p className="font-['Barlow_Condensed'] font-600 text-xl text-white leading-snug italic">
+                    "My mission is simple: give every client the honest, thorough inspection I'd want for my own family's home — so you can buy or sell with complete confidence."
+                  </p>
+                </blockquote>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  With over 20 years of hands-on experience in construction and home inspection across North Idaho, I've seen it all — from moisture intrusion in lakefront cabins to aging electrical panels in Sandpoint's historic neighborhoods. I founded True Homes Inspections because I believe every buyer deserves an inspector who works for <em>them</em>, not the deal.
+                </p>
+                <p className="text-muted-foreground leading-relaxed mb-8">
+                  Every inspection I perform is thorough, unhurried, and backed by InterNACHI certification and Idaho state licensing. You'll receive a detailed digital report with photos within 48 hours — and I'm always available to answer your questions.
+                </p>
+                <div className="flex flex-wrap gap-4">
+                  <Link href="/about" className="btn-amber text-xs">
+                    Read Tim's Full Story <ArrowRight size={13} />
+                  </Link>
+                  <Link href="/schedule" className="btn-outline-amber text-xs">
+                    Schedule with Tim <ArrowRight size={13} />
+                  </Link>
+                </div>
+              </div>
             </div>
           </div>
         </section>

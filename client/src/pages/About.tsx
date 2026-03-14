@@ -1,167 +1,339 @@
 /**
  * About Page — True Homes Inspections
- * "Territorial Authority" design: dark slate + amber
+ * Tim's full story: background, credentials, values, and personal mission
+ * Brand: dark slate + orange #D35400
  */
+import { useEffect, useRef } from "react";
 import { Link } from "wouter";
 import Layout from "@/components/Layout";
-import { CheckCircle, Shield, Award, Star, ArrowRight, Phone } from "lucide-react";
+import {
+  Shield, Award, CheckCircle, ArrowRight, Phone,
+  Star, Users, Home as HomeIcon, Clock
+} from "lucide-react";
 
-const ABOUT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/about-inspector-TRATKnoBszH9m4P7w9HXag.webp";
+const TIM_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/tim-photo_8065e303.png";
+const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/north-idaho-landscape-aGtsL65CuHUy9D4qReAaQj.webp";
 const INTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/inspection-interior-5kwkj8D2DYcxBYd4VkaTu6.webp";
 
 const credentials = [
-  "InterNACHI Certified Professional Inspector (CPI)",
-  "Idaho State Licensed Home Inspector",
-  "20+ Years Residential Construction Experience",
-  "Radon Measurement Certified",
-  "Continuing Education — 24 hours annually",
-  "Member: International Association of Certified Home Inspectors",
+  { icon: Shield, label: "InterNACHI Certified Professional Inspector" },
+  { icon: Award, label: "Idaho State Licensed Home Inspector" },
+  { icon: CheckCircle, label: "20+ Years Construction & Inspection Experience" },
+  { icon: HomeIcon, label: "3,500+ Inspections Completed" },
+  { icon: Clock, label: "48-Hour Digital Report Delivery" },
+  { icon: Users, label: "Locally Owned & Operated in North Idaho" },
 ];
 
 const values = [
   {
-    icon: Shield,
-    title: "Unbiased Integrity",
-    desc: "We work exclusively for you — the client. We have no financial relationship with real estate agents, contractors, or repair companies.",
+    title: "Honesty Above All",
+    desc: "I will never soften a finding to help a deal close. My job is to tell you the truth about a home — every time, without exception.",
   },
   {
-    icon: Award,
-    title: "Certified Expertise",
-    desc: "InterNACHI certified and Idaho licensed, we stay current with the latest inspection standards and North Idaho building codes.",
+    title: "Thoroughness You Can Count On",
+    desc: "I don't rush inspections. Every accessible system, component, and surface gets my full attention, because the details matter when you're making a major investment.",
   },
   {
-    icon: Star,
-    title: "Thorough Reports",
-    desc: "Our digital reports include hundreds of photos, clear explanations, and priority rankings so you know exactly what matters most.",
+    title: "Education, Not Just Reports",
+    desc: "I walk every client through the findings personally. You'll leave understanding your home — what needs immediate attention, what can wait, and what's perfectly normal.",
   },
   {
-    icon: CheckCircle,
     title: "Local Knowledge",
-    desc: "20+ years inspecting North Idaho homes means we know the region's specific issues — from snowload to moisture, radon to aging infrastructure.",
+    desc: "North Idaho homes have unique challenges: heavy snowpack, moisture intrusion, older infrastructure. I know what to look for because I've lived and worked here for decades.",
   },
 ];
 
+const timeline = [
+  {
+    year: "Early Career",
+    title: "Roots in Construction",
+    desc: "Tim began his career in residential construction, working across multiple trades and developing a deep, hands-on understanding of how homes are built — and where they fail. That foundation became the backbone of everything he does as an inspector today.",
+  },
+  {
+    year: "2004",
+    title: "Transition to Inspection",
+    desc: "After years in construction, Tim recognized that home buyers needed a trusted advocate — someone who could read a home's condition with a builder's eye and a client's heart. He earned his InterNACHI certification and began inspecting full-time across North Idaho.",
+  },
+  {
+    year: "2010",
+    title: "True Homes Inspections Founded",
+    desc: "Tim founded True Homes Inspections to build something he could be proud of: a locally owned company with a reputation for honesty, thoroughness, and genuine care for every client. The name reflects the mission — true information about your home.",
+  },
+  {
+    year: "Today",
+    title: "North Idaho's Trusted Inspector",
+    desc: "With over 3,500 inspections completed across Sandpoint, Coeur d'Alene, Post Falls, and the surrounding panhandle, Tim continues to personally perform every inspection — because he believes that's the only way to guarantee the quality his clients deserve.",
+  },
+];
+
+function useScrollAnimation() {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("visible");
+        });
+      },
+      { threshold: 0.1 }
+    );
+    const elements = ref.current?.querySelectorAll(".fade-up");
+    elements?.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+  return ref;
+}
+
 export default function About() {
+  const pageRef = useScrollAnimation();
+
   return (
     <Layout>
-      <div className="bg-[oklch(0.12_0.005_260)] py-16 border-b border-white/5">
-        <div className="container">
-          <div className="section-label mb-4">About Us</div>
-          <h1 className="font-['Barlow_Condensed'] font-800 text-5xl md:text-6xl text-white leading-tight mb-4">
-            About True Homes Inspections
-          </h1>
-          <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed">
-            North Idaho's trusted, locally owned home inspection company. Licensed, certified, and committed to protecting your investment.
-          </p>
-        </div>
-      </div>
+      <div ref={pageRef}>
 
-      <section className="py-24 bg-background">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="section-label mb-4">Our Story</div>
-              <h2 className="font-['Barlow_Condensed'] font-800 text-4xl text-white leading-tight mb-6">
-                20+ Years Protecting North Idaho Home Buyers
+        {/* ── PAGE HERO ── */}
+        <section
+          className="relative py-28 overflow-hidden"
+          style={{
+            backgroundImage: `url(${LANDSCAPE_IMG})`,
+            backgroundSize: "cover",
+            backgroundPosition: "center 40%",
+          }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/40" />
+          <div className="relative z-10 container">
+            <div className="section-label mb-4">About True Homes</div>
+            <h1 className="font-['Barlow_Condensed'] font-800 text-5xl md:text-7xl text-white leading-[0.95] tracking-tight mb-4">
+              BUILT ON HONESTY.<br />
+              <span className="text-[#D35400]">BACKED BY EXPERIENCE.</span>
+            </h1>
+            <p className="text-white/70 max-w-xl text-lg leading-relaxed">
+              True Homes Inspections is a locally owned, InterNACHI-certified home inspection company serving North Idaho since 2004. Every inspection is performed personally by Tim — because quality can't be delegated.
+            </p>
+          </div>
+        </section>
+
+        {/* ── MEET TIM — FULL INTRO ── */}
+        <section className="py-24 bg-[oklch(0.18_0.005_260)]">
+          <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              {/* Photo column */}
+              <div className="fade-up">
+                <div className="relative inline-block">
+                  <div
+                    className="absolute inset-0 border-2 border-[#D35400]"
+                    style={{ transform: "translate(14px, 14px)" }}
+                  />
+                  <img
+                    src={TIM_PHOTO}
+                    alt="Tim — Owner and Certified Home Inspector at True Homes Inspections"
+                    className="relative z-10 w-full max-w-md h-[520px] object-cover shadow-2xl"
+                    style={{ objectPosition: "center 10%" }}
+                  />
+                  {/* Credential badge */}
+                  <div className="absolute -bottom-6 -right-6 z-20 bg-[#D35400] p-5 shadow-2xl">
+                    <div className="flex gap-1 mb-1">
+                      {[1,2,3,4,5].map(i => (
+                        <Star key={i} size={12} className="text-white fill-white" />
+                      ))}
+                    </div>
+                    <div className="font-['Barlow_Condensed'] font-800 text-white text-2xl leading-none">5.0</div>
+                    <div className="font-['Barlow'] text-white/80 text-xs uppercase tracking-wider">100+ Reviews</div>
+                  </div>
+                </div>
+
+                {/* Credentials list below photo */}
+                <div className="mt-14 space-y-3">
+                  {credentials.map(({ icon: Icon, label }) => (
+                    <div key={label} className="flex items-center gap-3">
+                      <div className="w-7 h-7 bg-[#D35400]/10 flex items-center justify-center flex-shrink-0">
+                        <Icon size={14} className="text-[#D35400]" />
+                      </div>
+                      <span className="text-sm text-white/80">{label}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Story column */}
+              <div className="fade-up">
+                <div className="section-label mb-4">Meet Your Inspector</div>
+                <h2 className="font-['Barlow_Condensed'] font-800 text-4xl md:text-5xl text-white leading-tight mb-2">
+                  Tim
+                </h2>
+                <div className="font-['Barlow_Condensed'] font-600 text-[#D35400] text-lg tracking-wide uppercase mb-6">
+                  Owner &amp; Certified Home Inspector
+                </div>
+                <div className="amber-divider mb-8" />
+
+                <div className="space-y-5 text-muted-foreground leading-relaxed">
+                  <p>
+                    I grew up around construction. From an early age I was fascinated by how buildings work — the systems behind the walls, the structure beneath the floors, the details that separate a well-built home from one that's just waiting for problems to surface. That curiosity turned into a career, and that career eventually led me to home inspection.
+                  </p>
+                  <p>
+                    After spending years in residential construction across the Pacific Northwest, I made the move to North Idaho — and I fell in love with this place. The mountains, the lakes, the community. I also quickly learned that homes here face challenges you don't see everywhere else: the weight of heavy snowpack on roofs, moisture intrusion from our wet winters, older infrastructure in Sandpoint's historic neighborhoods, and radon levels that rank among the highest in the nation.
+                  </p>
+                  <p>
+                    I founded True Homes Inspections because I saw a gap: buyers needed someone who truly understood construction — not just a checklist-checker, but someone who could look at a home and understand its story. Someone who would tell them the truth, even when the truth was uncomfortable.
+                  </p>
+                  <p>
+                    That's what I do. Every single inspection I perform is personal. I don't send employees. I don't rush to fit more jobs into a day. I show up, I take my time, and I give you the honest, thorough assessment you deserve before making one of the biggest financial decisions of your life.
+                  </p>
+                  <p>
+                    When I'm not inspecting homes, you'll find me outdoors — hiking the Selkirks, fishing the Pend Oreille, or spending time with my family. North Idaho isn't just where I work. It's home. And I take that seriously.
+                  </p>
+                </div>
+
+                <blockquote className="mt-8 border-l-2 border-[#D35400] pl-5">
+                  <p className="font-['Barlow_Condensed'] font-600 text-xl text-white leading-snug italic">
+                    "I inspect every home as if my own family were moving in. That standard doesn't change — no matter the price point, no matter the timeline pressure."
+                  </p>
+                  <footer className="mt-3 text-sm text-[#D35400]">— Tim, True Homes Inspections</footer>
+                </blockquote>
+
+                <div className="mt-10 flex flex-wrap gap-4">
+                  <Link href="/schedule" className="btn-amber text-xs">
+                    Schedule with Tim <ArrowRight size={13} />
+                  </Link>
+                  <a href="tel:+15099984033" className="btn-outline-amber text-xs">
+                    <Phone size={13} /> (509) 998-4033
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── TIMELINE ── */}
+        <section className="py-24 bg-background">
+          <div className="container">
+            <div className="max-w-xl mb-16 fade-up">
+              <div className="section-label mb-4">The Journey</div>
+              <h2 className="font-['Barlow_Condensed'] font-800 text-4xl md:text-5xl text-white leading-tight">
+                Two Decades of Protecting Home Buyers
               </h2>
-              <div className="amber-divider mb-6" />
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                True Homes Inspections was founded with a single mission: to give North Idaho home buyers and sellers the honest, thorough information they need to make confident real estate decisions. Based in Coeur d'Alene and serving the entire North Idaho panhandle, we've built our reputation one inspection at a time.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-4">
-                Our inspector brings over 20 years of residential construction and inspection experience to every job. That background means we don't just identify problems — we understand why they occur, how serious they are, and what it takes to fix them.
-              </p>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                We inspect every home with the same thoroughness we'd apply if our own family were moving in. That standard has earned us hundreds of five-star reviews and the trust of North Idaho's real estate community.
-              </p>
-              <Link href="/schedule" className="btn-amber text-xs">
-                Schedule Your Inspection <ArrowRight size={13} />
-              </Link>
             </div>
             <div className="relative">
-              <div className="amber-frame">
+              {/* Vertical line */}
+              <div className="absolute left-6 top-0 bottom-0 w-px bg-[#D35400]/20 hidden md:block" />
+              <div className="space-y-8">
+                {timeline.map((item, i) => (
+                  <div
+                    key={item.year}
+                    className="fade-up relative md:pl-20"
+                    style={{ transitionDelay: `${i * 100}ms` }}
+                  >
+                    {/* Dot */}
+                    <div className="hidden md:flex absolute left-0 top-1 w-12 h-12 bg-[#D35400]/10 border border-[#D35400]/30 items-center justify-center">
+                      <div className="w-2 h-2 bg-[#D35400] rounded-full" />
+                    </div>
+                    <div className="bg-[oklch(0.20_0.005_260)] border border-white/5 p-6 hover:border-[#D35400]/20 transition-colors">
+                      <div className="font-['Barlow_Condensed'] font-700 text-[#D35400] text-sm tracking-widest uppercase mb-2">
+                        {item.year}
+                      </div>
+                      <h3 className="font-['Barlow_Condensed'] font-700 text-xl text-white mb-2">{item.title}</h3>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── VALUES ── */}
+        <section className="py-24 bg-[oklch(0.18_0.005_260)]">
+          <div className="container">
+            <div className="text-center max-w-2xl mx-auto mb-16 fade-up">
+              <div className="section-label justify-center mb-4">What We Stand For</div>
+              <h2 className="font-['Barlow_Condensed'] font-800 text-4xl md:text-5xl text-white leading-tight">
+                The Values Behind Every Inspection
+              </h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {values.map((v, i) => (
+                <div
+                  key={v.title}
+                  className="fade-up bg-[oklch(0.20_0.005_260)] border border-white/5 p-8 hover:border-[#D35400]/20 transition-colors"
+                  style={{ transitionDelay: `${i * 80}ms` }}
+                >
+                  <div className="amber-divider mb-5" />
+                  <h3 className="font-['Barlow_Condensed'] font-700 text-2xl text-white mb-3">{v.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{v.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── STATS SPLIT ── */}
+        <section className="py-24 bg-background">
+          <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="fade-up">
                 <img
-                  src={ABOUT_IMG}
-                  alt="True Homes Inspections — certified home inspector"
-                  className="w-full h-[520px] object-cover relative z-10"
+                  src={INTERIOR_IMG}
+                  alt="Home inspection in progress — True Homes Inspections"
+                  className="w-full h-[420px] object-cover"
                 />
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-20 bg-[oklch(0.18_0.005_260)]">
-        <div className="container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <div className="section-label mb-4">Credentials</div>
-              <h2 className="font-['Barlow_Condensed'] font-800 text-4xl text-white leading-tight mb-6">
-                Licensed, Certified &amp; Experienced
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-8">
-                Our inspector holds all required Idaho state licenses and maintains active InterNACHI certification — the gold standard in the home inspection industry.
-              </p>
-              <ul className="space-y-3">
-                {credentials.map((cred) => (
-                  <li key={cred} className="flex items-start gap-3 text-sm text-white/80">
-                    <CheckCircle size={15} className="text-[#D35400] flex-shrink-0 mt-0.5" />
-                    {cred}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <img
-                src={INTERIOR_IMG}
-                alt="Home inspection in progress — North Idaho"
-                className="w-full h-[400px] object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-background">
-        <div className="container">
-          <div className="text-center max-w-2xl mx-auto mb-14">
-            <div className="section-label justify-center mb-4">Our Values</div>
-            <h2 className="font-['Barlow_Condensed'] font-800 text-4xl text-white leading-tight">
-              Why Clients Choose True Homes
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {values.map((v) => (
-              <div key={v.title} className="service-card">
-                <div className="w-10 h-10 bg-[#D35400]/10 flex items-center justify-center mb-4">
-                  <v.icon size={20} className="text-[#D35400]" />
+              <div className="fade-up">
+                <div className="section-label mb-4">By the Numbers</div>
+                <h2 className="font-['Barlow_Condensed'] font-800 text-4xl md:text-5xl text-white leading-tight mb-8">
+                  Experience You Can Measure
+                </h2>
+                <div className="grid grid-cols-2 gap-6">
+                  {[
+                    { value: "20+", label: "Years of Experience" },
+                    { value: "3,500+", label: "Inspections Completed" },
+                    { value: "100+", label: "Five-Star Reviews" },
+                    { value: "48hr", label: "Report Turnaround" },
+                  ].map((stat) => (
+                    <div key={stat.label} className="border-l-2 border-[#D35400] pl-5">
+                      <div className="font-['Barlow_Condensed'] font-800 text-4xl text-white leading-none mb-1">
+                        {stat.value}
+                      </div>
+                      <div className="text-sm text-muted-foreground">{stat.label}</div>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="font-['Barlow_Condensed'] font-700 text-xl text-white mb-2">{v.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
+                <div className="mt-10">
+                  <Link href="/reviews" className="btn-outline-amber text-xs">
+                    Read Client Reviews <ArrowRight size={13} />
+                  </Link>
+                </div>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section className="py-16 bg-[#D35400]">
-        <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
-          <div>
-            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">
-              Ready to Work With North Idaho's Best?
+        {/* ── CTA ── */}
+        <section className="py-20 bg-[#D35400]">
+          <div className="container text-center">
+            <h2 className="font-['Barlow_Condensed'] font-800 text-4xl md:text-5xl text-[oklch(0.10_0.005_260)] leading-tight mb-4">
+              Ready to Work with Tim?
             </h2>
-            <p className="text-[oklch(0.10_0.005_260)]/70 text-sm">Schedule your inspection today or call us with any questions.</p>
+            <p className="text-[oklch(0.10_0.005_260)]/70 max-w-xl mx-auto mb-8 leading-relaxed">
+              Schedule your North Idaho home inspection today. Tim will personally perform your inspection and deliver a comprehensive report within 48 hours.
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <Link
+                href="/schedule"
+                className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2"
+              >
+                Schedule Online <ArrowRight size={14} />
+              </Link>
+              <a
+                href="tel:+15099984033"
+                className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2"
+              >
+                <Phone size={14} /> (509) 998-4033
+              </a>
+            </div>
           </div>
-          <div className="flex gap-3 flex-shrink-0">
-            <Link href="/schedule" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2">
-              Schedule Now <ArrowRight size={13} />
-            </Link>
-            <a href="tel:+15099984033" className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2">
-              <Phone size={13} /> Call Us
-            </a>
-          </div>
-        </div>
-      </section>
+        </section>
+
+      </div>
     </Layout>
   );
 }
