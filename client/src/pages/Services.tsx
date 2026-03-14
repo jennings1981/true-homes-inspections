@@ -88,8 +88,8 @@ export default function Services() {
               className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${i % 2 === 1 ? "lg:grid-flow-dense" : ""}`}
             >
               <div className={i % 2 === 1 ? "lg:col-start-2" : ""}>
-                <div className="w-12 h-12 bg-amber-500/10 flex items-center justify-center mb-5">
-                  <svc.icon size={24} className="text-amber-400" />
+                <div className="w-12 h-12 bg-[#C0392B]/10 flex items-center justify-center mb-5">
+                  <svc.icon size={24} className="text-[#C0392B]" />
                 </div>
                 <h2 className="font-['Barlow_Condensed'] font-800 text-4xl text-white leading-tight mb-4">
                   {svc.title}
@@ -99,12 +99,12 @@ export default function Services() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
                   {svc.includes.map((item) => (
                     <div key={item} className="flex items-center gap-2 text-sm text-white/70">
-                      <CheckCircle size={13} className="text-amber-400 flex-shrink-0" />
+                      <CheckCircle size={13} className="text-[#C0392B] flex-shrink-0" />
                       {item}
                     </div>
                   ))}
                 </div>
-                <Link href={svc.href} className="btn-amber text-xs">
+                <Link href={svc.href} className="btn-primary text-xs">
                   Learn More <ArrowRight size={13} />
                 </Link>
               </div>
@@ -120,19 +120,19 @@ export default function Services() {
         </div>
       </section>
 
-      <section className="py-16 bg-amber-500">
+      <section className="py-16 bg-[#C0392B]">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">
+            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-white leading-tight mb-1">
               Questions About Our Services?
             </h2>
-            <p className="text-[oklch(0.10_0.005_260)]/70 text-sm">Call us or schedule online — we're happy to help.</p>
+            <p className="text-white/70 text-sm">Call us or schedule online — we're happy to help.</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
-            <Link href="/schedule" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2">
+            <Link href="/schedule" className="bg-[#1a1a1a] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-black transition-colors flex items-center gap-2">
               Schedule Now <ArrowRight size={13} />
             </Link>
-            <a href="tel:+15099984033" className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2">
+            <a href="tel:+15099984033" className="border-2 border-white text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[#1a1a1a] hover:text-white transition-colors flex items-center gap-2">
               <Phone size={13} /> (509) 998-4033
             </a>
           </div>

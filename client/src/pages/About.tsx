@@ -74,7 +74,7 @@ export default function About() {
               <p className="text-muted-foreground leading-relaxed mb-8">
                 We inspect every home with the same thoroughness we'd apply if our own family were moving in. That standard has earned us hundreds of five-star reviews and the trust of North Idaho's real estate community.
               </p>
-              <Link href="/schedule" className="btn-amber text-xs">
+              <Link href="/schedule" className="btn-primary text-xs">
                 Schedule Your Inspection <ArrowRight size={13} />
               </Link>
             </div>
@@ -105,7 +105,7 @@ export default function About() {
               <ul className="space-y-3">
                 {credentials.map((cred) => (
                   <li key={cred} className="flex items-start gap-3 text-sm text-white/80">
-                    <CheckCircle size={15} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                    <CheckCircle size={15} className="text-[#C0392B] flex-shrink-0 mt-0.5" />
                     {cred}
                   </li>
                 ))}
@@ -133,8 +133,8 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((v) => (
               <div key={v.title} className="service-card">
-                <div className="w-10 h-10 bg-amber-500/10 flex items-center justify-center mb-4">
-                  <v.icon size={20} className="text-amber-400" />
+                <div className="w-10 h-10 bg-[#C0392B]/10 flex items-center justify-center mb-4">
+                  <v.icon size={20} className="text-[#C0392B]" />
                 </div>
                 <h3 className="font-['Barlow_Condensed'] font-700 text-xl text-white mb-2">{v.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{v.desc}</p>
@@ -144,7 +144,7 @@ export default function About() {
         </div>
       </section>
 
-      <section className="py-16 bg-amber-500">
+      <section className="py-16 bg-[#C0392B]">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
             <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">

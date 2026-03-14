@@ -42,20 +42,20 @@ export default function SampleReports() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                 {reportFeatures.map((feature) => (
                   <div key={feature.title} className="service-card">
-                    <div className="w-8 h-8 bg-amber-500/10 flex items-center justify-center mb-3">
-                      <feature.icon size={16} className="text-amber-400" />
+                    <div className="w-8 h-8 bg-[#C0392B]/10 flex items-center justify-center mb-3">
+                      <feature.icon size={16} className="text-[#C0392B]" />
                     </div>
                     <h3 className="font-['Barlow_Condensed'] font-700 text-base text-white mb-1">{feature.title}</h3>
                     <p className="text-xs text-muted-foreground leading-relaxed">{feature.desc}</p>
                   </div>
                 ))}
               </div>
-              <div className="bg-[oklch(0.20_0.005_260)] border border-amber-500/20 p-5">
+              <div className="bg-[oklch(0.20_0.005_260)] border border-[#C0392B]/20 p-5">
                 <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-3">Request a Sample Report</h3>
                 <p className="text-sm text-muted-foreground mb-4">Want to see a full sample report before scheduling? Call or email us and we'll send one right over.</p>
                 <div className="flex gap-3">
-                  <a href="tel:+15099984033" className="btn-amber text-xs"><Phone size={13} /> Call Us</a>
-                  <a href="mailto:info@truehomesinspections.com" className="btn-outline-amber text-xs">Email Us</a>
+                  <a href="tel:+15099984033" className="btn-primary text-xs"><Phone size={13} /> Call Us</a>
+                  <a href="mailto:info@truehomesinspections.com" className="btn-outline-primary text-xs">Email Us</a>
                 </div>
               </div>
             </div>
@@ -79,13 +79,13 @@ export default function SampleReports() {
                     "Accessible on any device (phone, tablet, computer)",
                   ].map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-white/70">
-                      <CheckCircle size={13} className="text-amber-400 flex-shrink-0 mt-0.5" />
+                      <CheckCircle size={13} className="text-[#C0392B] flex-shrink-0 mt-0.5" />
                       {item}
                     </li>
                   ))}
                 </ul>
                 <div className="mt-8 pt-6 border-t border-white/5">
-                  <Link href="/schedule" className="btn-amber w-full justify-center text-xs">
+                  <Link href="/schedule" className="btn-primary w-full justify-center text-xs">
                     Schedule Your Inspection <ArrowRight size={13} />
                   </Link>
                 </div>
@@ -95,19 +95,19 @@ export default function SampleReports() {
         </div>
       </section>
 
-      <section className="py-16 bg-amber-500">
+      <section className="py-16 bg-[#C0392B]">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">
+            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-white leading-tight mb-1">
               Ready for Your Detailed Report?
             </h2>
-            <p className="text-[oklch(0.10_0.005_260)]/70 text-sm">Schedule your inspection and receive your report within 48 hours.</p>
+            <p className="text-white/70 text-sm">Schedule your inspection and receive your report within 48 hours.</p>
           </div>
           <div className="flex gap-3 flex-shrink-0">
-            <Link href="/schedule" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2">
+            <Link href="/schedule" className="bg-[#1a1a1a] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-black transition-colors flex items-center gap-2">
               Schedule Now <ArrowRight size={13} />
             </Link>
-            <a href="tel:+15099984033" className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2">
+            <a href="tel:+15099984033" className="border-2 border-white text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[#1a1a1a] hover:text-white transition-colors flex items-center gap-2">
               <Phone size={13} /> (509) 998-4033
             </a>
           </div>
