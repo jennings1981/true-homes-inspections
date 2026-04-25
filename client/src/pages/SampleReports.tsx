@@ -51,12 +51,9 @@ export default function SampleReports() {
                 ))}
               </div>
               <div className="bg-[oklch(0.20_0.005_260)] border border-[#D35400]/20 p-5">
-                <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-3">Request a Sample Report</h3>
-                <p className="text-sm text-muted-foreground mb-4">Want to see a full sample report before scheduling? Call or email us and we'll send one right over.</p>
-                <div className="flex gap-3">
-                  <a href="tel:+12082439706" className="btn-amber text-xs"><Phone size={13} /> Call Tim</a>
-                  <a href="mailto:info@truehomesinspections.com" className="btn-outline-amber text-xs">Email Us</a>
-                </div>
+                <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-3">Questions About Reports?</h3>
+                <p className="text-sm text-muted-foreground mb-4">Want to see a full sample report before scheduling? Call Tim and he'll walk you through it.</p>
+                <a href="tel:+12082439706" className="btn-amber text-xs flex items-center gap-2 w-full justify-center"><Phone size={13} /> Call Tim — 208-243-9706</a>
               </div>
             </div>
 

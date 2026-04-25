@@ -174,43 +174,25 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Right: Quick quote form */}
+              {/* Right: Call CTA panel */}
               <div className="lg:ml-auto w-full max-w-sm">
-                <div className="bg-[oklch(0.12_0.005_260)]/90 backdrop-blur-sm border border-white/10 p-6">
-                  <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white tracking-wide mb-1">
-                    Request a Quote
+                <div className="bg-[oklch(0.12_0.005_260)]/90 backdrop-blur-sm border border-[#D35400]/30 p-8 text-center">
+                  <div className="w-16 h-16 rounded-full bg-[#D35400]/10 border-2 border-[#D35400] flex items-center justify-center mx-auto mb-5">
+                    <Phone size={28} className="text-[#D35400]" />
+                  </div>
+                  <h3 className="font-['Barlow_Condensed'] font-800 text-2xl text-white tracking-wide mb-2">
+                    Call Tim Directly
                   </h3>
-                  <p className="text-xs text-muted-foreground mb-5">We'll respond within 1 business hour.</p>
-                  <form className="space-y-3" onSubmit={(e) => e.preventDefault()}>
-                    <input
-                      type="text"
-                      placeholder="Your Name"
-                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-[#D35400]/60 transition-colors"
-                    />
-                    <input
-                      type="tel"
-                      placeholder="Phone Number"
-                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-[#D35400]/60 transition-colors"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Property Address"
-                      className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-white placeholder:text-muted-foreground focus:outline-none focus:border-[#D35400]/60 transition-colors"
-                    />
-                    <select className="w-full bg-white/5 border border-white/10 px-3 py-2.5 text-sm text-muted-foreground focus:outline-none focus:border-[#D35400]/60 transition-colors">
-                      <option value="">Select Service</option>
-                      <option>Buyer Home Inspection</option>
-                      <option>Pre-Listing Inspection</option>
-                      <option>New Construction Inspection</option>
-                      <option>Radon Testing</option>
-                      <option>Well Water Testing</option>
-                      <option>Sewer Scope Inspection</option>
-                      <option>Lead, Mold &amp; Pest</option>
-                    </select>
-                    <a href="tel:+12082439706" className="btn-amber w-full justify-center text-xs flex items-center gap-2">
-                      <Phone size={13} /> Call Tim Now — 208-243-9706
-                    </a>
-                  </form>
+                  <p className="text-sm text-white/60 mb-6 leading-relaxed">
+                    Skip the forms. Talk to Tim personally — same-week appointments often available.
+                  </p>
+                  <a
+                    href="tel:+12082439706"
+                    className="btn-amber w-full justify-center text-base flex items-center gap-3 py-4"
+                  >
+                    <Phone size={18} /> 208-243-9706
+                  </a>
+                  <p className="text-xs text-white/40 mt-4">Mon–Sat 7am–7pm · North Idaho</p>
                 </div>
               </div>
             </div>
