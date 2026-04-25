@@ -27,9 +27,12 @@ export default function Schedule() {
           <h1 className="font-['Barlow_Condensed'] font-800 text-5xl md:text-6xl text-white leading-tight mb-4">
             Schedule Your Inspection
           </h1>
-          <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed">
-            Fill out the form below and we'll contact you within 1 business hour to confirm your appointment. Same-week scheduling often available.
+          <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed mb-6">
+            The fastest way to book is to call Tim directly. Same-week scheduling is often available.
           </p>
+          <a href="tel:+12082439706" className="btn-amber text-sm flex items-center gap-2 w-fit">
+            <Phone size={14} /> Call Tim Now &mdash; 208-243-9706
+          </a>
         </div>
       </div>
 
@@ -49,7 +52,7 @@ export default function Schedule() {
                   </p>
                   <p className="text-sm text-muted-foreground">
                     Questions? Call us directly at{" "}
-                    <a href="tel:+15099984033" className="text-[#D35400] hover:text-[#E8660A] transition-colors">(509) 998-4033</a>
+                    <a href="tel:+12082439706" className="text-[#D35400] hover:text-[#E8660A] transition-colors">208-243-9706</a>
                   </p>
                 </div>
               ) : (
@@ -188,21 +191,15 @@ export default function Schedule() {
 
             {/* Sidebar */}
             <div className="space-y-5">
-              <div className="bg-[oklch(0.20_0.005_260)] border border-white/5 p-6">
-                <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-4">Contact Us Directly</h3>
-                <div className="space-y-3">
-                  <a href="tel:+15099984033" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-[#D35400] transition-colors">
-                    <Phone size={14} className="text-[#D35400] flex-shrink-0" />
-                    (509) 998-4033
-                  </a>
-                  <a href="mailto:info@truehomesinspections.com" className="flex items-center gap-3 text-sm text-muted-foreground hover:text-[#D35400] transition-colors">
-                    <Mail size={14} className="text-[#D35400] flex-shrink-0" />
-                    info@truehomesinspections.com
-                  </a>
-                  <div className="flex items-center gap-3 text-sm text-muted-foreground">
-                    <Clock size={14} className="text-[#D35400] flex-shrink-0" />
-                    Mon–Sat: 7am–7pm
-                  </div>
+              <div className="bg-[oklch(0.20_0.005_260)] border border-[#D35400]/20 p-6">
+                <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-2">Call Tim Directly</h3>
+                <p className="text-xs text-muted-foreground mb-4">The fastest way to book your inspection.</p>
+                <a href="tel:+12082439706" className="btn-amber text-sm flex items-center gap-2 w-full justify-center mb-4">
+                  <Phone size={14} /> 208-243-9706
+                </a>
+                <div className="flex items-center gap-3 text-sm text-muted-foreground">
+                  <Clock size={14} className="text-[#D35400] flex-shrink-0" />
+                  Mon–Sat: 7am–7pm
                 </div>
               </div>
 
@@ -213,7 +210,7 @@ export default function Schedule() {
                     "Response within 1 business hour",
                     "Same-week appointments often available",
                     "2–4 hours on-site inspection",
-                    "Report delivered within 24–48 hours",
+                    "Report delivered within 24 hours — guaranteed",
                     "Inspector available for questions",
                     "Attend your inspection — we encourage it",
                   ].map((item) => (

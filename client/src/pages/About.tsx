@@ -16,7 +16,7 @@ const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/
 const INTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/inspection-interior-5kwkj8D2DYcxBYd4VkaTu6.webp";
 
 const credentials = [
-  { icon: Shield, label: "InterNACHI Certified Professional Inspector" },
+  { icon: Shield, label: "ASHI Certified Professional Inspector" },
   { icon: Award, label: "Idaho State Licensed Home Inspector" },
   { icon: CheckCircle, label: "20+ Years Construction & Inspection Experience" },
   { icon: HomeIcon, label: "3,500+ Inspections Completed" },
@@ -52,7 +52,7 @@ const timeline = [
   {
     year: "2004",
     title: "Transition to Inspection",
-    desc: "After years in construction, Tim recognized that home buyers needed a trusted advocate — someone who could read a home's condition with a builder's eye and a client's heart. He earned his InterNACHI certification and began inspecting full-time across North Idaho.",
+    desc: "After years in construction, Tim recognized that home buyers needed a trusted advocate — someone who could read a home's condition with a builder's eye and a client's heart. He earned his ASHI certification and began inspecting full-time across North Idaho.",
   },
   {
     year: "2010",
@@ -108,7 +108,7 @@ export default function About() {
               <span className="text-[#D35400]">BACKED BY EXPERIENCE.</span>
             </h1>
             <p className="text-white/70 max-w-xl text-lg leading-relaxed">
-              True Homes Inspections is a locally owned, InterNACHI-certified home inspection company serving North Idaho since 2004. Every inspection is performed personally by Tim — because quality can't be delegated.
+              True Homes Inspections is a locally owned, ASHI-certified home inspection company serving North Idaho since 2004. Every inspection is performed personally by Tim — because quality can't be delegated.
             </p>
           </div>
         </section>
@@ -195,8 +195,8 @@ export default function About() {
                   <Link href="/schedule" className="btn-amber text-xs">
                     Schedule with Tim <ArrowRight size={13} />
                   </Link>
-                  <a href="tel:+15099984033" className="btn-outline-amber text-xs">
-                    <Phone size={13} /> (509) 998-4033
+                  <a href="tel:+12082439706" className="btn-outline-amber text-xs">
+                    <Phone size={13} /> 208-243-9706
                   </a>
                 </div>
               </div>
@@ -324,10 +324,10 @@ export default function About() {
                 Schedule Online <ArrowRight size={14} />
               </Link>
               <a
-                href="tel:+15099984033"
+                href="tel:+12082439706"
                 className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2"
               >
-                <Phone size={14} /> (509) 998-4033
+                <Phone size={14} /> 208-243-9706
               </a>
             </div>
           </div>

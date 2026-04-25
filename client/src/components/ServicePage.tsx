@@ -49,7 +49,7 @@ export default function ServicePage({ title, subtitle, description, longDesc, in
               </div>
               <div className="mt-8 flex gap-3">
                 <Link href="/schedule" className="btn-amber text-xs">Schedule Now <ArrowRight size={13} /></Link>
-                <a href="tel:+15099984033" className="btn-outline-amber text-xs"><Phone size={13} /> Call Us</a>
+                <a href="tel:+12082439706" className="btn-outline-amber text-xs"><Phone size={13} /> Call Tim</a>
               </div>
             </div>
             <div>
@@ -59,7 +59,7 @@ export default function ServicePage({ title, subtitle, description, longDesc, in
                 <p className="text-sm text-muted-foreground mb-4">Call us or schedule online. Same-week appointments often available.</p>
                 <div className="space-y-3">
                   <Link href="/schedule" className="btn-amber w-full justify-center text-xs">Book Online <ArrowRight size={13} /></Link>
-                  <a href="tel:+15099984033" className="btn-outline-amber w-full justify-center text-xs"><Phone size={13} /> (509) 998-4033</a>
+                  <a href="tel:+12082439706" className="btn-outline-amber w-full justify-center text-xs"><Phone size={13} /> 208-243-9706</a>
                 </div>
               </div>
             </div>
@@ -94,7 +94,7 @@ export default function ServicePage({ title, subtitle, description, longDesc, in
             <Link href="/schedule" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2">
               Schedule Now <ArrowRight size={13} />
             </Link>
-            <a href="tel:+15099984033" className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2">
+            <a href="tel:+12082439706" className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2">
               <Phone size={13} /> Call Us
             </a>
           </div>

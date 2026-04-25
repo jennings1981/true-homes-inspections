@@ -10,7 +10,7 @@ export default function CdaInspection() {
       paragraphs={[
         "Coeur d'Alene is one of the fastest-growing cities in the Pacific Northwest, with a booming real estate market that attracts buyers from across the country. Whether you're purchasing a lakefront home on Lake Coeur d'Alene, a property in an established neighborhood, or new construction in one of the area's many developments, True Homes Inspections provides the thorough inspection you need.",
         "Our inspector has extensive experience with Coeur d'Alene's diverse housing stock — from historic homes in the older neighborhoods to modern construction in rapidly developing areas like Hayden and Rathdrum. We understand the specific issues common to Kootenai County homes and provide honest, unbiased assessments.",
-        "As a locally owned company based in Coeur d'Alene, we're invested in this community. We provide the same thorough inspection we'd want for our own families, backed by InterNACHI certification and Idaho state licensing.",
+        "As a locally owned company based in Coeur d'Alene, we're invested in this community. We provide the same thorough inspection we'd want for our own families, backed by ASHI certification and Idaho state licensing.",
       ]}
       localFacts={[
         "Rapid growth means many new construction homes with builder defects",

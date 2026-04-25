@@ -22,6 +22,9 @@ import SampleReports from "./pages/SampleReports";
 import Blog from "./pages/Blog";
 import Schedule from "./pages/Schedule";
 import Contact from "./pages/Contact";
+import WellWaterTesting from "./pages/WellWaterTesting";
+import SewerScope from "./pages/SewerScope";
+import LeadMoldPest from "./pages/LeadMoldPest";
 
 function Router() {
   return (
@@ -33,6 +36,9 @@ function Router() {
       <Route path="/services/pre-listing-inspection" component={PreListingInspection} />
       <Route path="/services/new-construction-inspection" component={NewConstructionInspection} />
       <Route path="/services/radon-testing" component={RadonTesting} />
+      <Route path="/services/well-water-testing" component={WellWaterTesting} />
+      <Route path="/services/sewer-scope" component={SewerScope} />
+      <Route path="/services/lead-mold-pest" component={LeadMoldPest} />
       <Route path="/areas-served" component={AreasServed} />
       <Route path="/sandpoint-home-inspector" component={SandpointInspection} />
       <Route path="/coeur-dalene-home-inspection" component={CdaInspection} />

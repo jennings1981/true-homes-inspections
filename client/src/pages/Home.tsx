@@ -45,16 +45,16 @@ const services = [
 ];
 
 const stats = [
-  { value: "20+", label: "Years Experience" },
+  { value: "20+", label: "Years in Construction" },
+  { value: "11+", label: "Years Inspecting" },
   { value: "3,500+", label: "Inspections Completed" },
-  { value: "100%", label: "Certified & Licensed" },
-  { value: "48hr", label: "Report Delivery" },
+  { value: "24hr", label: "Guaranteed Report" },
 ];
 
 const process = [
   { num: "01", title: "Schedule Online", desc: "Book your inspection in minutes using our simple online form or call us directly." },
   { num: "02", title: "On-Site Inspection", desc: "We spend 2–4 hours thoroughly examining every accessible system and component." },
-  { num: "03", title: "Detailed Report", desc: "Receive a comprehensive digital report with photos within 24–48 hours." },
+  { num: "03", title: "Detailed Report", desc: "Receive a comprehensive digital report with photos within 24 hours — guaranteed." },
   { num: "04", title: "Review & Act", desc: "We walk you through findings and answer every question you have." },
 ];
 
@@ -152,22 +152,22 @@ export default function Home() {
                   IN NORTH IDAHO
                 </h1>
                 <p className="text-lg text-white/80 mb-8 max-w-lg leading-relaxed font-['Barlow'] font-300">
-                  Serving Sandpoint, Coeur d'Alene, Post Falls, and surrounding communities. Licensed &amp; InterNACHI certified with 20+ years of experience protecting North Idaho home buyers.
+                  Serving Sandpoint, Coeur d'Alene, Post Falls, and surrounding communities. ASHI certified with 20+ years in construction and 11+ years inspecting homes across North Idaho.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-10">
-                  <Link href="/schedule" className="btn-amber text-sm">
-                    Schedule Your Inspection <ArrowRight size={14} />
-                  </Link>
-                  <a href="tel:+15099984033" className="btn-outline-amber text-sm">
-                    <Phone size={14} /> Call Now
+                  <a href="tel:+12082439706" className="btn-amber text-sm">
+                    <Phone size={14} /> Call Tim — 208-243-9706
                   </a>
+                  <Link href="/schedule" className="btn-outline-amber text-sm">
+                    Schedule Online <ArrowRight size={14} />
+                  </Link>
                 </div>
                 {/* Trust badges */}
                 <div className="flex flex-wrap gap-6">
                   {[
-                    { icon: Shield, label: "InterNACHI Certified" },
-                    { icon: Award, label: "Idaho Licensed" },
-                    { icon: CheckCircle, label: "20+ Years Experience" },
+                    { icon: Shield, label: "ASHI Certified" },
+                    { icon: Award, label: "Previously WA Licensed" },
+                    { icon: CheckCircle, label: "20+ Yrs Construction" },
                   ].map(({ icon: Icon, label }) => (
                     <div key={label} className="flex items-center gap-2 text-sm text-white/70">
                       <Icon size={14} className="text-[#D35400]" />
@@ -206,10 +206,13 @@ export default function Home() {
                       <option>Pre-Listing Inspection</option>
                       <option>New Construction Inspection</option>
                       <option>Radon Testing</option>
+                      <option>Well Water Testing</option>
+                      <option>Sewer Scope Inspection</option>
+                      <option>Lead, Mold &amp; Pest</option>
                     </select>
-                    <Link href="/schedule" className="btn-amber w-full justify-center text-xs">
-                      Get a Quote <ArrowRight size={13} />
-                    </Link>
+                    <a href="tel:+12082439706" className="btn-amber w-full justify-center text-xs flex items-center gap-2">
+                      <Phone size={13} /> Call Tim Now — 208-243-9706
+                    </a>
                   </form>
                 </div>
               </div>
@@ -280,7 +283,7 @@ export default function Home() {
                   With over 20 years of hands-on experience in construction and home inspection across North Idaho, I've seen it all — from moisture intrusion in lakefront cabins to aging electrical panels in Sandpoint's historic neighborhoods. I founded True Homes Inspections because I believe every buyer deserves an inspector who works for <em>them</em>, not the deal.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Every inspection I perform is thorough, unhurried, and backed by InterNACHI certification and Idaho state licensing. You'll receive a detailed digital report with photos within 48 hours — and I'm always available to answer your questions.
+                  Every inspection I perform is thorough, unhurried, and backed by ASHI certification and Idaho state licensing. You'll receive a detailed digital report with photos within 48 hours — and I'm always available to answer your questions.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="/about" className="btn-amber text-xs">
@@ -358,18 +361,18 @@ export default function Home() {
                 </h2>
                 <div className="amber-divider mb-6" />
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  True Homes Inspections is a locally owned, licensed, and InterNACHI-certified home inspection company serving the greater North Idaho region since 2004. We understand the unique challenges of homes in our region — from moisture issues caused by heavy snowpack to aging infrastructure in older Sandpoint and Coeur d'Alene neighborhoods.
+                  True Homes Inspections is a locally owned, licensed, and ASHI-certified home inspection company serving the greater North Idaho region since 2004. We understand the unique challenges of homes in our region — from moisture issues caused by heavy snowpack to aging infrastructure in older Sandpoint and Coeur d'Alene neighborhoods.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   Every inspection is performed personally by our certified inspector, ensuring consistent quality and attention to detail. We don't rush. We don't cut corners. We deliver the thorough, honest assessment you deserve before making one of the largest investments of your life.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
-                    "InterNACHI Certified Professional Inspector",
-                    "Idaho State Licensed",
-                    "20+ Years Local Experience",
+                    "ASHI Certified Professional Inspector",
+                    "Previously Licensed in WA - Now Serving North Idaho",
+                    "20+ Years in Construction, 11+ Years Inspecting",
                     "Detailed Digital Reports with Photos",
-                    "Same-Week Scheduling Available",
+                    "24-Hour Guaranteed Report Delivery",
                   ].map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm text-white/80">
                       <CheckCircle size={15} className="text-[#D35400] flex-shrink-0" />
@@ -377,9 +380,14 @@ export default function Home() {
                     </li>
                   ))}
                 </ul>
-                <Link href="/about" className="btn-amber text-xs">
-                  About True Homes <ArrowRight size={13} />
-                </Link>
+                <div className="flex flex-wrap gap-3">
+                  <a href="tel:+12082439706" className="btn-amber text-xs flex items-center gap-2">
+                    <Phone size={13} /> Call Tim — 208-243-9706
+                  </a>
+                  <Link href="/about" className="btn-outline-amber text-xs">
+                    About Tim <ArrowRight size={13} />
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -418,9 +426,9 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-12 text-center fade-up">
-              <Link href="/schedule" className="btn-amber text-sm">
-                Schedule Your Inspection <ArrowRight size={14} />
-              </Link>
+              <a href="tel:+12082439706" className="btn-amber text-sm flex items-center gap-2">
+              <Phone size={14} /> Call Tim — 208-243-9706
+            </a>
             </div>
           </div>
         </section>
@@ -441,9 +449,9 @@ export default function Home() {
               "We inspect every home as if our own family were moving in."
             </blockquote>
             <p className="text-white/60 text-sm mb-8">— True Homes Inspections, Sandpoint, Idaho</p>
-            <Link href="/schedule" className="btn-amber text-sm">
-              Book Your Inspection Today <ArrowRight size={14} />
-            </Link>
+            <a href="tel:+12082439706" className="btn-amber text-sm flex items-center gap-2">
+              <Phone size={14} /> Call Tim — 208-243-9706
+            </a>
           </div>
         </section>
 
@@ -585,10 +593,10 @@ export default function Home() {
                 Schedule Online <ArrowRight size={14} />
               </Link>
               <a
-                href="tel:+15099984033"
+                href="tel:+12082439706"
                 className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2"
               >
-                <Phone size={14} /> (509) 998-4033
+                <Phone size={14} /> 208-243-9706
               </a>
             </div>
           </div>

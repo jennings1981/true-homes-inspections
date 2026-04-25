@@ -10,7 +10,7 @@ export default function SandpointInspection() {
       paragraphs={[
         "Sandpoint is one of North Idaho's most sought-after communities, attracting buyers from across the Pacific Northwest and beyond. Whether you're purchasing a lakefront home on Lake Pend Oreille, a mountain property near Schweitzer, or a home in one of Sandpoint's established neighborhoods, True Homes Inspections provides the thorough, certified inspection you need.",
         "We've been inspecting Sandpoint homes for over 20 years. That experience gives us deep knowledge of the region's housing stock — from older craftsman homes in the historic downtown area to newer construction in Ponderay and Sagle. We understand the unique challenges these homes face, including heavy snowpack loads, moisture from the lake environment, and the aging infrastructure common in older properties.",
-        "Every Sandpoint home inspection follows InterNACHI standards and covers all accessible systems and components. You'll receive a detailed digital report with photos within 24–48 hours, and we're available to answer questions throughout the process.",
+        "Every Sandpoint home inspection follows ASHI standards and covers all accessible systems and components. You'll receive a detailed digital report with photos within 24–48 hours, and we're available to answer questions throughout the process.",
       ]}
       localFacts={[
         "Heavy snowpack can stress roofs, gutters, and structural components",

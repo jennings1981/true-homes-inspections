@@ -54,7 +54,7 @@ export default function SampleReports() {
                 <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-3">Request a Sample Report</h3>
                 <p className="text-sm text-muted-foreground mb-4">Want to see a full sample report before scheduling? Call or email us and we'll send one right over.</p>
                 <div className="flex gap-3">
-                  <a href="tel:+15099984033" className="btn-amber text-xs"><Phone size={13} /> Call Us</a>
+                  <a href="tel:+12082439706" className="btn-amber text-xs"><Phone size={13} /> Call Tim</a>
                   <a href="mailto:info@truehomesinspections.com" className="btn-outline-amber text-xs">Email Us</a>
                 </div>
               </div>
@@ -107,8 +107,8 @@ export default function SampleReports() {
             <Link href="/schedule" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2">
               Schedule Now <ArrowRight size={13} />
             </Link>
-            <a href="tel:+15099984033" className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2">
-              <Phone size={13} /> (509) 998-4033
+            <a href="tel:+12082439706" className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2">
+              <Phone size={13} /> 208-243-9706
             </a>
           </div>
         </div>

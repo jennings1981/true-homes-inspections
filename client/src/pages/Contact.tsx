@@ -25,9 +25,12 @@ export default function Contact() {
           <h1 className="font-['Barlow_Condensed'] font-800 text-5xl md:text-6xl text-white leading-tight mb-4">
             Contact True Homes Inspections
           </h1>
-          <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed">
-            Questions about our services? Ready to schedule? We're here to help. Reach out by phone, email, or the form below.
+          <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed mb-6">
+            The fastest way to reach Tim is by phone. Call or text during business hours for same-day response.
           </p>
+          <a href="tel:+12082439706" className="btn-amber text-sm flex items-center gap-2 w-fit">
+            <Phone size={14} /> Call Tim Now &mdash; 208-243-9706
+          </a>
         </div>
       </div>
 
@@ -36,21 +39,18 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact info */}
             <div className="space-y-5">
-              <div className="bg-[oklch(0.20_0.005_260)] border border-white/5 p-6">
-                <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-5">Contact Information</h3>
+              <div className="bg-[oklch(0.20_0.005_260)] border border-[#D35400]/20 p-6">
+                <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-2">Call Tim Directly</h3>
+                <p className="text-xs text-muted-foreground mb-4">The fastest way to get answers and schedule your inspection.</p>
+                <a href="tel:+12082439706" className="btn-amber text-sm flex items-center gap-2 w-full justify-center mb-5">
+                  <Phone size={14} /> 208-243-9706
+                </a>
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <Phone size={16} className="text-[#D35400] flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="text-xs text-muted-foreground mb-1 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">Phone</div>
-                      <a href="tel:+15099984033" className="text-white hover:text-[#D35400] transition-colors text-sm">(509) 998-4033</a>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <Mail size={16} className="text-[#D35400] flex-shrink-0 mt-0.5" />
-                    <div>
-                      <div className="text-xs text-muted-foreground mb-1 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">Email</div>
-                      <a href="mailto:info@truehomesinspections.com" className="text-white hover:text-[#D35400] transition-colors text-sm">info@truehomesinspections.com</a>
+                      <div className="text-xs text-muted-foreground mb-1 font-['Barlow_Condensed'] font-600 tracking-wide uppercase">Call or Text</div>
+                      <a href="tel:+12082439706" className="text-white hover:text-[#D35400] transition-colors text-sm">208-243-9706</a>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -92,7 +92,7 @@ export default function Contact() {
                   </p>
                   <p className="text-sm text-muted-foreground">
                     For urgent inquiries, call us at{" "}
-                    <a href="tel:+15099984033" className="text-[#D35400] hover:text-[#E8660A] transition-colors">(509) 998-4033</a>
+                    <a href="tel:+12082439706" className="text-[#D35400] hover:text-[#E8660A] transition-colors">208-243-9706</a>
                   </p>
                 </div>
               ) : (

@@ -1,14 +1,15 @@
 /**
  * Layout — True Homes Inspections
  * Brand: dark nav + orange accents (#D35400) + True Homes logo image
+ * Phone: 208-243-9706 (primary CTA — call Tim directly)
  */
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
-import { Phone, Mail, Menu, X, ChevronDown, MapPin, Clock, Facebook, Star } from "lucide-react";
+import { Phone, Menu, X, ChevronDown, MapPin, Clock, Facebook, Star } from "lucide-react";
 
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/true-homes-logo_ec38aa83.jpeg";
-
-// Brand orange color
+const PHONE = "208-243-9706";
+const PHONE_HREF = "tel:+12082439706";
 const ORANGE = "#D35400";
 
 const navItems = [
@@ -21,6 +22,9 @@ const navItems = [
       { label: "Pre-Listing Inspection", href: "/services/pre-listing-inspection" },
       { label: "New Construction Inspection", href: "/services/new-construction-inspection" },
       { label: "Radon Testing", href: "/services/radon-testing" },
+      { label: "Well Water Testing", href: "/services/well-water-testing" },
+      { label: "Sewer Scope Inspection", href: "/services/sewer-scope" },
+      { label: "Lead, Mold & Pest", href: "/services/lead-mold-pest" },
     ],
   },
   { label: "Areas Served", href: "/areas-served" },
@@ -41,22 +45,22 @@ function NavDropdown({ item }: { item: typeof navItems[0] }) {
       onMouseEnter={() => setOpen(true)}
       onMouseLeave={() => setOpen(false)}
     >
-      <button
+      <Link
+        href={item.href}
         className={`nav-link flex items-center gap-1 ${isActive ? "active" : ""}`}
-        onClick={() => setOpen(!open)}
+        onClick={() => setOpen(false)}
       >
         {item.label}
         <ChevronDown size={11} className={`transition-transform duration-200 ${open ? "rotate-180" : ""}`} />
-      </button>
+      </Link>
       {open && item.children && (
-        <div className="absolute top-full left-0 pt-2 z-50 min-w-[220px]">
+        <div className="absolute top-full left-0 pt-2 z-50 min-w-[240px]">
           <div className="bg-[oklch(0.12_0.005_260)] border border-white/10 shadow-2xl py-1">
             {item.children.map((child) => (
               <Link
                 key={child.href}
                 href={child.href}
                 className="block px-4 py-2.5 text-xs font-['Barlow_Condensed'] font-600 tracking-wide uppercase text-muted-foreground hover:text-white hover:bg-white/5 transition-colors"
-                style={{ ["--hover-color" as string]: ORANGE }}
                 onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
                 onMouseLeave={e => (e.currentTarget.style.color = "")}
                 onClick={() => setOpen(false)}
@@ -93,17 +97,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <div className="hidden md:block bg-[oklch(0.10_0.005_260)] border-b border-white/5">
         <div className="container flex items-center justify-between py-2">
           <div className="flex items-center gap-6">
-            <a href="tel:+15099984033" className="flex items-center gap-1.5 text-xs text-muted-foreground transition-colors"
+            <a href={PHONE_HREF} className="flex items-center gap-1.5 text-xs text-muted-foreground transition-colors font-['Barlow_Condensed'] font-600 tracking-wide"
               onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
               onMouseLeave={e => (e.currentTarget.style.color = "")}>
               <Phone size={11} style={{ color: ORANGE }} />
-              (509) 998-4033
-            </a>
-            <a href="mailto:info@truehomesinspections.com" className="flex items-center gap-1.5 text-xs text-muted-foreground transition-colors"
-              onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
-              onMouseLeave={e => (e.currentTarget.style.color = "")}>
-              <Mail size={11} style={{ color: ORANGE }} />
-              info@truehomesinspections.com
+              {PHONE}
             </a>
             <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
               <Clock size={11} style={{ color: ORANGE }} />
@@ -138,13 +136,13 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         }`}
       >
         <div className="container flex items-center justify-between py-3">
-          {/* Logo image */}
+          {/* Logo — transparent background, no white box */}
           <Link href="/">
             <img
               src={LOGO_URL}
               alt="True Homes Home Inspections"
               className="h-14 w-auto object-contain"
-              style={{ maxWidth: "220px" }}
+              style={{ maxWidth: "220px", mixBlendMode: "lighten" }}
             />
           </Link>
 
@@ -165,17 +163,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             )}
           </nav>
 
-          {/* CTA */}
+          {/* CTA — call Tim */}
           <div className="hidden lg:flex items-center gap-3">
-            <a href="tel:+15099984033" className="flex items-center gap-1.5 text-xs text-muted-foreground transition-colors font-['Barlow_Condensed'] font-600 tracking-wide"
-              onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
-              onMouseLeave={e => (e.currentTarget.style.color = "")}>
-              <Phone size={13} style={{ color: ORANGE }} />
-              (509) 998-4033
+            <a
+              href={PHONE_HREF}
+              className="flex items-center gap-1.5 text-sm font-['Barlow_Condensed'] font-700 tracking-wide transition-colors"
+              style={{ color: ORANGE }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#E8660A")}
+              onMouseLeave={e => (e.currentTarget.style.color = ORANGE)}
+            >
+              <Phone size={14} />
+              {PHONE}
             </a>
-            <Link href="/schedule" className="btn-amber text-xs py-2.5 px-5">
-              Schedule
-            </Link>
+            <a href={PHONE_HREF} className="btn-amber text-xs py-2.5 px-5 flex items-center gap-1.5">
+              <Phone size={12} /> Call Tim Now
+            </a>
           </div>
 
           {/* Mobile toggle */}
@@ -219,12 +221,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </div>
               ))}
               <div className="pt-4 border-t border-white/5 space-y-3">
-                <a href="tel:+15099984033" className="flex items-center gap-2 text-sm text-muted-foreground">
-                  <Phone size={14} style={{ color: ORANGE }} /> (509) 998-4033
+                <a href={PHONE_HREF} className="btn-amber text-xs w-full justify-center flex items-center gap-2">
+                  <Phone size={13} /> Call Tim — {PHONE}
                 </a>
-                <Link href="/schedule" className="btn-amber text-xs w-full justify-center">
-                  Schedule Inspection
-                </Link>
               </div>
             </div>
           </div>
@@ -245,28 +244,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   src={LOGO_URL}
                   alt="True Homes Home Inspections"
                   className="h-12 w-auto object-contain"
-                  style={{ maxWidth: "180px" }}
+                  style={{ maxWidth: "180px", mixBlendMode: "lighten" }}
                 />
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed mb-5">
-                North Idaho's trusted, locally owned home inspection company. Licensed, InterNACHI certified, and committed to protecting your investment.
+                North Idaho's trusted, locally owned home inspection company. ASHI certified and committed to protecting your investment.
               </p>
-              <div className="flex items-center gap-1 mb-2">
+              <div className="flex items-center gap-1 mb-4">
                 {[1,2,3,4,5].map(i => <Star key={i} size={12} style={{ color: ORANGE, fill: ORANGE }} />)}
                 <span className="text-xs text-muted-foreground ml-1">5.0 · 100+ Reviews</span>
               </div>
-              <div className="flex gap-3 mt-4">
-                <a
-                  href="https://www.facebook.com/truehomesinspections"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-8 h-8 bg-white/5 flex items-center justify-center transition-colors"
-                  onMouseEnter={e => (e.currentTarget.style.backgroundColor = `${ORANGE}22`)}
-                  onMouseLeave={e => (e.currentTarget.style.backgroundColor = "")}
-                >
-                  <Facebook size={14} className="text-muted-foreground" />
-                </a>
-              </div>
+              <a
+                href={PHONE_HREF}
+                className="btn-amber text-xs flex items-center gap-2 w-fit"
+              >
+                <Phone size={12} /> Call Tim Now
+              </a>
             </div>
 
             {/* Services */}
@@ -278,7 +271,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   { label: "Pre-Listing Inspection", href: "/services/pre-listing-inspection" },
                   { label: "New Construction Inspection", href: "/services/new-construction-inspection" },
                   { label: "Radon Testing", href: "/services/radon-testing" },
-                  { label: "Sample Reports", href: "/sample-reports" },
+                  { label: "Well Water Testing", href: "/services/well-water-testing" },
+                  { label: "Sewer Scope Inspection", href: "/services/sewer-scope" },
+                  { label: "Lead, Mold & Pest", href: "/services/lead-mold-pest" },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link href={link.href} className="text-sm text-muted-foreground transition-colors"
@@ -312,26 +307,23 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </ul>
             </div>
 
-            {/* Contact */}
+            {/* Contact — call focused */}
             <div>
-              <h4 className="font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase text-white mb-4">Contact</h4>
-              <ul className="space-y-3">
-                <li>
-                  <a href="tel:+15099984033" className="flex items-start gap-2 text-sm text-muted-foreground transition-colors"
-                    onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
-                    onMouseLeave={e => (e.currentTarget.style.color = "")}>
-                    <Phone size={13} style={{ color: ORANGE }} className="mt-0.5 flex-shrink-0" />
-                    (509) 998-4033
-                  </a>
-                </li>
-                <li>
-                  <a href="mailto:info@truehomesinspections.com" className="flex items-start gap-2 text-sm text-muted-foreground transition-colors"
-                    onMouseEnter={e => (e.currentTarget.style.color = ORANGE)}
-                    onMouseLeave={e => (e.currentTarget.style.color = "")}>
-                    <Mail size={13} style={{ color: ORANGE }} className="mt-0.5 flex-shrink-0" />
-                    info@truehomesinspections.com
-                  </a>
-                </li>
+              <h4 className="font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase text-white mb-4">Get In Touch</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed mb-4">
+                The fastest way to reach Tim is by phone. Call or text anytime during business hours.
+              </p>
+              <a
+                href={PHONE_HREF}
+                className="flex items-center gap-2 mb-3 transition-colors"
+                style={{ color: ORANGE }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#E8660A")}
+                onMouseLeave={e => (e.currentTarget.style.color = ORANGE)}
+              >
+                <Phone size={16} />
+                <span className="font-['Barlow_Condensed'] font-700 text-lg">{PHONE}</span>
+              </a>
+              <ul className="space-y-2 mb-5">
                 <li className="flex items-start gap-2 text-sm text-muted-foreground">
                   <MapPin size={13} style={{ color: ORANGE }} className="mt-0.5 flex-shrink-0" />
                   North Idaho Panhandle
@@ -341,24 +333,22 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   Mon–Sat: 7am–7pm
                 </li>
               </ul>
-              <div className="mt-5">
-                <Link href="/schedule" className="btn-amber text-xs">
-                  Schedule Inspection
-                </Link>
-              </div>
+              <a href={PHONE_HREF} className="btn-amber text-xs flex items-center gap-2 w-fit">
+                <Phone size={12} /> Call Tim Now
+              </a>
             </div>
           </div>
 
           {/* Bottom bar */}
           <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-xs text-muted-foreground">
-              © {new Date().getFullYear()} True Homes Inspections. All rights reserved. Idaho Licensed Home Inspector.
+              © {new Date().getFullYear()} True Homes Inspections. All rights reserved. ASHI Certified Home Inspector.
             </p>
             <div className="flex gap-5">
               {[
                 { label: "Privacy Policy", href: "/contact" },
                 { label: "Terms of Service", href: "/contact" },
-                { label: "InterNACHI Member", href: "https://www.nachi.org", external: true },
+                { label: "ASHI Member", href: "https://www.homeinspector.org", external: true },
               ].map((link) => (
                 link.external ? (
                   <a
