@@ -8,6 +8,8 @@ import { Link, useLocation } from "wouter";
 import { Phone, Menu, X, ChevronDown, MapPin, Clock, Facebook, Star } from "lucide-react";
 
 const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/true-homes-logo_ec38aa83.jpeg";
+const AHIT_LOGO = "/manus-storage/ahit-logo_514ff516.jpg";
+const ASHI_LOGO = "/manus-storage/ashi-logo_11eadb50.png";
 const PHONE = "208-243-9706";
 const PHONE_HREF = "tel:+12082439706";
 const ORANGE = "#D35400";
@@ -335,6 +337,19 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </ul>
               <a href={PHONE_HREF} className="btn-amber text-xs flex items-center gap-2 w-fit">
                 <Phone size={12} /> Call Tim Now
+              </a>
+            </div>
+          </div>
+
+          {/* Certification logos */}
+          <div className="border-t border-white/5 pt-8 pb-8 flex flex-col md:flex-row items-center justify-center gap-8">
+            <p className="text-xs text-muted-foreground font-['Barlow_Condensed'] font-600 tracking-widest uppercase">Certified & Trained By</p>
+            <div className="flex items-center gap-8">
+              <a href="https://www.ahit.com" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                <img src={AHIT_LOGO} alt="AHIT Certified Inspector" className="h-20 w-auto object-contain" />
+              </a>
+              <a href="https://www.homeinspector.org" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                <img src={ASHI_LOGO} alt="ASHI Certified Inspector" className="h-20 w-auto object-contain" />
               </a>
             </div>
           </div>

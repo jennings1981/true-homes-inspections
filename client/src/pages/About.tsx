@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 
 const TIM_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/tim-photo_8065e303.png";
+const AHIT_LOGO = "/manus-storage/ahit-logo_514ff516.jpg";
+const ASHI_LOGO = "/manus-storage/ashi-logo_11eadb50.png";
 const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/north-idaho-landscape-aGtsL65CuHUy9D4qReAaQj.webp";
 const INTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/inspection-interior-5kwkj8D2DYcxBYd4VkaTu6.webp";
 
@@ -152,6 +154,18 @@ export default function About() {
                       <span className="text-sm text-white/80">{label}</span>
                     </div>
                   ))}
+                </div>
+                {/* Certification logos */}
+                <div className="mt-8 pt-6 border-t border-white/10">
+                  <p className="text-xs text-muted-foreground font-['Barlow_Condensed'] font-600 tracking-widest uppercase mb-4">Certified By</p>
+                  <div className="flex items-center gap-6">
+                    <a href="https://www.ahit.com" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                      <img src={AHIT_LOGO} alt="AHIT Certified Inspector" className="h-20 w-auto object-contain" />
+                    </a>
+                    <a href="https://www.homeinspector.org" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
+                      <img src={ASHI_LOGO} alt="ASHI Certified Inspector" className="h-20 w-auto object-contain" />
+                    </a>
+                  </div>
                 </div>
               </div>
 

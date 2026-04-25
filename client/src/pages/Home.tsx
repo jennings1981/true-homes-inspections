@@ -12,6 +12,8 @@ import {
 } from "lucide-react";
 
 const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/hero-north-idaho-M9dpChiYReqSTwNmxxV7rj.webp";
+const AHIT_LOGO = "/manus-storage/ahit-logo_514ff516.jpg";
+const ASHI_LOGO = "/manus-storage/ashi-logo_11eadb50.png";
 const INSPECTOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/hero-house-inspection-63aGz43DbvpCKgC7R3bn5U.webp";
 const TIM_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/tim-photo_8065e303.png";
 const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/north-idaho-landscape-aGtsL65CuHUy9D4qReAaQj.webp";
@@ -160,7 +162,7 @@ export default function Home() {
                   </a>
                 </div>
                 {/* Trust badges */}
-                <div className="flex flex-wrap gap-6">
+                <div className="flex flex-wrap gap-6 mb-6">
                   {[
                     { icon: Shield, label: "ASHI Certified" },
                     { icon: Award, label: "Previously WA Licensed" },
@@ -171,6 +173,11 @@ export default function Home() {
                       {label}
                     </div>
                   ))}
+                </div>
+                {/* Certification logos */}
+                <div className="flex items-center gap-4">
+                  <img src={AHIT_LOGO} alt="AHIT Certified" className="h-14 w-auto object-contain opacity-90" />
+                  <img src={ASHI_LOGO} alt="ASHI Certified" className="h-14 w-auto object-contain opacity-90" />
                 </div>
               </div>
 
