@@ -52,7 +52,7 @@ const stats = [
 ];
 
 const process = [
-  { num: "01", title: "Schedule Online", desc: "Book your inspection in minutes using our simple online form or call us directly." },
+  { num: "01", title: "Call Tim Directly", desc: "Call Tim at 208-243-9706 to book your inspection. Same-week appointments are often available." },
   { num: "02", title: "On-Site Inspection", desc: "We spend 2–4 hours thoroughly examining every accessible system and component." },
   { num: "03", title: "Detailed Report", desc: "Receive a comprehensive digital report with photos within 24 hours — guaranteed." },
   { num: "04", title: "Review & Act", desc: "We walk you through findings and answer every question you have." },
@@ -158,9 +158,6 @@ export default function Home() {
                   <a href="tel:+12082439706" className="btn-amber text-sm">
                     <Phone size={14} /> Call Tim — 208-243-9706
                   </a>
-                  <Link href="/schedule" className="btn-outline-amber text-sm">
-                    Schedule Online <ArrowRight size={14} />
-                  </Link>
                 </div>
                 {/* Trust badges */}
                 <div className="flex flex-wrap gap-6">
@@ -289,9 +286,9 @@ export default function Home() {
                   <Link href="/about" className="btn-amber text-xs">
                     Read Tim's Full Story <ArrowRight size={13} />
                   </Link>
-                  <Link href="/schedule" className="btn-outline-amber text-xs">
-                    Schedule with Tim <ArrowRight size={13} />
-                  </Link>
+                  <a href="tel:+12082439706" className="btn-outline-amber text-xs flex items-center gap-2">
+                    <Phone size={13} /> Call Tim Now
+                  </a>
                 </div>
               </div>
             </div>
@@ -586,17 +583,11 @@ export default function Home() {
               Don't leave the biggest purchase of your life to chance. Schedule your North Idaho home inspection today and get a detailed report within 48 hours.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link
-                href="/schedule"
-                className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2"
-              >
-                Schedule Online <ArrowRight size={14} />
-              </Link>
               <a
                 href="tel:+12082439706"
-                className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2"
+                className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2"
               >
-                <Phone size={14} /> 208-243-9706
+                <Phone size={14} /> Call Tim Now — 208-243-9706
               </a>
             </div>
           </div>

@@ -48,19 +48,15 @@ export default function ServicePage({ title, subtitle, description, longDesc, in
                 </div>
               </div>
               <div className="mt-8 flex gap-3">
-                <Link href="/schedule" className="btn-amber text-xs">Schedule Now <ArrowRight size={13} /></Link>
-                <a href="tel:+12082439706" className="btn-outline-amber text-xs"><Phone size={13} /> Call Tim</a>
+                <a href="tel:+12082439706" className="btn-amber text-xs flex items-center gap-2"><Phone size={13} /> Call Tim — 208-243-9706</a>
               </div>
             </div>
             <div>
               <img src={INSPECTOR_IMG} alt={title} className="w-full h-[400px] object-cover mb-6" />
               <div className="bg-[oklch(0.20_0.005_260)] border border-white/5 p-6">
-                <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-4">Schedule This Inspection</h3>
-                <p className="text-sm text-muted-foreground mb-4">Call us or schedule online. Same-week appointments often available.</p>
-                <div className="space-y-3">
-                  <Link href="/schedule" className="btn-amber w-full justify-center text-xs">Book Online <ArrowRight size={13} /></Link>
-                  <a href="tel:+12082439706" className="btn-outline-amber w-full justify-center text-xs"><Phone size={13} /> 208-243-9706</a>
-                </div>
+                <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-4">Call Tim to Book</h3>
+                <p className="text-sm text-muted-foreground mb-4">Call Tim directly. Same-week appointments often available.</p>
+                <a href="tel:+12082439706" className="btn-amber w-full justify-center text-xs flex items-center gap-2"><Phone size={13} /> 208-243-9706</a>
               </div>
             </div>
           </div>
@@ -90,14 +86,9 @@ export default function ServicePage({ title, subtitle, description, longDesc, in
             <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-[oklch(0.10_0.005_260)] leading-tight mb-1">Ready to Get Started?</h2>
             <p className="text-[oklch(0.10_0.005_260)]/70 text-sm">Schedule your inspection today — same-week availability.</p>
           </div>
-          <div className="flex gap-3 flex-shrink-0">
-            <Link href="/schedule" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2">
-              Schedule Now <ArrowRight size={13} />
-            </Link>
-            <a href="tel:+12082439706" className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2">
-              <Phone size={13} /> Call Us
-            </a>
-          </div>
+          <a href="tel:+12082439706" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2 flex-shrink-0">
+            <Phone size={13} /> Call Tim — 208-243-9706
+          </a>
         </div>
       </section>
     </Layout>

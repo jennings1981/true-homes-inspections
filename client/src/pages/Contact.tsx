@@ -73,9 +73,7 @@ export default function Contact() {
               <div className="bg-[#D35400]/10 border border-[#D35400]/20 p-6">
                 <h3 className="font-['Barlow_Condensed'] font-700 text-lg text-white mb-2">Ready to Schedule?</h3>
                 <p className="text-sm text-muted-foreground mb-4">Use our scheduling form for the fastest response.</p>
-                <a href="/schedule" className="btn-amber text-xs w-full justify-center">
-                  Schedule Inspection <ArrowRight size={13} />
-                </a>
+                <a href="tel:+12082439706" className="btn-amber text-xs w-full justify-center flex items-center gap-2"><Phone size={13} /> Call Tim Now</a>
               </div>
             </div>
 

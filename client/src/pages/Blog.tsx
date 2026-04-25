@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import Layout from "@/components/Layout";
-import { ArrowRight, Calendar, ChevronRight } from "lucide-react";
+import { ArrowRight, Calendar, ChevronRight, Phone } from "lucide-react";
 
 const posts = [
   {
@@ -179,11 +179,9 @@ export default function Blog() {
             </h2>
             <p className="text-[oklch(0.10_0.005_260)]/70 text-sm">Put our expertise to work for you.</p>
           </div>
-          <div className="flex gap-3 flex-shrink-0">
-            <Link href="/schedule" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2">
-              Schedule Now <ArrowRight size={13} />
-            </Link>
-          </div>
+          <a href="tel:+12082439706" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2 flex-shrink-0">
+            <Phone size={13} /> Call Tim — 208-243-9706
+          </a>
         </div>
       </section>
     </Layout>

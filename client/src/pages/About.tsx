@@ -192,9 +192,7 @@ export default function About() {
                 </blockquote>
 
                 <div className="mt-10 flex flex-wrap gap-4">
-                  <Link href="/schedule" className="btn-amber text-xs">
-                    Schedule with Tim <ArrowRight size={13} />
-                  </Link>
+                  <a href="tel:+12082439706" className="btn-amber text-xs flex items-center gap-2"><Phone size={13} /> Call Tim Now</a>
                   <a href="tel:+12082439706" className="btn-outline-amber text-xs">
                     <Phone size={13} /> 208-243-9706
                   </a>
@@ -317,17 +315,8 @@ export default function About() {
               Schedule your North Idaho home inspection today. Tim will personally perform your inspection and deliver a comprehensive report within 48 hours.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <Link
-                href="/schedule"
-                className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2"
-              >
-                Schedule Online <ArrowRight size={14} />
-              </Link>
-              <a
-                href="tel:+12082439706"
-                className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2"
-              >
-                <Phone size={14} /> 208-243-9706
+              <a href="tel:+12082439706" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-sm tracking-widest uppercase px-8 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2">
+                <Phone size={14} /> Call Tim Now — 208-243-9706
               </a>
             </div>
           </div>

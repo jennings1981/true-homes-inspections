@@ -80,11 +80,8 @@ export default function LocationPage({ city, county, state, description, paragra
                   Same-week appointments often available. Call or book online.
                 </p>
                 <div className="space-y-3 mb-6">
-                  <Link href="/schedule" className="btn-amber w-full justify-center text-xs">
-                    Book Online <ArrowRight size={13} />
-                  </Link>
-                  <a href="tel:+12082439706" className="btn-outline-amber w-full justify-center text-xs">
-                    <Phone size={13} /> 208-243-9706
+                  <a href="tel:+12082439706" className="btn-amber w-full justify-center text-xs flex items-center gap-2">
+                    <Phone size={13} /> Call Tim — 208-243-9706
                   </a>
                 </div>
                 <div className="border-t border-white/5 pt-5 space-y-2">
@@ -115,14 +112,9 @@ export default function LocationPage({ city, county, state, description, paragra
             </h2>
             <p className="text-[oklch(0.10_0.005_260)]/70 text-sm">Licensed, certified, and locally trusted.</p>
           </div>
-          <div className="flex gap-3 flex-shrink-0">
-            <Link href="/schedule" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2">
-              Schedule Now <ArrowRight size={13} />
-            </Link>
-            <a href="tel:+12082439706" className="border-2 border-[oklch(0.10_0.005_260)] text-[oklch(0.10_0.005_260)] font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.10_0.005_260)] hover:text-white transition-colors flex items-center gap-2">
-              <Phone size={13} /> Call Us
-            </a>
-          </div>
+          <a href="tel:+12082439706" className="bg-[oklch(0.10_0.005_260)] text-white font-['Barlow_Condensed'] font-700 text-xs tracking-widest uppercase px-6 py-3 hover:bg-[oklch(0.20_0.005_260)] transition-colors flex items-center gap-2 flex-shrink-0">
+            <Phone size={13} /> Call Tim — 208-243-9706
+          </a>
         </div>
       </section>
     </Layout>
