@@ -9,8 +9,8 @@ import { Phone, Menu, X, ChevronDown, MapPin, Clock, Facebook, Star } from "luci
 import TrueHomesLogo from "./TrueHomesLogo";
 
 // Logo is now an inline SVG component — no white box, blends into dark nav
-const AHIT_LOGO = "/manus-storage/ahit-logo_514ff516.jpg";
-const ASHI_LOGO = "/manus-storage/ashi-logo_11eadb50.png";
+const AHIT_LOGO = "/manus-storage/ahit-logo-transparent_0fa1ff18.png";
+const ASHI_LOGO = "/manus-storage/ashi-logo-transparent_5ad9c0ba.png";
 const PHONE = "208-243-9706";
 const PHONE_HREF = "tel:+12082439706";
 const ORANGE = "#D35400";

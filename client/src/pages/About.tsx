@@ -12,8 +12,8 @@ import {
 } from "lucide-react";
 
 const TIM_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/tim-photo_8065e303.png";
-const AHIT_LOGO = "/manus-storage/ahit-logo_514ff516.jpg";
-const ASHI_LOGO = "/manus-storage/ashi-logo_11eadb50.png";
+const AHIT_LOGO = "/manus-storage/ahit-logo-transparent_0fa1ff18.png";
+const ASHI_LOGO = "/manus-storage/ashi-logo-transparent_5ad9c0ba.png";
 const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/north-idaho-landscape-aGtsL65CuHUy9D4qReAaQj.webp";
 const INTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/inspection-interior-5kwkj8D2DYcxBYd4VkaTu6.webp";
 
