@@ -6,8 +6,9 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
 import { Phone, Menu, X, ChevronDown, MapPin, Clock, Facebook, Star } from "lucide-react";
+import TrueHomesLogo from "./TrueHomesLogo";
 
-const LOGO_URL = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/true-homes-logo_ec38aa83.jpeg";
+// Logo is now an inline SVG component — no white box, blends into dark nav
 const AHIT_LOGO = "/manus-storage/ahit-logo_514ff516.jpg";
 const ASHI_LOGO = "/manus-storage/ashi-logo_11eadb50.png";
 const PHONE = "208-243-9706";
@@ -138,14 +139,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         }`}
       >
         <div className="container flex items-center justify-between py-3">
-          {/* Logo — transparent background, no white box */}
-          <Link href="/">
-            <img
-              src={LOGO_URL}
-              alt="True Homes Home Inspections"
-              className="h-14 w-auto object-contain"
-              style={{ maxWidth: "220px", mixBlendMode: "lighten" }}
-            />
+          {/* Logo — inline SVG, transparent, blends into dark nav */}
+          <Link href="/" className="flex items-center">
+            <TrueHomesLogo height={52} />
           </Link>
 
           {/* Desktop nav */}
@@ -242,12 +238,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             {/* Brand */}
             <div>
               <div className="mb-5">
-                <img
-                  src={LOGO_URL}
-                  alt="True Homes Home Inspections"
-                  className="h-12 w-auto object-contain"
-                  style={{ maxWidth: "180px", mixBlendMode: "lighten" }}
-                />
+                <TrueHomesLogo height={48} />
               </div>
               <p className="text-sm text-muted-foreground leading-relaxed mb-5">
                 North Idaho's trusted, locally owned home inspection company. ASHI certified and committed to protecting your investment.
