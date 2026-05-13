@@ -176,7 +176,7 @@ export default function Home() {
                 </div>
                 {/* Certification logos */}
                 <div className="flex items-center gap-4">
-                  <img src={AHIT_LOGO} alt="AHIT Certified" className="h-14 w-auto object-contain opacity-90" />
+                  <div className="rounded-full bg-[#1a1a1a] p-1.5 flex items-center justify-center"><img src={AHIT_LOGO} alt="AHIT Certified" className="h-11 w-11 object-contain" /></div>
                   <img src={ASHI_LOGO} alt="ASHI Certified" className="h-14 w-auto object-contain opacity-90" />
                 </div>
               </div>

@@ -337,7 +337,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <p className="text-xs text-muted-foreground font-['Barlow_Condensed'] font-600 tracking-widest uppercase">Certified & Trained By</p>
             <div className="flex items-center gap-8">
               <a href="https://www.ahit.com" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
-                <img src={AHIT_LOGO} alt="AHIT Certified Inspector" className="h-20 w-auto object-contain" />
+                <div className="rounded-full bg-[#1a1a1a] p-2 flex items-center justify-center"><img src={AHIT_LOGO} alt="AHIT Certified Inspector" className="h-16 w-16 object-contain" /></div>
               </a>
               <a href="https://www.homeinspector.org" target="_blank" rel="noopener noreferrer" className="opacity-80 hover:opacity-100 transition-opacity">
                 <img src={ASHI_LOGO} alt="ASHI Certified Inspector" className="h-20 w-auto object-contain" />
