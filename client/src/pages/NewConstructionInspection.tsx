@@ -4,6 +4,7 @@ import { Hammer } from "lucide-react";
 export default function NewConstructionInspection() {
   return (
     <ServicePage
+      heroImage="https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-new-construction-Ry3zoEMp9Gta5ZrVfS3WLy.webp"
       icon={Hammer}
       subtitle="New Construction Inspection"
       title="New Home Inspection in North Idaho"

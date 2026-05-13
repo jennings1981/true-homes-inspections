@@ -10,11 +10,12 @@ interface ServicePageProps {
   longDesc: string[];
   includes: string[];
   icon: LucideIcon;
+  heroImage?: string;
   faq?: { q: string; a: string }[];
 }
 
-export default function ServicePage({ title, subtitle, description, longDesc, includes, icon: Icon, faq }: ServicePageProps) {
-  const INSPECTOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-lake-home-modern-UGNTJeLS2FKtKZjEDRs9Vu.webp";
+export default function ServicePage({ title, subtitle, description, longDesc, includes, icon: Icon, heroImage, faq }: ServicePageProps) {
+  const INSPECTOR_IMG = heroImage || "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-lake-home-modern-UGNTJeLS2FKtKZjEDRs9Vu.webp";
 
   return (
     <Layout>

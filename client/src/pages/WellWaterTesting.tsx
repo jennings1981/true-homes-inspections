@@ -36,8 +36,12 @@ export default function WellWaterTesting() {
   return (
     <Layout>
       {/* Header */}
-      <div className="bg-[oklch(0.12_0.005_260)] py-16 border-b border-white/5">
-        <div className="container">
+      <div className="relative bg-[oklch(0.12_0.005_260)] border-b border-white/5 overflow-hidden">
+        <div className="absolute inset-0">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-well-water-home-m5VktnbxfBXvo2MbBgEvHi.webp" alt="North Idaho rural home" className="w-full h-full object-cover opacity-25" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.10_0.005_260)] via-[oklch(0.10_0.005_260)]/80 to-transparent" />
+        </div>
+        <div className="relative container py-24">
           <div className="section-label mb-4">Specialty Service</div>
           <h1 className="font-['Barlow_Condensed'] font-800 text-5xl md:text-6xl text-white leading-tight mb-4">
             Well Water Testing
