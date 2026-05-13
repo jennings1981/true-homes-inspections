@@ -14,7 +14,7 @@ interface ServicePageProps {
 }
 
 export default function ServicePage({ title, subtitle, description, longDesc, includes, icon: Icon, faq }: ServicePageProps) {
-  const INSPECTOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/hero-house-inspection-63aGz43DbvpCKgC7R3bn5U.webp";
+  const INSPECTOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/home-engineering-diagram-Sqzsc98zPqArjucrQ4sW5p.webp";
 
   return (
     <Layout>

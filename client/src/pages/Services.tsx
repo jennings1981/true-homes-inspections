@@ -11,7 +11,7 @@ import {
   Phone, Droplets, Eye, Bug, Layers
 } from "lucide-react";
 
-const INSPECTOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/hero-house-inspection-63aGz43DbvpCKgC7R3bn5U.webp";
+const INSPECTOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/home-engineering-diagram-Sqzsc98zPqArjucrQ4sW5p.webp";
 const INTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/inspection-interior-5kwkj8D2DYcxBYd4VkaTu6.webp";
 const PHONE = "208-243-9706";
 const PHONE_HREF = "tel:+12082439706";
