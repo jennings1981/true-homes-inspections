@@ -11,14 +11,22 @@ import {
   Phone, Droplets, Eye, Bug, Layers
 } from "lucide-react";
 
-const INSPECTOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-lakefront-estate-nVVWCPKw3vgDiKNxr5zAHJ.webp";
-const INTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-architectural-overlay-hEdHqCYBF63ue4iCZ7fmCo.webp";
+const CDN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7";
+// One unique image per service section
+const IMG_BUYER       = `${CDN}/ni-lake-home-modern-UGNTJeLS2FKtKZjEDRs9Vu.webp`;
+const IMG_PRELISTING  = `${CDN}/ni-mountain-cabin-jdBz6UgXHUdpXSF4RfL7fu.webp`;
+const IMG_NEWCONST    = `${CDN}/ni-new-construction-Ry3zoEMp9Gta5ZrVfS3WLy.webp`;
+const IMG_RADON       = `${CDN}/ni-radon-home-Erwb9m2BkhNkRdwLj2vDCU.webp`;
+const IMG_WELLWATER   = `${CDN}/ni-well-water-home-m5VktnbxfBXvo2MbBgEvHi.webp`;
+const IMG_SEWER       = `${CDN}/ni-sewer-scope-home-2gLmp3t522BVzQaxgYnidU.webp`;
+const IMG_LEADMOLD    = `${CDN}/ni-lakefront-estate-nVVWCPKw3vgDiKNxr5zAHJ.webp`;
 const PHONE = "208-243-9706";
 const PHONE_HREF = "tel:+12082439706";
 
 const services = [
   {
     icon: Home,
+    img: IMG_BUYER,
     title: "Buyer Home Inspection",
     href: "/services/buyer-home-inspection",
     desc: "Our most comprehensive service — a thorough evaluation of every accessible system and component in the home before you close. We examine the roof, foundation, electrical, plumbing, HVAC, insulation, windows, doors, and much more.",
@@ -35,6 +43,7 @@ const services = [
   },
   {
     icon: FileSearch,
+    img: IMG_PRELISTING,
     title: "Pre-Listing (Seller) Inspection",
     href: "/services/pre-listing-inspection",
     desc: "Sell your home faster and for more money. A pre-listing inspection identifies issues before buyers discover them, giving you the opportunity to make repairs, price accurately, and negotiate from a position of strength.",
@@ -49,6 +58,7 @@ const services = [
   },
   {
     icon: Hammer,
+    img: IMG_NEWCONST,
     title: "New Construction Inspection",
     href: "/services/new-construction-inspection",
     desc: "New homes aren't perfect. Builder errors, code violations, and installation defects are common. We inspect at every key phase of construction — from excavation through finished product — to ensure your new home meets standards before you take possession.",
@@ -66,6 +76,7 @@ const services = [
   },
   {
     icon: Wind,
+    img: IMG_RADON,
     title: "Radon Testing",
     href: "/services/radon-testing",
     desc: "Idaho has some of the highest radon levels in the nation. Radon is a colorless, odorless radioactive gas that is the second leading cause of lung cancer in the US. We perform certified radon testing with clear results and mitigation recommendations.",
@@ -81,6 +92,7 @@ const services = [
   },
   {
     icon: Droplets,
+    img: IMG_WELLWATER,
     title: "Well Water Testing",
     href: "/services/well-water-testing",
     desc: "Many North Idaho properties rely on private wells. Well water quality can vary significantly and may contain bacteria, nitrates, arsenic, or other contaminants. We coordinate water sampling and provide links to certified labs for comprehensive testing options.",
@@ -96,6 +108,7 @@ const services = [
   },
   {
     icon: Eye,
+    img: IMG_SEWER,
     title: "Sewer Scope Inspection",
     href: "/services/sewer-scope",
     desc: "A camera inspection of the sewer lateral from the home to the main line can reveal root intrusion, pipe collapse, offset joints, and other costly issues invisible from the surface. Sewer scope inspections are sub-contracted to Lateral Concepts, a trusted local specialist.",
@@ -110,6 +123,7 @@ const services = [
   },
   {
     icon: Bug,
+    img: IMG_LEADMOLD,
     title: "Lead, Mold & Pest Inspections",
     href: "/services/lead-mold-pest",
     desc: "Older homes may contain lead paint or asbestos. Moisture issues can lead to mold growth. And pest infestations — from termites to rodents — can cause significant structural damage. These specialized inspections are sub-contracted to qualified specialists.",
@@ -222,7 +236,7 @@ export default function Services() {
               </div>
               <div className={i % 2 === 1 ? "lg:col-start-1 lg:row-start-1" : ""}>
                 <img
-                  src={i % 2 === 0 ? INSPECTOR_IMG : INTERIOR_IMG}
+                  src={svc.img}
                   alt={svc.title}
                   className="w-full h-[360px] object-cover"
                 />
