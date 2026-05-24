@@ -329,18 +329,8 @@ export default function Home() {
         <section className="py-24 bg-[oklch(0.18_0.005_260)]">
           <div className="container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              {/* Image with amber frame */}
-              <div className="relative fade-up order-2 lg:order-1">
-                <div className="amber-frame">
-                  <img
-                    src={INSPECTOR_IMG}
-                    alt="True Homes Inspections — certified home inspector in North Idaho"
-                    className="w-full h-[420px] object-contain bg-[oklch(0.10_0.005_260)] relative z-10"
-                  />
-                </div>
-              </div>
               {/* Content */}
-              <div className="order-1 lg:order-2 fade-up">
+              <div className="fade-up">
                 <div className="section-label mb-4">We Work For You</div>
                 <h2 className="font-['Barlow_Condensed'] font-800 text-4xl md:text-5xl text-white leading-tight mb-6">
                   North Idaho's Most Trusted Home Inspector
@@ -375,7 +365,25 @@ export default function Home() {
                   </Link>
                 </div>
               </div>
+              {/* Right column placeholder for balance */}
+              <div className="fade-up hidden lg:block" />
             </div>
+          </div>
+        </section>
+
+        {/* ── ARCHITECTURAL DIAGRAM — full width ── */}
+        <section className="py-12 pb-24 bg-[oklch(0.18_0.005_260)]">
+          <div className="container">
+            <div className="section-label mb-3 justify-center text-center">Inspection Scope</div>
+            <h2 className="font-['Barlow_Condensed'] font-800 text-3xl md:text-4xl text-white leading-tight mb-8 text-center">
+              Every System. Every Component.
+            </h2>
+            {/* Full-width 16:9 diagram — h-auto preserves all labels */}
+            <img
+              src={INSPECTOR_IMG}
+              alt="Architectural Inspection — Exterior Overview showing all inspection points"
+              className="w-full h-auto block border border-white/10"
+            />
           </div>
         </section>
 

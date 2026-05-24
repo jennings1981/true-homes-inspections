@@ -283,42 +283,49 @@ export default function About() {
           </div>
         </section>
 
-        {/* ── STATS SPLIT ── */}
+        {/* ── ARCHITECTURAL DIAGRAM — full width ── */}
         <section className="py-24 bg-background">
           <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div className="fade-up">
-                <img
-                  src={INTERIOR_IMG}
-                  alt="Home inspection in progress — True Homes Inspections"
-                  className="w-full h-[420px] object-cover"
-                />
-              </div>
-              <div className="fade-up">
-                <div className="section-label mb-4">By the Numbers</div>
-                <h2 className="font-['Barlow_Condensed'] font-800 text-4xl md:text-5xl text-white leading-tight mb-8">
-                  Experience You Can Measure
-                </h2>
-                <div className="grid grid-cols-2 gap-6">
-                  {[
-                    { value: "20+", label: "Years of Experience" },
-                    { value: "3,500+", label: "Inspections Completed" },
-                    { value: "100+", label: "Five-Star Reviews" },
-                    { value: "48hr", label: "Report Turnaround" },
-                  ].map((stat) => (
-                    <div key={stat.label} className="border-l-2 border-[#D35400] pl-5">
-                      <div className="font-['Barlow_Condensed'] font-800 text-4xl text-white leading-none mb-1">
-                        {stat.value}
-                      </div>
-                      <div className="text-sm text-muted-foreground">{stat.label}</div>
+            <div className="text-center mb-10 fade-up">
+              <div className="section-label justify-center mb-4">What We Inspect</div>
+              <h2 className="font-['Barlow_Condensed'] font-800 text-4xl md:text-5xl text-white leading-tight">
+                Every System. Every Component.
+              </h2>
+            </div>
+            {/* Full-width diagram — use auto height to preserve 16:9 aspect ratio */}
+            <div className="fade-up w-full mb-14">
+              <img
+                src={INTERIOR_IMG}
+                alt="Architectural Inspection — Exterior Overview diagram showing all inspection points"
+                className="w-full h-auto block"
+                style={{ maxWidth: "100%" }}
+              />
+            </div>
+            {/* Stats row below the diagram */}
+            <div className="fade-up">
+              <div className="section-label mb-4">By the Numbers</div>
+              <h2 className="font-['Barlow_Condensed'] font-800 text-3xl md:text-4xl text-white leading-tight mb-8">
+                Experience You Can Measure
+              </h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {[
+                  { value: "20+", label: "Years of Experience" },
+                  { value: "2,500+", label: "Inspections Completed" },
+                  { value: "100+", label: "Five-Star Reviews" },
+                  { value: "24hr", label: "Report Turnaround" },
+                ].map((stat) => (
+                  <div key={stat.label} className="border-l-2 border-[#D35400] pl-5">
+                    <div className="font-['Barlow_Condensed'] font-800 text-4xl text-white leading-none mb-1">
+                      {stat.value}
                     </div>
-                  ))}
-                </div>
-                <div className="mt-10">
-                  <Link href="/reviews" className="btn-outline-amber text-xs">
-                    Read Client Reviews <ArrowRight size={13} />
-                  </Link>
-                </div>
+                    <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+              <div className="mt-10">
+                <Link href="/reviews" className="btn-outline-amber text-xs">
+                  Read Client Reviews <ArrowRight size={13} />
+                </Link>
               </div>
             </div>
           </div>
