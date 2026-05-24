@@ -27,12 +27,15 @@ export default function ServicePage({ title, subtitle, description, longDesc, in
         </div>
       </div>
 
-      <section className="py-24 bg-background">
+      <section className="py-12 bg-background">
         <div className="container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             <div>
-              <div className="w-12 h-12 bg-[#D35400]/10 flex items-center justify-center mb-6">
-                <Icon size={24} className="text-[#D35400]" />
+              <div className="flex items-center gap-3 mb-5">
+                <div className="w-8 h-8 bg-[#D35400]/10 flex items-center justify-center flex-shrink-0">
+                  <Icon size={16} className="text-[#D35400]" />
+                </div>
+                <div className="amber-divider flex-1" />
               </div>
               {longDesc.map((para, i) => (
                 <p key={i} className="text-muted-foreground leading-relaxed mb-4">{para}</p>
