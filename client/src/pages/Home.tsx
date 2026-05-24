@@ -86,19 +86,19 @@ const blogPosts = [
     title: "Common Issues Found in North Idaho Homes",
     excerpt: "From moisture intrusion to aging electrical panels, here are the most frequent problems we discover during inspections in the Sandpoint and Coeur d'Alene areas.",
     date: "March 2025",
-    href: "/blog",
+    href: "/blog/common-issues-north-idaho-homes",
   },
   {
     title: "What Buyers Should Know Before Buying in Sandpoint",
     excerpt: "The Sandpoint real estate market moves fast. Here's what every buyer should understand about home inspections before making an offer.",
     date: "February 2025",
-    href: "/blog",
+    href: "/blog/buying-in-sandpoint",
   },
   {
     title: "How Radon Affects Homes in North Idaho",
     excerpt: "Idaho consistently ranks among the highest radon-risk states. Learn why testing matters and what levels are considered dangerous.",
     date: "January 2025",
-    href: "/blog",
+    href: "/blog/radon-north-idaho",
   },
 ];
 

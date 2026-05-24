@@ -20,6 +20,7 @@ import PostFallsInspection from "./pages/PostFallsInspection";
 import Reviews from "./pages/Reviews";
 import SampleReports from "./pages/SampleReports";
 import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 import Schedule from "./pages/Schedule";
 import Contact from "./pages/Contact";
 import WellWaterTesting from "./pages/WellWaterTesting";
@@ -46,6 +47,7 @@ function Router() {
       <Route path="/reviews" component={Reviews} />
       <Route path="/sample-reports" component={SampleReports} />
       <Route path="/blog" component={Blog} />
+      <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/schedule" component={Schedule} />
       <Route path="/contact" component={Contact} />
       <Route path="/404" component={NotFound} />
