@@ -11,13 +11,13 @@ import {
   Home as HomeIcon, FileSearch, Hammer, Wind, ChevronRight
 } from "lucide-react";
 
-const HERO_BG = "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&auto=format&fit=crop"; // North Idaho mountain lake
+const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/hero-north-idaho-M9dpChiYReqSTwNmxxV7rj.webp";
 const AHIT_LOGO = "/manus-storage/ahit-logo-transparent_0fa1ff18.png";
 const ASHI_LOGO = "/manus-storage/ashi-logo-transparent_5ad9c0ba.png";
-const INSPECTOR_IMG = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop"; // Home inspector
+const INSPECTOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/home-engineering-diagram-Sqzsc98zPqArjucrQ4sW5p.webp";
 const TIM_PHOTO = "/manus-storage/tim-headshot-pro_7b94626e.jpg";
-const LANDSCAPE_IMG = "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1200&auto=format&fit=crop"; // House exterior
-const INTERIOR_IMG = "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200&auto=format&fit=crop"; // Home interior kitchen
+const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/north-idaho-landscape-aGtsL65CuHUy9D4qReAaQj.webp";
+const INTERIOR_IMG = "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=1200&auto=format&fit=crop";
 
 const services = [
   {
