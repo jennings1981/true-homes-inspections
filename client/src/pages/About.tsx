@@ -18,11 +18,11 @@ const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/
 const INTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-inspection-overlay-LWivZzmpRAfYMZvPMAa2rS.webp";
 
 const credentials = [
-  { icon: Shield, label: "ASHI Certified Professional Inspector" },
-  { icon: Award, label: "Idaho State Licensed Home Inspector" },
-  { icon: CheckCircle, label: "20+ Years Construction & Inspection Experience" },
-  { icon: HomeIcon, label: "3,500+ Inspections Completed" },
-  { icon: Clock, label: "48-Hour Digital Report Delivery" },
+  { icon: Shield, label: "AHIT Trained & Certified Inspector" },
+  { icon: Award, label: "Previously Licensed in WA — Now Serving North Idaho & Eastern WA" },
+  { icon: CheckCircle, label: "20+ Years in Construction, 11+ Years Inspecting" },
+  { icon: HomeIcon, label: "2,500+ Inspections Completed" },
+  { icon: Clock, label: "24-Hour Guaranteed Report Delivery" },
   { icon: Users, label: "Locally Owned & Operated in North Idaho" },
 ];
 
@@ -49,22 +49,27 @@ const timeline = [
   {
     year: "Early Career",
     title: "Roots in Construction",
-    desc: "Tim began his career in residential construction, working across multiple trades and developing a deep, hands-on understanding of how homes are built — and where they fail. That foundation became the backbone of everything he does as an inspector today.",
+    desc: "Tim began his career in residential and commercial construction, working across multiple trades and developing a deep, hands-on understanding of how homes are built — and where they fail. That foundation became the backbone of everything he does as an inspector today.",
   },
   {
-    year: "2004",
-    title: "Transition to Inspection",
-    desc: "After years in construction, Tim recognized that home buyers needed a trusted advocate — someone who could read a home's condition with a builder's eye and a client's heart. He earned his ASHI certification and began inspecting full-time across North Idaho.",
+    year: "2015",
+    title: "Caribou Ridge Construction",
+    desc: "After years working in both residential and commercial construction, Tim started Caribou Ridge Construction — running the company and managing projects across the region. It was this experience as a business owner and builder that gave him an unmatched perspective on construction quality, contractor workmanship, and what buyers truly need to know before purchasing a home.",
   },
   {
-    year: "2010",
+    year: "The Shift",
+    title: "From Builder to Inspector",
+    desc: "After running Caribou Ridge Construction, Tim made a deliberate choice to shift his career toward home inspections — bringing his builder's eye and deep construction knowledge to serve buyers and sellers directly. He earned his AHIT certification and began inspecting full-time across North Idaho and Eastern Washington.",
+  },
+  {
+    year: "True Homes",
     title: "True Homes Inspections Founded",
     desc: "Tim founded True Homes Inspections to build something he could be proud of: a locally owned company with a reputation for honesty, thoroughness, and genuine care for every client. The name reflects the mission — true information about your home.",
   },
   {
     year: "Today",
     title: "North Idaho's Trusted Inspector",
-    desc: "With over 3,500 inspections completed across Sandpoint, Coeur d'Alene, Post Falls, and the surrounding panhandle, Tim continues to personally perform every inspection — because he believes that's the only way to guarantee the quality his clients deserve.",
+    desc: "With over 2,500 inspections completed across Sandpoint, Coeur d'Alene, Post Falls, and surrounding North Idaho and Eastern Washington communities, Tim continues to personally perform every inspection — because he believes that's the only way to guarantee the quality his clients deserve.",
   },
 ];
 

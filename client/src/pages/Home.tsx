@@ -335,7 +335,7 @@ export default function Home() {
                   <img
                     src={INSPECTOR_IMG}
                     alt="True Homes Inspections — certified home inspector in North Idaho"
-                    className="w-full h-[480px] object-cover relative z-10"
+                    className="w-full h-[420px] object-contain bg-[oklch(0.10_0.005_260)] relative z-10"
                   />
                 </div>
               </div>

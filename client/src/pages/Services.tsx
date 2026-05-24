@@ -16,8 +16,8 @@ const CDN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6C
 const IMG_BUYER       = `${CDN}/ni-lake-home-modern-UGNTJeLS2FKtKZjEDRs9Vu.webp`;
 const IMG_PRELISTING  = `${CDN}/ni-mountain-cabin-jdBz6UgXHUdpXSF4RfL7fu.webp`;
 const IMG_NEWCONST    = `${CDN}/ni-new-construction-Ry3zoEMp9Gta5ZrVfS3WLy.webp`;
-const IMG_RADON       = `${CDN}/ni-radon-home-Erwb9m2BkhNkRdwLj2vDCU.webp`;
-const IMG_WELLWATER   = `${CDN}/ni-well-water-home-m5VktnbxfBXvo2MbBgEvHi.webp`;
+const IMG_RADON       = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/us-radon-map-UaRDvF4YSMCA9BY4mfovLb.webp";
+const IMG_WELLWATER   = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-well-water-photo-LxSmrYMFGS7xP9i9CXPCo3.webp";
 const IMG_SEWER       = `${CDN}/ni-sewer-scope-home-2gLmp3t522BVzQaxgYnidU.webp`;
 const IMG_LEADMOLD    = `${CDN}/ni-lakefront-estate-nVVWCPKw3vgDiKNxr5zAHJ.webp`;
 const PHONE = "208-243-9706";
@@ -30,6 +30,7 @@ const services = [
     title: "Buyer Home Inspection",
     href: "/services/buyer-home-inspection",
     desc: "Our most comprehensive service — a thorough evaluation of every accessible system and component in the home before you close. We examine the roof, foundation, electrical, plumbing, HVAC, insulation, windows, doors, and much more.",
+    pricing: "Starting at $450 — price subject to location, size, and style",
     includes: [
       "Roof, gutters, and drainage",
       "Foundation and structural components",
@@ -47,6 +48,7 @@ const services = [
     title: "Pre-Listing (Seller) Inspection",
     href: "/services/pre-listing-inspection",
     desc: "Sell your home faster and for more money. A pre-listing inspection identifies issues before buyers discover them, giving you the opportunity to make repairs, price accurately, and negotiate from a position of strength.",
+    pricing: "Starting at $450 — price subject to location, size, and style",
     includes: [
       "Same scope as buyer inspection",
       "Identify deal-breakers before listing",
@@ -73,6 +75,7 @@ const services = [
       "Finished product / final walkthrough",
     ],
     note: "Phase inspections can be scheduled individually or as a complete package. Call Tim to discuss what's right for your project.",
+    pricing: "Call for pricing and details — standalone phases also available",
   },
   {
     icon: Wind,
@@ -80,6 +83,7 @@ const services = [
     title: "Radon Testing",
     href: "/services/radon-testing",
     desc: "Idaho has some of the highest radon levels in the nation. Radon is a colorless, odorless radioactive gas that is the second leading cause of lung cancer in the US. We perform certified radon testing with clear results and mitigation recommendations.",
+    pricing: "Starting at $175 with a home inspection",
     includes: [
       "Certified radon measurement",
       "Short-term and long-term testing",
@@ -96,6 +100,7 @@ const services = [
     title: "Well Water Testing",
     href: "/services/well-water-testing",
     desc: "Many North Idaho properties rely on private wells. Well water quality can vary significantly and may contain bacteria, nitrates, arsenic, or other contaminants. We coordinate water sampling and provide links to certified labs for comprehensive testing options.",
+    pricing: "$150–$500 depending on the scope of testing",
     includes: [
       "Water sampling coordination",
       "Coliform & E. coli bacteria testing",
@@ -112,6 +117,7 @@ const services = [
     title: "Sewer Scope Inspection",
     href: "/services/sewer-scope",
     desc: "A camera inspection of the sewer lateral from the home to the main line can reveal root intrusion, pipe collapse, offset joints, and other costly issues invisible from the surface. Sewer scope inspections are sub-contracted to Lateral Concepts, a trusted local specialist.",
+    pricing: "$250–$300 depending on scope and service",
     includes: [
       "Camera inspection of sewer lateral",
       "Root intrusion detection",
@@ -124,17 +130,18 @@ const services = [
   {
     icon: Bug,
     img: IMG_LEADMOLD,
-    title: "Lead, Mold & Pest Inspections",
+    title: "Lead & Mold Inspections",
     href: "/services/lead-mold-pest",
-    desc: "Older homes may contain lead paint or asbestos. Moisture issues can lead to mold growth. And pest infestations — from termites to rodents — can cause significant structural damage. These specialized inspections are sub-contracted to qualified specialists.",
+    desc: "Older homes may contain lead paint. Moisture issues can lead to mold growth that affects air quality and structural integrity. These specialized inspections are sub-contracted to qualified specialists and can be coordinated alongside your home inspection.",
     includes: [
       "Lead paint testing (pre-1978 homes)",
       "Mold sampling and assessment",
-      "Pest and termite inspection",
-      "Rodent activity assessment",
+      "Air quality testing",
+      "Moisture source identification",
       "Sub-contracted to qualified specialists",
       "Can be bundled with home inspection",
     ],
+    pricing: "Call for pricing",
   },
 ];
 
@@ -230,6 +237,13 @@ export default function Services() {
                   </div>
                 )}
 
+                {/* Pricing badge */}
+                {(svc as any).pricing && (
+                  <div className="mb-5 inline-flex items-center gap-2 bg-[#D35400]/10 border border-[#D35400]/30 px-4 py-2">
+                    <span className="text-[#D35400] font-['Barlow_Condensed'] font-700 text-sm tracking-wide uppercase">Pricing:</span>
+                    <span className="text-white/80 text-sm font-['Barlow']">{(svc as any).pricing}</span>
+                  </div>
+                )}
                 <a href={PHONE_HREF} className="btn-amber text-xs flex items-center gap-2 w-fit">
                   <Phone size={13} /> Call Tim — {PHONE}
                 </a>

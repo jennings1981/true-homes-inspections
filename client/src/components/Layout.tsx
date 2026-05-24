@@ -27,7 +27,7 @@ const navItems = [
       { label: "Radon Testing", href: "/services/radon-testing" },
       { label: "Well Water Testing", href: "/services/well-water-testing" },
       { label: "Sewer Scope Inspection", href: "/services/sewer-scope" },
-      { label: "Lead, Mold & Pest", href: "/services/lead-mold-pest" },
+      { label: "Lead & Mold", href: "/services/lead-mold-pest" },
     ],
   },
   { label: "Areas Served", href: "/areas-served" },
@@ -266,7 +266,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                   { label: "Radon Testing", href: "/services/radon-testing" },
                   { label: "Well Water Testing", href: "/services/well-water-testing" },
                   { label: "Sewer Scope Inspection", href: "/services/sewer-scope" },
-                  { label: "Lead, Mold & Pest", href: "/services/lead-mold-pest" },
+                  { label: "Lead & Mold", href: "/services/lead-mold-pest" },
                 ].map((link) => (
                   <li key={link.href}>
                     <Link href={link.href} className="text-sm text-muted-foreground transition-colors"

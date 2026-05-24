@@ -1,10 +1,10 @@
 /**
- * Lead, Mold & Pest Inspections — True Homes Inspections
+ * Lead & Mold Inspections — True Homes Inspections
  * Sub-contracted to qualified specialists
  * CTA: call Tim at 208-243-9706
  */
 import Layout from "@/components/Layout";
-import { Phone, CheckCircle, Bug } from "lucide-react";
+import { Phone, CheckCircle, Microscope } from "lucide-react";
 
 const PHONE = "208-243-9706";
 const PHONE_HREF = "tel:+12082439706";
@@ -32,23 +32,12 @@ const services = [
       "Remediation recommendations",
     ],
   },
-  {
-    title: "Pest & Termite Inspection",
-    desc: "Termites, carpenter ants, and other wood-destroying insects can cause significant structural damage that may not be visible during a standard home inspection. Rodent activity can also compromise insulation and create health hazards. We coordinate pest inspections with licensed specialists.",
-    items: [
-      "Termite and wood-destroying insect inspection",
-      "Carpenter ant assessment",
-      "Rodent activity signs",
-      "Wood damage documentation",
-      "Treatment recommendations",
-    ],
-  },
 ];
 
 const faqs = [
   {
     q: "Are these inspections part of the standard home inspection?",
-    a: "No. Lead, mold, and pest inspections require specialized equipment and licensing. They are sub-contracted to qualified specialists and can be coordinated at the same time as your home inspection.",
+    a: "No. Lead and mold inspections require specialized equipment and licensing. They are sub-contracted to qualified specialists and can be coordinated at the same time as your home inspection.",
   },
   {
     q: "When is lead paint testing required?",
@@ -76,10 +65,10 @@ export default function LeadMoldPest() {
         <div className="relative container py-24">
           <div className="section-label mb-4">Specialty Services</div>
           <h1 className="font-['Barlow_Condensed'] font-800 text-5xl md:text-6xl text-white leading-tight mb-4">
-            Lead, Mold & Pest Inspections
+            Lead &amp; Mold Inspections
           </h1>
           <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed">
-            Specialized testing and inspections sub-contracted to qualified experts — coordinated by Tim to happen on the same day as your home inspection.
+            Specialized testing sub-contracted to qualified experts — coordinated by Tim to happen on the same day as your home inspection.
           </p>
         </div>
       </div>
@@ -91,7 +80,7 @@ export default function LeadMoldPest() {
             <div key={svc.title} className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start border-b border-white/5 pb-16 last:border-0 last:pb-0">
               <div className="lg:col-span-2">
                 <div className="w-10 h-10 bg-[#D35400]/10 flex items-center justify-center mb-4">
-                  <Bug size={20} className="text-[#D35400]" />
+                  <Microscope size={20} className="text-[#D35400]" />
                 </div>
                 <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-white mb-3">{svc.title}</h2>
                 <div className="amber-divider mb-4" />

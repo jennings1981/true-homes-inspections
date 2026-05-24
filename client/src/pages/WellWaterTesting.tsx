@@ -38,7 +38,7 @@ export default function WellWaterTesting() {
       {/* Header */}
       <div className="relative bg-[oklch(0.12_0.005_260)] border-b border-white/5 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-well-water-home-m5VktnbxfBXvo2MbBgEvHi.webp" alt="North Idaho rural home" className="w-full h-full object-cover opacity-25" />
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-well-water-photo-LxSmrYMFGS7xP9i9CXPCo3.webp" alt="North Idaho well water testing" className="w-full h-full object-cover opacity-25" />
           <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.10_0.005_260)] via-[oklch(0.10_0.005_260)]/80 to-transparent" />
         </div>
         <div className="relative container py-24">

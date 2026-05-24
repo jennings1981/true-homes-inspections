@@ -12,7 +12,7 @@ const services = [
   "Radon Testing",
   "Well Water Testing",
   "Sewer Scope Inspection",
-  "Lead, Mold & Pest Inspections",
+  "Lead & Mold Inspections",
 ];
 
 const areas = [
