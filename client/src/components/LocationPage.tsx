@@ -13,7 +13,7 @@ interface LocationPageProps {
 }
 
 export default function LocationPage({ city, county, state, description, paragraphs, localFacts, testimonial }: LocationPageProps) {
-  const HERO_BG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/north-idaho-landscape-aGtsL65CuHUy9D4qReAaQj.webp";
+  const HERO_BG = "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&auto=format&fit=crop"; // North Idaho mountain lake landscape
 
   return (
     <Layout>

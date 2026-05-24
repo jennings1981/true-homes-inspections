@@ -38,7 +38,7 @@ export default function WellWaterTesting() {
       {/* Header */}
       <div className="relative bg-[oklch(0.12_0.005_260)] border-b border-white/5 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-well-water-photo-LxSmrYMFGS7xP9i9CXPCo3.webp" alt="North Idaho well water testing" className="w-full h-full object-cover opacity-25" />
+          <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1400&auto=format&fit=crop" alt="North Idaho well water testing" className="w-full h-full object-cover opacity-25" />
           <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.10_0.005_260)] via-[oklch(0.10_0.005_260)]/80 to-transparent" />
         </div>
         <div className="relative container py-24">
@@ -53,15 +53,17 @@ export default function WellWaterTesting() {
       </div>
 
       {/* Main content */}
-      <section className="py-20 bg-background">
+      <section className="py-12 bg-background">
         <div className="container grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           <div>
-            <div className="w-12 h-12 bg-[#D35400]/10 flex items-center justify-center mb-6">
-              <Droplets size={24} className="text-[#D35400]" />
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-8 h-8 bg-[#D35400]/10 flex items-center justify-center flex-shrink-0">
+                <Droplets size={16} className="text-[#D35400]" />
+              </div>
+              <h2 className="font-['Barlow_Condensed'] font-800 text-3xl text-white leading-tight">
+                Private Well Water Safety
+              </h2>
             </div>
-            <h2 className="font-['Barlow_Condensed'] font-800 text-4xl text-white mb-4">
-              Private Well Water Safety
-            </h2>
             <div className="amber-divider mb-6" />
             <p className="text-muted-foreground leading-relaxed mb-6">
               Unlike municipal water systems, private wells are not regulated or monitored by any government agency. The responsibility for testing and maintaining water quality falls entirely on the homeowner. In North Idaho, common concerns include coliform bacteria from surface runoff, nitrates from agricultural activity, and naturally occurring arsenic and iron.

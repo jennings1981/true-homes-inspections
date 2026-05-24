@@ -4,7 +4,7 @@ import { Wind } from "lucide-react";
 export default function RadonTesting() {
   return (
     <ServicePage
-      heroImage="https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/us-radon-map-UaRDvF4YSMCA9BY4mfovLb.webp"
+      heroImage="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1400&auto=format&fit=crop"
       icon={Wind}
       subtitle="Radon Testing"
       title="Radon Testing in North Idaho"

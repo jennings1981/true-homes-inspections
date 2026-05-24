@@ -4,7 +4,7 @@ import { FileSearch } from "lucide-react";
 export default function PreListingInspection() {
   return (
     <ServicePage
-      heroImage="https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-radon-home-Erwb9m2BkhNkRdwLj2vDCU.webp"
+      heroImage="https://images.unsplash.com/photo-1560184897-ae75f418493e?w=1400&auto=format&fit=crop"
       icon={FileSearch}
       subtitle="Pre-Listing Inspection"
       title="Seller Home Inspection in North Idaho"

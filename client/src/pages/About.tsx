@@ -14,8 +14,8 @@ import {
 const TIM_PHOTO = "/manus-storage/tim-headshot-pro_7b94626e.jpg";
 const AHIT_LOGO = "/manus-storage/ahit-logo-transparent_0fa1ff18.png";
 const ASHI_LOGO = "/manus-storage/ashi-logo-transparent_5ad9c0ba.png";
-const LANDSCAPE_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-mountain-cabin-jdBz6UgXHUdpXSF4RfL7fu.webp";
-const INTERIOR_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-inspection-overlay-LWivZzmpRAfYMZvPMAa2rS.webp";
+const LANDSCAPE_IMG = "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?w=1600&auto=format&fit=crop"; // Mountain cabin North Idaho
+const INTERIOR_IMG = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&auto=format&fit=crop"; // Home inspector at work
 
 const credentials = [
   { icon: Shield, label: "AHIT Trained & Certified Inspector" },

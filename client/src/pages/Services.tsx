@@ -11,15 +11,14 @@ import {
   Phone, Droplets, Eye, Bug, Layers
 } from "lucide-react";
 
-const CDN = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7";
-// One unique image per service section
-const IMG_BUYER       = `${CDN}/ni-lake-home-modern-UGNTJeLS2FKtKZjEDRs9Vu.webp`;
-const IMG_PRELISTING  = `${CDN}/ni-mountain-cabin-jdBz6UgXHUdpXSF4RfL7fu.webp`;
-const IMG_NEWCONST    = `${CDN}/ni-new-construction-Ry3zoEMp9Gta5ZrVfS3WLy.webp`;
-const IMG_RADON       = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/us-radon-map-UaRDvF4YSMCA9BY4mfovLb.webp";
-const IMG_WELLWATER   = "https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-well-water-photo-LxSmrYMFGS7xP9i9CXPCo3.webp";
-const IMG_SEWER       = `${CDN}/ni-sewer-scope-home-2gLmp3t522BVzQaxgYnidU.webp`;
-const IMG_LEADMOLD    = `${CDN}/ni-lakefront-estate-nVVWCPKw3vgDiKNxr5zAHJ.webp`;
+// One unique Unsplash image per service section
+const IMG_BUYER       = "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=900&auto=format&fit=crop"; // House exterior
+const IMG_PRELISTING  = "https://images.unsplash.com/photo-1560184897-ae75f418493e?w=900&auto=format&fit=crop"; // Home for sale
+const IMG_NEWCONST    = "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&auto=format&fit=crop"; // New construction framing
+const IMG_RADON       = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop"; // Inspector testing
+const IMG_WELLWATER   = "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=900&auto=format&fit=crop"; // Water/well testing
+const IMG_SEWER       = "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=900&auto=format&fit=crop"; // Plumbing pipes
+const IMG_LEADMOLD    = "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900&auto=format&fit=crop"; // Home interior
 const PHONE = "208-243-9706";
 const PHONE_HREF = "tel:+12082439706";
 

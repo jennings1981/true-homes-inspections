@@ -4,7 +4,7 @@ import { Home } from "lucide-react";
 export default function BuyerInspection() {
   return (
     <ServicePage
-      heroImage="https://d2xsxph8kpxj0f.cloudfront.net/310519663427046845/ToYqQAZz6CCmi4HjBtrLQ7/ni-lake-home-modern-UGNTJeLS2FKtKZjEDRs9Vu.webp"
+      heroImage="https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=1400&auto=format&fit=crop"
       icon={Home}
       subtitle="Buyer Home Inspection"
       title="Pre-Purchase Home Inspection in North Idaho"
