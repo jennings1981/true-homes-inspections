@@ -48,7 +48,7 @@ const services = [
 
 const stats = [
   { value: "20+", label: "Years in Construction" },
-  { value: "11+", label: "Years Inspecting" },
+  { value: "11+", label: "Years Inspecting in ID & WA" },
   { value: "3,500+", label: "Inspections Completed" },
   { value: "24hr", label: "Guaranteed Report" },
 ];
@@ -56,7 +56,7 @@ const stats = [
 const process = [
   { num: "01", title: "Call Tim Directly", desc: "Call Tim at 208-243-9706 to book your inspection. Same-week appointments are often available." },
   { num: "02", title: "On-Site Inspection", desc: "We spend 2–4 hours thoroughly examining every accessible system and component." },
-  { num: "03", title: "Detailed Report", desc: "Receive a comprehensive digital report with photos within 24 hours — guaranteed." },
+  { num: "03", title: "Detailed Report", desc: "Receive a comprehensive digital report with photos within 24 hours — guaranteed. Over 2,500 inspections completed." },
   { num: "04", title: "Review & Act", desc: "We walk you through findings and answer every question you have." },
 ];
 
@@ -154,7 +154,7 @@ export default function Home() {
                   IN NORTH IDAHO
                 </h1>
                 <p className="text-lg text-white/80 mb-8 max-w-lg leading-relaxed font-['Barlow'] font-300">
-                  Serving Sandpoint, Coeur d'Alene, Post Falls, and surrounding communities. ASHI certified with 20+ years in construction and 11+ years inspecting homes across North Idaho.
+                  Serving Sandpoint, Coeur d'Alene, Post Falls, and surrounding communities. AHIT trained and certified with 20+ years in construction and 11+ years inspecting homes across North Idaho and Eastern Washington.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-10">
                   <a href="tel:+12082439706" className="btn-amber text-sm">
@@ -164,7 +164,7 @@ export default function Home() {
                 {/* Trust badges */}
                 <div className="flex flex-wrap gap-6 mb-6">
                   {[
-                    { icon: Shield, label: "ASHI Certified" },
+                    { icon: Shield, label: "AHIT Trained & Certified" },
                     { icon: Award, label: "Previously WA Licensed" },
                     { icon: CheckCircle, label: "20+ Yrs Construction" },
                   ].map(({ icon: Icon, label }) => (
@@ -269,7 +269,7 @@ export default function Home() {
                   With over 20 years of hands-on experience in construction and home inspection across North Idaho, I've seen it all — from moisture intrusion in lakefront cabins to aging electrical panels in Sandpoint's historic neighborhoods. I founded True Homes Inspections because I believe every buyer deserves an inspector who works for <em>them</em>, not the deal.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Every inspection I perform is thorough, unhurried, and backed by ASHI certification and Idaho state licensing. You'll receive a detailed digital report with photos within 48 hours — and I'm always available to answer your questions.
+                  Every inspection I perform is thorough, unhurried, and backed by AHIT training and certification. You'll receive a detailed digital report with photos within 24 hours — guaranteed. With over 2,500 inspections completed, I'm always available to answer your questions.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link href="/about" className="btn-amber text-xs">
@@ -347,16 +347,16 @@ export default function Home() {
                 </h2>
                 <div className="amber-divider mb-6" />
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  True Homes Inspections is a locally owned, licensed, and ASHI-certified home inspection company serving the greater North Idaho region since 2004. We understand the unique challenges of homes in our region — from moisture issues caused by heavy snowpack to aging infrastructure in older Sandpoint and Coeur d'Alene neighborhoods.
+                  True Homes Inspections is a locally owned, AHIT-trained and certified home inspection company serving North Idaho and Eastern Washington. With over 2,500 inspections completed, we understand the unique challenges of homes in our region — from moisture issues caused by heavy snowpack to aging infrastructure in older Sandpoint and Coeur d'Alene neighborhoods.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8">
                   Every inspection is performed personally by our certified inspector, ensuring consistent quality and attention to detail. We don't rush. We don't cut corners. We deliver the thorough, honest assessment you deserve before making one of the largest investments of your life.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
-                    "ASHI Certified Professional Inspector",
+                    "AHIT Trained & Certified Inspector",
                     "Previously Licensed in WA - Now Serving North Idaho",
-                    "20+ Years in Construction, 11+ Years Inspecting",
+                    "20+ Years in Construction, 11+ Years Inspecting in ID & WA",
                     "Detailed Digital Reports with Photos",
                     "24-Hour Guaranteed Report Delivery",
                   ].map((item) => (
@@ -569,7 +569,7 @@ export default function Home() {
               Ready to Schedule Your Inspection?
             </h2>
             <p className="text-[oklch(0.10_0.005_260)]/70 max-w-xl mx-auto mb-8 leading-relaxed">
-              Don't leave the biggest purchase of your life to chance. Schedule your North Idaho home inspection today and get a detailed report within 48 hours.
+              Don't leave the biggest purchase of your life to chance. Call Tim today and get a detailed report within 24 hours — guaranteed.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
