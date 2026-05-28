@@ -156,11 +156,14 @@ export default function Home() {
                 <p className="text-lg text-white/80 mb-8 max-w-lg leading-relaxed font-['Barlow'] font-300">
                   Serving Sandpoint, Coeur d'Alene, Post Falls, and surrounding communities. AHIT and ASHI trained and certified with 20+ years in construction and 11+ years inspecting homes across North Idaho and Eastern Washington.
                 </p>
-                <div className="flex flex-wrap gap-4 mb-10">
+                <div className="flex flex-wrap gap-4 mb-4">
                   <a href="tel:+12082439706" className="btn-amber text-sm">
                     <Phone size={14} /> Call Tim — 208-243-9706
                   </a>
                 </div>
+                <p className="text-sm text-white/60 mb-6 font-['Barlow_Condensed'] font-600 tracking-wide">
+                  <span style={{ color: '#D35400' }}>Standard inspections from $450</span> · Price varies by size, style &amp; location
+                </p>
                 {/* Trust badges */}
                 <div className="flex flex-wrap gap-6 mb-6">
                   {[
@@ -320,6 +323,51 @@ export default function Home() {
             <div className="mt-10 text-center fade-up">
               <Link href="/services" className="btn-outline-amber text-xs">
                 View All Services <ArrowRight size={13} />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* ── PRICING SNAPSHOT ── */}
+        <section className="py-20 bg-[oklch(0.13_0.005_260)] border-y border-white/5">
+          <div className="container">
+            <div className="text-center max-w-2xl mx-auto mb-12 fade-up">
+              <div className="section-label justify-center mb-4">Transparent Pricing</div>
+              <h2 className="font-['Barlow_Condensed'] font-800 text-4xl md:text-5xl text-white leading-tight mb-3">
+                No Surprises. No Hidden Fees.
+              </h2>
+              <p className="text-muted-foreground">
+                We believe in upfront pricing. Here's what you can expect to pay for each service.
+              </p>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 fade-up">
+              {[
+                { service: "Standard Home Inspection", price: "From $450", note: "Price varies by size, style & location", highlight: true },
+                { service: "Radon Testing", price: "$175", note: "With a home inspection" },
+                { service: "Well Water Testing", price: "$150–$500", note: "Depends on scope of testing" },
+                { service: "Sewer Scope Inspection", price: "$250–$300", note: "Depends on scope & service" },
+                { service: "New Construction Inspection", price: "Call for Pricing", note: "Call Tim for details" },
+                { service: "Lead & Mold Inspection", price: "Call for Pricing", note: "Call Tim for details" },
+              ].map((item) => (
+                <div
+                  key={item.service}
+                  className={`p-6 border ${
+                    item.highlight
+                      ? "border-[#D35400] bg-[#D35400]/5"
+                      : "border-white/8 bg-[oklch(0.18_0.005_260)]"
+                  }`}
+                >
+                  <div className="font-['Barlow_Condensed'] font-700 text-white text-lg mb-1 leading-tight">{item.service}</div>
+                  <div className={`font-['Barlow_Condensed'] font-800 text-3xl mb-1 ${
+                    item.highlight ? "text-[#D35400]" : "text-white"
+                  }`}>{item.price}</div>
+                  <div className="text-xs text-muted-foreground">{item.note}</div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-10 text-center fade-up">
+              <Link href="/pricing" className="btn-outline-amber text-xs">
+                View Full Pricing Details <ArrowRight size={13} />
               </Link>
             </div>
           </div>

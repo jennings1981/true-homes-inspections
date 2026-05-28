@@ -110,6 +110,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Clock size={11} style={{ color: ORANGE }} />
               Mon–Sat 7am–7pm
             </div>
+            <div className="flex items-center gap-1.5 text-xs font-['Barlow_Condensed'] font-700 tracking-wide" style={{ color: ORANGE }}>
+              Inspections from $450
+            </div>
           </div>
           <div className="flex items-center gap-4">
             <div className="flex items-center gap-1">
