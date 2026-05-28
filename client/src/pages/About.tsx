@@ -115,7 +115,7 @@ export default function About() {
               <span className="text-[#D35400]">BACKED BY EXPERIENCE.</span>
             </h1>
             <p className="text-white/70 max-w-xl text-lg leading-relaxed">
-              True Homes Inspections is a locally owned, ASHI-certified home inspection company serving North Idaho since 2004. Every inspection is performed personally by Tim — because quality can't be delegated.
+              True Homes Inspections is a locally owned, ASHI-certified home inspection company serving North Idaho since 2015. Every inspection is performed personally by Tim — because quality can't be delegated.
             </p>
           </div>
         </section>
