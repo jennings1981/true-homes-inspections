@@ -3,6 +3,7 @@
  * Individual blog article page — dark slate + orange #D35400
  */
 import { useRoute, Link } from "wouter";
+import { Helmet } from "react-helmet-async";
 import Layout from "@/components/Layout";
 import { ArrowLeft, Calendar, Clock, Phone, ArrowRight } from "lucide-react";
 import { getPostBySlug, blogPosts } from "@/lib/blogPosts";
@@ -71,8 +72,20 @@ export default function BlogPost() {
   const relatedPosts =
     related.length > 0 ? related : blogPosts.filter((p) => p.slug !== slug).slice(0, 2);
 
+  const canonicalUrl = `https://www.truehomesinspections.com/blog/${post.slug}`;
+
   return (
     <Layout>
+      <Helmet>
+        <title>{post.title} | True Homes Inspections Blog</title>
+        <meta name="description" content={post.excerpt} />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:title" content={`${post.title} | True Homes Inspections`} />
+        <meta property="og:description" content={post.excerpt} />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:type" content="article" />
+        <meta name="keywords" content={`${post.category}, home inspection North Idaho, True Homes Inspections, ${post.title.toLowerCase()}`} />
+      </Helmet>
       {/* Compact hero */}
       <div className="bg-[oklch(0.12_0.005_260)] py-10 border-b border-white/5">
         <div className="container max-w-4xl">
