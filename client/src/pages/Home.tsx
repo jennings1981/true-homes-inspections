@@ -49,7 +49,7 @@ const services = [
 const stats = [
   { value: "20+", label: "Years in Construction" },
   { value: "11+", label: "Years Inspecting in ID & WA" },
-  { value: "3,500+", label: "Inspections Completed" },
+  { value: "2,500+", label: "Inspections Completed" },
   { value: "24hr", label: "Guaranteed Report" },
 ];
 
