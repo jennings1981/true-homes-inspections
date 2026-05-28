@@ -62,22 +62,22 @@ const process = [
 
 const testimonials = [
   {
-    name: "Sarah M.",
-    location: "Sandpoint, ID",
+    name: "Lynol Stevens",
+    location: "North Idaho",
     rating: 5,
-    text: "Absolutely thorough inspection. The report was incredibly detailed with photos of every issue found. Saved us from a very expensive mistake on a lakefront property.",
+    text: "Detailed and thorough — pictures, videos, recommendations. Professional.",
   },
   {
-    name: "James & Linda K.",
-    location: "Coeur d'Alene, ID",
+    name: "J.W.",
+    location: "North Idaho",
     rating: 5,
-    text: "Professional, knowledgeable, and patient. He took the time to explain everything he found and helped us understand what was urgent vs. what could wait.",
+    text: "Tim was awesome regarding our house inspection. My wife and I purchasing of a home moved very rapidly and Tim responded just as quickly to get the home inspection done. Tim was very thorough where he explained what needed to be fixed in layman's terms. I highly recommend him for your home inspection needs.",
   },
   {
-    name: "Mike T.",
-    location: "Post Falls, ID",
+    name: "Lynn Fleckle",
+    location: "North Idaho",
     rating: 5,
-    text: "Used True Homes for our new construction inspection. Found several issues the builder had missed. Worth every penny. Will use again for our next purchase.",
+    text: "We cannot emphasize enough how thorough Tim inspected our potential homes. In the long run, he saved us many thousands of dollars by documenting actual and potential structural issues we were completely unaware of. He shows up when scheduled and is very prompt in providing a complete report. We will definitely call him again.",
   },
 ];
 
