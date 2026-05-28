@@ -39,7 +39,7 @@ export default function BuyerInspection() {
         },
         {
           q: "Should I attend the inspection?",
-          a: "Yes, absolutely. Attending your inspection gives you the opportunity to ask questions and see issues firsthand. It's one of the best ways to learn about your new home.",
+          a: "We recommend joining Tim at the end of the inspection for a personal walkthrough review — and it's one of the most valuable 20 minutes you'll spend in the home buying process. Tim will walk you through every significant finding face-to-face, explain what it means in plain language, and answer every question you have. You'll leave with a clear picture of the home's condition — not just a report to decipher on your own. Plan to arrive toward the end of the inspection window and Tim will let you know when he's ready for you.",
         },
         {
           q: "What if the inspection finds problems?",
