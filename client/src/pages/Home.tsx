@@ -154,7 +154,7 @@ export default function Home() {
                   IN NORTH IDAHO
                 </h1>
                 <p className="text-lg text-white/80 mb-8 max-w-lg leading-relaxed font-['Barlow'] font-300">
-                  Serving Sandpoint, Coeur d'Alene, Post Falls, and surrounding communities. AHIT trained and certified with 20+ years in construction and 11+ years inspecting homes across North Idaho and Eastern Washington.
+                  Serving Sandpoint, Coeur d'Alene, Post Falls, and surrounding communities. AHIT and ASHI trained and certified with 20+ years in construction and 11+ years inspecting homes across North Idaho and Eastern Washington.
                 </p>
                 <div className="flex flex-wrap gap-4 mb-10">
                   <a href="tel:+12082439706" className="btn-amber text-sm">
@@ -164,7 +164,7 @@ export default function Home() {
                 {/* Trust badges */}
                 <div className="flex flex-wrap gap-6 mb-6">
                   {[
-                    { icon: Shield, label: "AHIT Trained & Certified" },
+                    { icon: Shield, label: "AHIT & ASHI Trained & Certified" },
                     { icon: Award, label: "Previously WA Licensed" },
                     { icon: CheckCircle, label: "20+ Yrs Construction" },
                   ].map(({ icon: Icon, label }) => (
@@ -344,7 +344,7 @@ export default function Home() {
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
-                    "AHIT Trained & Certified Inspector",
+                    "AHIT & ASHI Trained & Certified Inspector",
                     "Previously Licensed in WA - Now Serving North Idaho",
                     "20+ Years in Construction, 11+ Years Inspecting in ID & WA",
                     "Detailed Digital Reports with Photos",
