@@ -39,6 +39,10 @@ export default function NewConstructionInspection() {
           q: "Will the builder allow an independent inspection?",
           a: "Yes. You have the right to hire an independent inspector for any home purchase, including new construction. Most reputable builders welcome independent inspections.",
         },
+        {
+          q: "Should I be present for the inspection?",
+          a: "We recommend joining Tim at the end of the inspection for a personal walkthrough review — and it's one of the most valuable things you can do during the new construction process. Tim will walk you through every significant finding face-to-face, explain what it means in plain language, and answer every question you have. You'll leave knowing exactly what your builder needs to address before you close. Plan to arrive toward the end of the inspection window and Tim will let you know when he's ready for you.",
+        },
       ]}
     />
   );

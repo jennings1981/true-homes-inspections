@@ -37,6 +37,10 @@ export default function PreListingInspection() {
           q: "How much does a pre-listing inspection cost?",
           a: "Contact us for current pricing. The cost is typically a fraction of what you'd lose in price negotiations if a buyer discovers issues during their own inspection.",
         },
+        {
+          q: "Should I be present for the inspection?",
+          a: "We recommend joining Tim at the end of the inspection for a personal walkthrough review — and it's one of the most valuable things you can do during the selling process. Tim will walk you through every significant finding face-to-face, explain what it means in plain language, and answer every question you have. You'll leave with a clear picture of your home's condition and know exactly what to address before listing. Plan to arrive toward the end of the inspection window and Tim will let you know when he's ready for you.",
+        },
       ]}
     />
   );
