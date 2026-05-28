@@ -366,8 +366,8 @@ export default function Home() {
               ))}
             </div>
             <div className="mt-10 text-center fade-up">
-              <Link href="/pricing" className="btn-outline-amber text-xs">
-                View Full Pricing Details <ArrowRight size={13} />
+              <Link href="/services" className="btn-outline-amber text-xs">
+                View All Services &amp; Pricing <ArrowRight size={13} />
               </Link>
             </div>
           </div>
