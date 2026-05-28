@@ -135,6 +135,35 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Google Maps Service Area */}
+      <section className="py-0 bg-background">
+        <div className="container pb-16">
+          <div className="mb-6">
+            <h2 className="font-['Barlow_Condensed'] font-700 text-2xl text-white mb-2 flex items-center gap-2">
+              <MapPin size={20} className="text-[#D35400]" /> Service Area Map
+            </h2>
+            <p className="text-sm text-muted-foreground">
+              Serving Sandpoint, Coeur d'Alene, Post Falls, and all of North Idaho and Eastern Washington.
+            </p>
+          </div>
+          <div className="w-full overflow-hidden border border-white/10" style={{height: '420px'}}>
+            <iframe
+              title="True Homes Inspections Service Area — North Idaho"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d692830.0!2d-116.7805!3d47.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5363f5e7e3a5b1b5%3A0x1234567890abcdef!2sNorth%20Idaho%2C%20USA!5e0!3m2!1sen!2sus!4v1716921600000!5m2!1sen!2sus"
+              width="100%"
+              height="420"
+              style={{border: 0, filter: 'grayscale(30%) contrast(1.1)'}}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+          <p className="text-xs text-muted-foreground mt-3 text-center">
+            True Homes Inspections · North Idaho &amp; Eastern Washington · (208) 243-9706
+          </p>
+        </div>
+      </section>
+
       {/* Final CTA */}
       <section className="py-16 bg-[#D35400]">
         <div className="container flex flex-col md:flex-row items-center justify-between gap-6">
