@@ -17,7 +17,7 @@ const IMG_PRELISTING  = "https://images.unsplash.com/photo-1560184897-ae75f41849
 const IMG_NEWCONST    = "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&auto=format&fit=crop"; // New construction framing
 const IMG_RADON       = "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&auto=format&fit=crop"; // Inspector testing
 const IMG_WELLWATER   = "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=900&auto=format&fit=crop"; // Water/well testing
-const IMG_SEWER       = "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=900&auto=format&fit=crop"; // Plumbing pipes
+const IMG_SEWER       = "https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&auto=format&fit=crop"; // Pipe/sewer inspection
 const IMG_LEADMOLD    = "https://images.unsplash.com/photo-1484154218962-a197022b5858?w=900&auto=format&fit=crop"; // Home interior
 const PHONE = "208-243-9706";
 const PHONE_HREF = "tel:+12082439706";
