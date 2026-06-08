@@ -37,10 +37,7 @@ export default function SewerScope() {
     <Layout>
       {/* Header */}
       <div className="relative bg-[oklch(0.12_0.005_260)] border-b border-white/5 overflow-hidden">
-        <div className="absolute inset-0">
-          <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=1400&auto=format&fit=crop" alt="Home inspection sewer scope" className="w-full h-full object-cover opacity-25" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.10_0.005_260)] via-[oklch(0.10_0.005_260)]/80 to-transparent" />
-        </div>
+
         <div className="relative container py-24">
           <div className="section-label mb-4">Specialty Service</div>
           <h1 className="font-['Barlow_Condensed'] font-800 text-5xl md:text-6xl text-white leading-tight mb-4">
